@@ -1,0 +1,1327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | Aargee Equipment Pvt. Ltd.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /* OVERRIDE index.css which sets body{background:#08080a;color:#fff} — causes blank page */
+        body {
+            background: #fff !important;
+            color: #111827 !important;
+            margin: 0;
+        }
+
+        .abt-heritage,
+        .abt-mvv,
+        .abt-certs,
+        .abt-capabilities {
+            color: #111827;
+        }
+
+        /* HERO */
+        .abt-hero {
+            position: relative;
+            height: 520px;
+            overflow: hidden;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .abt-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: #C8102E;
+            z-index: 10;
+        }
+
+        .abt-hero-img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 40%;
+        }
+
+        .abt-hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, rgba(5, 5, 5, .94) 0%, rgba(8, 8, 8, .78) 50%, rgba(10, 10, 10, .45) 100%), linear-gradient(to top, rgba(0, 0, 0, .7) 0%, transparent 55%);
+        }
+
+        .abt-hero-content {
+            position: relative;
+            z-index: 5;
+            max-width: 1280px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 60px 64px;
+        }
+
+        .abt-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: .76rem;
+            color: rgba(255, 255, 255, .4);
+            margin-bottom: 28px;
+        }
+
+        .abt-breadcrumb a {
+            color: rgba(255, 255, 255, .5);
+            text-decoration: none;
+        }
+
+        .abt-breadcrumb a:hover {
+            color: #C8102E;
+        }
+
+        .abt-eyebrow-hero {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-family: 'Outfit', sans-serif;
+            font-size: .66rem;
+            font-weight: 700;
+            letter-spacing: .25em;
+            text-transform: uppercase;
+            color: #C8102E;
+            margin-bottom: 16px;
+        }
+
+        .abt-eyebrow-hero::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            background: #C8102E;
+        }
+
+        .abt-hero-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.2rem, 5vw, 3.8rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.06;
+            margin: 0 0 16px;
+            letter-spacing: -.03em;
+        }
+
+        .abt-hero-title .red {
+            color: #C8102E;
+        }
+
+        .abt-hero-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: rgba(255, 255, 255, .55);
+            margin: 0 0 28px;
+            max-width: 560px;
+        }
+
+        .badge-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 14px;
+            background: rgba(200, 16, 46, .15);
+            border: 1px solid rgba(200, 16, 46, .35);
+            border-radius: 2px;
+            font-family: 'Inter', sans-serif;
+            font-size: .7rem;
+            color: rgba(255, 255, 255, .85);
+        }
+
+        .badge-pill svg {
+            color: #C8102E;
+        }
+
+        /* STATS */
+        .abt-stats {
+            background: #b7122e;
+        }
+
+        .abt-stats-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 60px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+
+        .abt-stat {
+            padding: 34px 24px;
+            text-align: center;
+            border-right: 1px solid rgba(255, 255, 255, .2);
+        }
+
+        .abt-stat:last-child {
+            border-right: none;
+        }
+
+        .abt-stat-num {
+            display: inline;
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.04em;
+        }
+
+        .abt-stat-suf {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .abt-stat-lbl {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: .68rem;
+            color: rgba(255, 255, 255, .75);
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            margin-top: 6px;
+        }
+
+        /* SECTION HELPERS */
+        .s-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: .64rem;
+            font-weight: 700;
+            letter-spacing: .22em;
+            text-transform: uppercase;
+            color: #C8102E;
+            margin-bottom: 14px;
+        }
+
+        .s-eyebrow::before {
+            content: '';
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: #C8102E;
+        }
+
+        .s-eyebrow.center {
+            justify-content: center;
+        }
+
+        .s-h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+            font-weight: 800;
+            color: #0d0d0d;
+            line-height: 1.15;
+            letter-spacing: -.025em;
+            margin: 0;
+        }
+
+        .s-h2 .red {
+            color: #C8102E;
+        }
+
+        /* HERITAGE */
+        .abt-heritage {
+            background: #fff;
+            padding: 96px 60px;
+        }
+
+        .abt-heritage-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .abt-p {
+            font-family: 'Inter', sans-serif;
+            font-size: .94rem;
+            line-height: 1.82;
+            color: #555;
+            margin: 0 0 14px;
+        }
+
+        .abt-p strong {
+            color: #111827;
+            font-weight: 600;
+        }
+
+        .img-wrap {
+            position: relative;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .img-wrap::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -6px;
+            bottom: 0;
+            width: 4px;
+            background: #C8102E;
+            border-radius: 2px;
+            z-index: 1;
+        }
+
+        .img-wrap img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .img-badge {
+            position: absolute;
+            bottom: -18px;
+            right: -18px;
+            width: 96px;
+            height: 96px;
+            background: #0d0d0d;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, .4);
+        }
+
+        .img-badge .b-n {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+
+        .img-badge .b-t {
+            font-family: 'Inter', sans-serif;
+            font-size: .55rem;
+            font-weight: 600;
+            color: #C8102E;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            text-align: center;
+            line-height: 1.3;
+            margin-top: 2px;
+        }
+
+        /* MVV */
+        .abt-mvv {
+            background: #F7F8FA;
+            padding: 88px 60px;
+        }
+
+        .abt-mvv-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .mvv-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .mvv-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+
+        .mvv-card {
+            background: #fff;
+            border-radius: 2px;
+            padding: 40px 32px;
+            border-top: 3px solid transparent;
+            box-shadow: 0 2px 16px rgba(0, 0, 0, .05);
+            transition: transform .3s, box-shadow .3s;
+        }
+
+        .mvv-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 36px rgba(0, 0, 0, .09);
+        }
+
+        .mvv-card.mission {
+            border-top-color: #C8102E;
+        }
+
+        .mvv-card.vision {
+            border-top-color: #0d0d0d;
+        }
+
+        .mvv-card.values {
+            border-top-color: #555;
+        }
+
+        .mvv-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .mission .mvv-icon {
+            background: rgba(200, 16, 46, .08);
+            color: #C8102E;
+        }
+
+        .vision .mvv-icon {
+            background: rgba(13, 13, 13, .07);
+            color: #0d0d0d;
+        }
+
+        .values .mvv-icon {
+            background: rgba(85, 85, 85, .08);
+            color: #555;
+        }
+
+        .mvv-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #0d0d0d;
+            margin: 0 0 12px;
+        }
+
+        .mvv-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: .88rem;
+            line-height: 1.75;
+            color: #6B7280;
+            margin: 0;
+        }
+
+        /* TIMELINE */
+        .abt-timeline {
+            background: #0d0d0d;
+            padding: 96px 60px;
+        }
+
+        .tl-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .tl-header {
+            text-align: center;
+            margin-bottom: 64px;
+        }
+
+        .tl-header .s-h2 {
+            color: #fff;
+        }
+
+        .tl-header .s-eyebrow {
+            color: #C8102E;
+        }
+
+        .tl-header .s-eyebrow::before {
+            background: #C8102E;
+        }
+
+        .tl-track {
+            position: relative;
+        }
+
+        .tl-track::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, #C8102E, rgba(200, 16, 46, .1));
+            transform: translateX(-50%);
+        }
+
+        .tl-item {
+            display: grid;
+            grid-template-columns: 1fr 56px 1fr;
+            align-items: center;
+            margin-bottom: 44px;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .5s, transform .5s;
+        }
+
+        .tl-item.tl-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .tl-left {
+            text-align: right;
+            padding-right: 36px;
+        }
+
+        .tl-right {
+            text-align: left;
+            padding-left: 36px;
+        }
+
+        .tl-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            z-index: 2;
+        }
+
+        .tl-dot {
+            width: 14px;
+            height: 14px;
+            background: #C8102E;
+            border-radius: 50%;
+            box-shadow: 0 0 0 5px rgba(200, 16, 46, .2);
+        }
+
+        .tl-year {
+            font-family: 'Outfit', sans-serif;
+            font-size: .66rem;
+            font-weight: 700;
+            color: #C8102E;
+            letter-spacing: .12em;
+            white-space: nowrap;
+        }
+
+        .tl-card {
+            background: rgba(255, 255, 255, .04);
+            border: 1px solid rgba(255, 255, 255, .07);
+            border-radius: 2px;
+            padding: 22px 24px;
+            transition: background .3s, border-color .3s;
+        }
+
+        .tl-card:hover {
+            background: rgba(200, 16, 46, .08);
+            border-color: rgba(200, 16, 46, .3);
+        }
+
+        .tl-card h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: .95rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 8px;
+        }
+
+        .tl-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: .82rem;
+            line-height: 1.7;
+            color: rgba(255, 255, 255, .5);
+            margin: 0;
+        }
+
+        /* CERTS */
+        .abt-certs {
+            background: #fff;
+            padding: 88px 60px;
+        }
+
+        .certs-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .certs-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .certs-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .cert-card {
+            border: 1px solid #E5E7EB;
+            border-radius: 2px;
+            padding: 36px 20px;
+            text-align: center;
+            transition: box-shadow .3s, border-color .3s, transform .2s;
+        }
+
+        .cert-card:hover {
+            box-shadow: 0 8px 28px rgba(200, 16, 46, .1);
+            border-color: #C8102E;
+            transform: translateY(-3px);
+        }
+
+        .cert-icon {
+            width: 52px;
+            height: 52px;
+            margin: 0 auto 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(200, 16, 46, .07);
+            border-radius: 50%;
+            color: #C8102E;
+        }
+
+        .cert-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0d0d0d;
+            margin-bottom: 8px;
+        }
+
+        .cert-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: .78rem;
+            color: #9CA3AF;
+            line-height: 1.65;
+        }
+
+        /* CAPABILITIES */
+        .abt-capabilities {
+            background: #F7F8FA;
+            padding: 88px 60px;
+        }
+
+        .cap-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+
+        .cap-header {
+            text-align: center;
+            margin-bottom: 52px;
+        }
+
+        .cap-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2px;
+            background: #E5E7EB;
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .cap-cell {
+            background: #fff;
+            padding: 38px 32px;
+            transition: background .25s;
+        }
+
+        .cap-cell:hover {
+            background: #f9fafb;
+        }
+
+        .cap-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            font-weight: 800;
+            color: #C8102E;
+            line-height: 1;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .cap-num::after {
+            content: '';
+            display: block;
+            width: 28px;
+            height: 2px;
+            background: #0d0d0d;
+            margin-left: 6px;
+            border-radius: 1px;
+        }
+
+        .cap-cell h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: .97rem;
+            font-weight: 700;
+            color: #0d0d0d;
+            margin: 0 0 10px;
+        }
+
+        .cap-cell p {
+            font-family: 'Inter', sans-serif;
+            font-size: .82rem;
+            line-height: 1.72;
+            color: #6B7280;
+            margin: 0;
+        }
+
+        /* CTA */
+        .abt-cta {
+            background: #0d0d0d;
+            padding: 88px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .abt-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 55% 80% at 80% 50%, rgba(200, 16, 46, .12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .abt-cta::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: #C8102E;
+        }
+
+        .cta-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-text h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-weight: 800;
+            color: #fff;
+            letter-spacing: -.025em;
+            margin: 0 0 10px;
+        }
+
+        .cta-text h2 .red {
+            color: #C8102E;
+        }
+
+        .cta-text p {
+            font-family: 'Inter', sans-serif;
+            font-size: .93rem;
+            color: rgba(255, 255, 255, .5);
+            margin: 0;
+        }
+
+        .cta-btns {
+            display: flex;
+            gap: 14px;
+            flex-shrink: 0;
+        }
+
+        .btn-red {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 26px;
+            background: #C8102E;
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: .82rem;
+            font-weight: 700;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: background .25s, transform .2s;
+        }
+
+        .btn-red:hover {
+            background: #a00d24;
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 26px;
+            border: 1px solid rgba(255, 255, 255, .25);
+            color: #fff;
+            font-family: 'Outfit', sans-serif;
+            font-size: .82rem;
+            font-weight: 600;
+            letter-spacing: .05em;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-radius: 2px;
+            transition: border-color .25s, background .25s;
+        }
+
+        .btn-outline:hover {
+            border-color: rgba(255, 255, 255, .55);
+            background: rgba(255, 255, 255, .05);
+        }
+
+        /* FOOTER */
+        .abt-footer {
+            background: #0d0d0d;
+            border-top: 2px solid #C8102E;
+            padding: 36px 60px;
+        }
+
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .abt-footer p {
+            font-family: 'Inter', sans-serif;
+            font-size: .74rem;
+            color: rgba(255, 255, 255, .3);
+            margin: 0;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, .4);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: .74rem;
+            transition: color .2s;
+        }
+
+        .footer-links a:hover {
+            color: #C8102E;
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:1024px) {
+            .abt-heritage-inner {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .mvv-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .certs-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .cap-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .abt-stats-inner {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .tl-track::before {
+                left: 20px;
+            }
+
+            .tl-item {
+                grid-template-columns: 40px 1fr;
+            }
+
+            .tl-left {
+                display: none;
+            }
+
+            .tl-right {
+                text-align: left;
+                padding-left: 20px;
+            }
+
+            .cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-btns {
+                justify-content: center;
+            }
+        }
+
+        @media(max-width:640px) {
+            .abt-hero {
+                height: 380px;
+            }
+
+            .abt-hero-content,
+            .abt-stats-inner {
+                padding-left: 20px;
+                padding-right: 20px;
+            }
+
+            .abt-heritage,
+            .abt-mvv,
+            .abt-certs,
+            .abt-capabilities,
+            .abt-timeline,
+            .abt-cta {
+                padding: 60px 20px;
+            }
+
+            .abt-footer {
+                padding: 28px 20px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .certs-grid,
+            .cap-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .abt-stats-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .abt-stat {
+                border-right: none;
+                border-bottom: 1px solid rgba(255, 255, 255, .06);
+            }
+
+            .abt-stat:last-child {
+                border-bottom: none;
+            }
+
+            .badge-row {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar" id="top-bar">
+        <div class="top-bar-inner">
+            <div class="top-bar-items">
+                <div class="top-bar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg><span>45+ Years of Excellence</span></div>
+                <div class="top-bar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg><span>ISO 9001:2015 Certified</span></div>
+                <div class="top-bar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                    </svg><span>IATF 16949:2016</span></div>
+            </div>
+            <div class="top-bar-social">
+                <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                    </svg></a>
+                <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+                    </svg></a>
+            </div>
+        </div>
+    </div>
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo" id="nav-logo"><img src="aargee-logo.png"
+                    alt="Aargee Equipment Pvt. Ltd." class="logo-img"></a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="nav-link" id="nav-home">HOME</a></li>
+                    <li><a href="about.html" class="nav-link active" id="nav-about">ABOUT US</a></li>
+                    <li><a href="#" class="nav-link" id="nav-solutions">SOLUTIONS</a></li>
+                    <li><a href="#" class="nav-link" id="nav-industries">INDUSTRIES</a></li>
+                    <li><a href="#" class="nav-link" id="nav-manufacturing">MANUFACTURING</a></li>
+                    <li><a href="#" class="nav-link" id="nav-quality">QUALITY</a></li>
+                    <li><a href="#" class="nav-link" id="nav-careers">CAREERS</a></li>
+                    <li><a href="#" class="nav-link" id="nav-contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <a href="#" class="nav-cta" id="nav-contact-btn">Get A Quote</a>
+            <button class="nav-toggle" id="nav-toggle"
+                aria-label="Menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+    <!-- HERO BANNER -->
+    <section class="abt-hero" id="abt-hero">
+        <img src="about-banner.jpg" alt="Aargee engineering facility" class="abt-hero-img">
+        <div class="abt-hero-overlay"></div>
+        <div class="abt-hero-content">
+            <nav class="abt-breadcrumb"><a href="index.html">Home</a><span>&nbsp;&#8250;&nbsp;</span><span>About
+                    Us</span></nav>
+            <div class="abt-eyebrow-hero">Who We Are</div>
+            <h1 class="abt-hero-title">About <span class="red">Aargee</span><br>Equipment Pvt. Ltd.</h1>
+            <p class="abt-hero-sub">Engineering Excellence Since 1979 &mdash; Trusted by OEMs, Transport Operators &amp;
+                System Integrators across India.</p>
+            <div class="badge-row">
+                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>ISO 9001:2015</div>
+                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>IATF 16949:2016</div>
+                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>45+ Years</div>
+                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <polyline points="20 6 9 17 4 12" />
+                    </svg>Est. 1979</div>
+            </div>
+        </div>
+    </section>
+    <!-- STATS -->
+    <div class="abt-stats">
+        <div class="abt-stats-inner">
+            <div class="abt-stat"><span class="abt-stat-num" data-count="45">0</span><span
+                    class="abt-stat-suf">+</span><span class="abt-stat-lbl">Years of Excellence</span></div>
+            <div class="abt-stat"><span class="abt-stat-num">1979</span><span class="abt-stat-lbl">Year
+                    Established</span></div>
+            <div class="abt-stat"><span class="abt-stat-num" data-count="500">0</span><span
+                    class="abt-stat-suf">+</span><span class="abt-stat-lbl">Products Delivered</span></div>
+            <div class="abt-stat"><span class="abt-stat-num" data-count="100">0</span><span
+                    class="abt-stat-suf">+</span><span class="abt-stat-lbl">Clients Nationwide</span></div>
+        </div>
+    </div>
+    <!-- HERITAGE -->
+    <section class="abt-heritage" id="our-heritage">
+        <div class="abt-heritage-inner">
+            <div>
+                <div class="s-eyebrow">Our Heritage</div>
+                <h2 class="s-h2" style="margin-bottom:20px;">Four Decades of<br><span class="red">Engineering</span>
+                    Leadership</h2>
+                <p class="abt-p">Founded in <strong>1979</strong>, Aargee Equipment Pvt. Ltd. is a pioneering force in
+                    India's transportation electronics industry. For over four decades, we have been at the forefront of
+                    designing and manufacturing advanced vehicle technologies, intelligent mobility solutions, and
+                    safety-critical systems that power the nation's transport infrastructure.</p>
+                <p class="abt-p">Holding both <strong>ISO 9001:2015</strong> and <strong>IATF 16949:2016</strong>
+                    certifications, our engineering and manufacturing capabilities are benchmarked against the highest
+                    global standards. We serve OEMs, State Transport Undertakings, bus body builders, and system
+                    integrators across India and international markets.</p>
+                <p class="abt-p">Our portfolio spans <strong>automotive lighting systems</strong>,
+                    <strong>ITMS</strong>, <strong>Passenger Information Systems</strong>, <strong>TFT display
+                        solutions</strong>, and <strong>advanced safety technologies</strong> &mdash; each engineered to
+                    the highest standards of reliability and performance.</p>
+            </div>
+            <div style="position:relative;">
+                <div class="img-wrap">
+                    <img src="hero-bg.jpg" alt="Aargee Equipment">
+                    <div class="img-badge"><span class="b-n">45+</span><span class="b-t">Years of<br>Trust</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- MVV -->
+    <section class="abt-mvv" id="mission-vision">
+        <div class="abt-mvv-inner">
+            <div class="mvv-header">
+                <div class="s-eyebrow center">Our Foundation</div>
+                <h2 class="s-h2">Mission, Vision &amp; Values</h2>
+            </div>
+            <div class="mvv-grid">
+                <div class="mvv-card mission">
+                    <div class="mvv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg></div>
+                    <h3>Our Mission</h3>
+                    <p>To engineer and deliver world-class transportation electronics and intelligent mobility solutions
+                        that enhance safety, efficiency, and passenger experience across India and beyond.</p>
+                </div>
+                <div class="mvv-card vision">
+                    <div class="mvv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
+                        </svg></div>
+                    <h3>Our Vision</h3>
+                    <p>To be India's most trusted and innovative engineering company in transportation electronics
+                        &mdash; setting new standards in quality, technology, and sustainable intelligent mobility.</p>
+                </div>
+                <div class="mvv-card values">
+                    <div class="mvv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg></div>
+                    <h3>Our Values</h3>
+                    <p>Quality without compromise. Innovation with purpose. Integrity in every partnership &mdash;
+                        guided by a commitment to engineering excellence, customer-first thinking, and ethical business
+                        practices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- TIMELINE -->
+    <section class="abt-timeline" id="our-journey">
+        <div class="tl-inner">
+            <div class="tl-header">
+                <div class="s-eyebrow center">Our Journey</div>
+                <h2 class="s-h2">Milestones That Shaped <span class="red">Aargee</span></h2>
+            </div>
+            <div class="tl-track">
+                <div class="tl-item">
+                    <div class="tl-left">
+                        <div class="tl-card">
+                            <h4>Foundation &amp; Beginnings</h4>
+                            <p>Established with a vision to engineer reliable automotive electrical and lighting systems
+                                for the Indian transportation sector.</p>
+                        </div>
+                    </div>
+                    <div class="tl-center">
+                        <div class="tl-dot"></div><span class="tl-year">1979</span>
+                    </div>
+                    <div class="tl-right"></div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-left"></div>
+                    <div class="tl-center">
+                        <div class="tl-dot"></div><span class="tl-year">1990s</span>
+                    </div>
+                    <div class="tl-right">
+                        <div class="tl-card">
+                            <h4>Expansion into Vehicle Electronics</h4>
+                            <p>Growth into a full-spectrum vehicle electronics manufacturer, expanding into driver
+                                information systems and advanced control modules.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-left">
+                        <div class="tl-card">
+                            <h4>ISO 9001 Quality Certification</h4>
+                            <p>Achieved ISO 9001 certification, formalising Aargee's commitment to world-class quality
+                                management and process excellence.</p>
+                        </div>
+                    </div>
+                    <div class="tl-center">
+                        <div class="tl-dot"></div><span class="tl-year">2000s</span>
+                    </div>
+                    <div class="tl-right"></div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-left"></div>
+                    <div class="tl-center">
+                        <div class="tl-dot"></div><span class="tl-year">2010s</span>
+                    </div>
+                    <div class="tl-right">
+                        <div class="tl-card">
+                            <h4>Intelligent Mobility &amp; ITMS</h4>
+                            <p>Launched ITMS and Passenger Information Systems, positioning Aargee as a smart mobility
+                                technology leader in India.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-left">
+                        <div class="tl-card">
+                            <h4>IATF 16949 Automotive Standard</h4>
+                            <p>Secured IATF 16949:2016 &mdash; reinforcing capability to supply leading OEMs worldwide
+                                to the highest automotive quality standard.</p>
+                        </div>
+                    </div>
+                    <div class="tl-center">
+                        <div class="tl-dot"></div><span class="tl-year">2016</span>
+                    </div>
+                    <div class="tl-right"></div>
+                </div>
+                <div class="tl-item">
+                    <div class="tl-left"></div>
+                    <div class="tl-center">
+                        <div class="tl-dot"></div><span class="tl-year">Today</span>
+                    </div>
+                    <div class="tl-right">
+                        <div class="tl-card">
+                            <h4>45+ Years &mdash; Engineering the Future</h4>
+                            <p>Trusted by 100+ clients across India, continuing to innovate with TFT displays, LED
+                                lighting, and advanced safety solutions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CERTS -->
+    <section class="abt-certs" id="certifications">
+        <div class="certs-inner">
+            <div class="certs-header">
+                <div class="s-eyebrow center">Quality &amp; Standards</div>
+                <h2 class="s-h2">Certified to Global Standards</h2>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path
+                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                        </svg></div>
+                    <div class="cert-name">ISO 9001:2015</div>
+                    <div class="cert-desc">Quality Management System ensuring consistent product quality and customer
+                        satisfaction at every stage of design and manufacturing.</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <rect x="1" y="3" width="15" height="13" rx="1" />
+                            <path d="M16 8h4l3 5v3h-7V8z" />
+                            <circle cx="5.5" cy="18.5" r="2.5" />
+                            <circle cx="18.5" cy="18.5" r="2.5" />
+                        </svg></div>
+                    <div class="cert-name">IATF 16949:2016</div>
+                    <div class="cert-desc">International Automotive Quality Management Standard &mdash; the highest
+                        benchmark for automotive manufacturing adopted by leading OEMs.</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                            <path d="M2 17l10 5 10-5" />
+                            <path d="M2 12l10 5 10-5" />
+                        </svg></div>
+                    <div class="cert-name">In-house R&amp;D</div>
+                    <div class="cert-desc">End-to-end design and manufacturing capabilities &mdash; delivering
+                        engineering excellence from concept to deployment under one roof.</div>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg></div>
+                    <div class="cert-name">Safety &amp; Compliance</div>
+                    <div class="cert-desc">All products rigorously tested to meet applicable safety, environmental, and
+                        regulatory standards for the transportation sector.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CAPABILITIES -->
+    <section class="abt-capabilities" id="capabilities">
+        <div class="cap-inner">
+            <div class="cap-header">
+                <div class="s-eyebrow center">What We Do</div>
+                <h2 class="s-h2">Core Capabilities &amp; Business Areas</h2>
+            </div>
+            <div class="cap-grid">
+                <div class="cap-cell">
+                    <div class="cap-num">01</div>
+                    <h4>Automotive Lighting Systems</h4>
+                    <p>Premium LED headlamps, tail lamps, lanterns, interior lighting, and solar-powered systems for
+                        buses, trucks, and special vehicles.</p>
+                </div>
+                <div class="cap-cell">
+                    <div class="cap-num">02</div>
+                    <h4>Intelligent Transport Systems</h4>
+                    <p>ITMS platforms including vehicle tracking, route management, fleet analytics, and driver
+                        monitoring for modern public transport.</p>
+                </div>
+                <div class="cap-cell">
+                    <div class="cap-num">03</div>
+                    <h4>Passenger Information Systems</h4>
+                    <p>Real-time PIS displays, audio announcement systems, LED destination boards, and integrated
+                        solutions for buses and rail.</p>
+                </div>
+                <div class="cap-cell">
+                    <div class="cap-num">04</div>
+                    <h4>TFT Display Solutions</h4>
+                    <p>High-brightness driver and passenger displays engineered for harsh vehicle environments &mdash;
+                        daylight-readable and vibration-resistant.</p>
+                </div>
+                <div class="cap-cell">
+                    <div class="cap-num">05</div>
+                    <h4>Vehicle Electronics &amp; Controls</h4>
+                    <p>Custom ECUs, body control units, power distribution systems, and vehicle interface electronics
+                        for commercial vehicles.</p>
+                </div>
+                <div class="cap-cell">
+                    <div class="cap-num">06</div>
+                    <h4>Safety &amp; Advanced Technologies</h4>
+                    <p>Driver fatigue monitoring, collision warning, CCTV integration, and advanced safety electronics
+                        ensuring safer journeys.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CTA -->
+    <section class="abt-cta" id="get-in-touch">
+        <div class="cta-inner">
+            <div class="cta-text">
+                <h2>Partner with <span class="red">Aargee</span> &mdash; India's Engineering Experts</h2>
+                <p>Trusted by OEMs, State Transport Undertakings, and mobility integrators for over 45 years. Let's
+                    build smarter transport together.</p>
+            </div>
+            <div class="cta-btns">
+                <a href="#" class="btn-red" id="abt-quote-btn">Get A Quote <svg width="14" height="14"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg></a>
+                <a href="index.html" class="btn-outline" id="abt-home-btn">Back to Home</a>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="abt-footer">
+        <div class="footer-inner">
+            <p>&copy; 2024 Aargee Equipment Pvt. Ltd. All rights reserved.</p>
+            <div class="footer-links"><a href="index.html">Home</a><a href="#">Solutions</a><a href="#">Contact</a>
+            </div>
+        </div>
+    </footer>
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var tls = document.querySelectorAll('.tl-item');
+            if (tls.length) { var o = new IntersectionObserver(function (e) { e.forEach(function (x) { if (x.isIntersecting) { var i = Array.from(tls).indexOf(x.target); setTimeout(function () { x.target.classList.add('tl-visible'); }, i * 100); o.unobserve(x.target); } }); }, { threshold: .1 }); tls.forEach(function (el) { o.observe(el); }); }
+            var co = new IntersectionObserver(function (e) { e.forEach(function (x) { if (x.isIntersecting) { var el = x.target, t = parseInt(el.dataset.count, 10), dur = 1800, s = performance.now(); (function tick(n) { var p = Math.min((n - s) / dur, 1); el.textContent = Math.round(t * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(s); co.unobserve(x.target); } }); }, { threshold: .5 });
+            document.querySelectorAll('.abt-stat-num[data-count]').forEach(function (el) { co.observe(el); });
+        });
+    </script>
+</body>
+
+</html>
