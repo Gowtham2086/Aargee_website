@@ -64,10 +64,10 @@
         .abt-hero-content {
             position: relative;
             z-index: 5;
-            max-width: 1280px;
+            max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 60px 64px;
+            padding: 0 clamp(20px, 4vw, 48px) 120px;
         }
 
         .abt-breadcrumb {
@@ -543,287 +543,634 @@
             margin: 0;
         }
 
-        /* CERTS */
-        .abt-certs {
+        /* -------------------------------------
+           SECTION 3: PREMIUM QUALITY & TRUST
+           ------------------------------------- */
+        .premium-quality {
             background: #fff;
-            padding: 88px 60px;
+            padding: 120px 60px;
+            position: relative;
+            overflow: hidden;
         }
-
-        .certs-inner {
-            max-width: 1280px;
+        .premium-quality::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(200, 16, 46, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(200, 16, 46, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.8;
+            pointer-events: none;
+        }
+        .premium-quality::after {
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 50%;
+            background: radial-gradient(circle at top right, rgba(200, 16, 46, 0.05), transparent 70%);
+            pointer-events: none;
+        }
+        .pq-inner {
+            max-width: 1400px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
-
-        .certs-header {
+        .pq-header {
             text-align: center;
-            margin-bottom: 52px;
+            margin-bottom: 70px;
         }
-
-        .certs-grid {
+        .pq-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
-            gap: 20px;
+            gap: 24px;
+            margin-bottom: 60px;
         }
-
-        .cert-card {
-            border: 1px solid #E5E7EB;
-            border-radius: 2px;
-            padding: 36px 20px;
+        .pq-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(229, 231, 235, 0.8);
+            border-radius: 4px;
+            padding: 40px 32px;
             text-align: center;
-            transition: box-shadow .3s, border-color .3s, transform .2s;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
         }
-
-        .cert-card:hover {
-            box-shadow: 0 8px 28px rgba(200, 16, 46, .1);
-            border-color: #C8102E;
-            transform: translateY(-3px);
+        .pq-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 3px;
+            background: #C8102E;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.4s ease;
         }
-
-        .cert-icon {
-            width: 52px;
-            height: 52px;
-            margin: 0 auto 14px;
+        .pq-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 40px rgba(200, 16, 46, 0.08);
+            border-color: rgba(200, 16, 46, 0.2);
+            background: #fff;
+        }
+        .pq-card:hover::before {
+            transform: scaleX(1);
+        }
+        .pq-icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 24px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(200, 16, 46, .07);
+            background: linear-gradient(135deg, rgba(200,16,46,0.1), rgba(200,16,46,0.02));
             border-radius: 50%;
             color: #C8102E;
+            transition: transform 0.4s ease, background 0.4s ease;
         }
-
-        .cert-name {
+        .pq-card:hover .pq-icon {
+            transform: scale(1.1);
+            background: #C8102E;
+            color: #fff;
+            box-shadow: 0 8px 24px rgba(200,16,46,0.3);
+        }
+        .pq-name {
             font-family: 'Outfit', sans-serif;
-            font-size: 1rem;
+            font-size: 1.1rem;
             font-weight: 700;
             color: #0d0d0d;
-            margin-bottom: 8px;
+            margin-bottom: 12px;
         }
-
-        .cert-desc {
+        .pq-desc {
             font-family: 'Inter', sans-serif;
-            font-size: .78rem;
-            color: #9CA3AF;
-            line-height: 1.65;
+            font-size: 0.85rem;
+            color: #6B7280;
+            line-height: 1.7;
         }
-
-        /* CAPABILITIES */
-        .abt-capabilities {
-            background: #F7F8FA;
-            padding: 88px 60px;
-        }
-
-        .cap-inner {
-            max-width: 1280px;
-            margin: 0 auto;
-        }
-
-        .cap-header {
-            text-align: center;
-            margin-bottom: 52px;
-        }
-
-        .cap-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2px;
-            background: #E5E7EB;
-            border-radius: 2px;
+        
+        /* TRUST STRIP */
+        .trust-strip {
+            background: #0d0d0d;
+            border-radius: 4px;
+            padding: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+            position: relative;
             overflow: hidden;
         }
-
-        .cap-cell {
-            background: #fff;
-            padding: 38px 32px;
-            transition: background .25s;
+        .trust-strip::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0; left: 0; width: 4px;
+            background: #C8102E;
         }
-
-        .cap-cell:hover {
-            background: #f9fafb;
+        .trust-item {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+            padding: 0 24px;
+            border-right: 1px solid rgba(255,255,255,0.1);
         }
-
-        .cap-num {
+        .trust-item:last-child { border: none; }
+        .t-num {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             font-weight: 800;
-            color: #C8102E;
+            color: #fff;
             line-height: 1;
-            margin-bottom: 8px;
             display: flex;
             align-items: center;
-            gap: 4px;
+        }
+        .t-num span { color: #C8102E; margin-left: 2px;}
+        .t-lbl {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: rgba(255,255,255,0.6);
+            font-weight: 600;
         }
 
-        .cap-num::after {
-            content: '';
-            display: block;
-            width: 28px;
-            height: 2px;
-            background: #0d0d0d;
-            margin-left: 6px;
-            border-radius: 1px;
+        /* -------------------------------------
+           SECTION 4: PREMIUM ENGINEERING
+           ------------------------------------- */
+        .premium-engineering {
+            background: #F7F8FA;
+            padding: 120px 60px 0;
+            position: relative;
         }
-
-        .cap-cell h4 {
+        .pe-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .pe-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        .pe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 100px;
+        }
+        .pe-card {
+            background: #fff;
+            padding: 48px 40px;
+            border-radius: 4px;
+            border-top: 4px solid transparent;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+            transition: all 0.4s ease;
+        }
+        .pe-card:hover {
+            transform: translateY(-8px);
+            border-top-color: #C8102E;
+            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+        }
+        .pe-icon {
+            color: #C8102E;
+            margin-bottom: 24px;
+        }
+        .pe-title {
             font-family: 'Outfit', sans-serif;
-            font-size: .97rem;
+            font-size: 1.3rem;
             font-weight: 700;
             color: #0d0d0d;
-            margin: 0 0 10px;
+            margin: 0 0 16px;
         }
-
-        .cap-cell p {
+        .pe-desc {
             font-family: 'Inter', sans-serif;
-            font-size: .82rem;
-            line-height: 1.72;
-            color: #6B7280;
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #555;
             margin: 0;
         }
 
-        /* CTA */
-        .abt-cta {
-            background: #0d0d0d;
-            padding: 88px 60px;
+        /* FOCUS BAND */
+        .pe-focus-band {
+            background: #C8102E;
+            padding: 24px 0;
+            overflow: hidden;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+        }
+        .pe-marquee {
+            display: inline-block;
+            animation: marquee 40s linear infinite;
+        }
+        .pe-marquee span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin: 0 40px;
+            display: inline-flex;
+            align-items: center;
+        }
+        .pe-marquee span::after {
+            content: '';
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            background: rgba(255,255,255,0.4);
+            border-radius: 50%;
+            margin-left: 80px;
+        }
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* SMART FEATURE BLOCK */
+        .pe-smart-block {
+            background: #ffffff url('data:image/svg+xml;utf8,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><path d="M10 10h80v80h-80z" fill="none" stroke="rgba(0,0,0,0.03)" stroke-width="1"/></svg>');
+            padding: 100px 60px;
+            text-align: center;
+            border-bottom: 4px solid #C8102E;
+        }
+        .pe-smart-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .pe-smart-content h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #111827;
+            margin: 0 0 24px;
+            letter-spacing: -0.02em;
+        }
+        .pe-smart-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+
+        /* ANIMATION HELPERS */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .zoom-in {
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .zoom-in.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        @media (max-width: 1024px) {
+            .pq-grid, .pe-grid { grid-template-columns: repeat(2, 1fr); }
+            .trust-strip { flex-wrap: wrap; gap: 32px; }
+            .trust-item { border: none; width: 50%; flex: none; }
+        }
+        @media (max-width: 768px) {
+            .pq-grid, .pe-grid { grid-template-columns: 1fr; }
+            .trust-item { width: 100%; text-align: center; }
+            .pe-smart-content h3 { font-size: 2rem; }
+        }
+.cert-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .cert-card {
+            background: #f7f8fa;
+            border-radius: 12px;
+            padding: 48px 40px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            border-top: 4px solid #C8102E;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
             position: relative;
             overflow: hidden;
         }
 
-        .abt-cta::before {
+        .cert-card::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            background: rgba(200, 16, 46, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+            transition: transform 0.6s ease;
+        }
+
+        .cert-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(200,16,46,0.1);
+        }
+
+        .cert-card:hover::before {
+            transform: scale(3);
+        }
+
+        .cert-card > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cert-card-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(200, 16, 46, 0.1);
+            color: #C8102E;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .cert-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #111;
+            margin: 0 0 4px;
+        }
+
+        .cert-card-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #C8102E;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .cert-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 24px;
+        }
+
+        .cert-card-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .cert-card-list li {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 12px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: #333;
+        }
+
+        .cert-card-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 6px;
+            width: 16px;
+            height: 16px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23C8102E' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        @media (max-width: 768px) {
+            
+        .cert-grid-4 {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 1024px) {
+            .cert-grid-4 { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .cert-grid-4 { grid-template-columns: 1fr; }
+        }
+
+        .cert-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* -------------------------------------
+           PREMIUM CORPORATE FOOTER (Integrated CTA)
+           ------------------------------------- */
+        .premium-footer {
+            background: #0A0A0A;
+            border-top: 2px solid #C8102E;
+            padding: 30px 60px 16px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+        }
+        .premium-footer::before {
             content: '';
             position: absolute;
             inset: 0;
-            background: radial-gradient(ellipse 55% 80% at 80% 50%, rgba(200, 16, 46, .12) 0%, transparent 65%);
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 30px 30px;
             pointer-events: none;
         }
-
-        .abt-cta::after {
+        .premium-footer::after {
             content: '';
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 3px;
-            background: #C8102E;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200,16,46,0.3), transparent);
         }
-
-        .cta-inner {
-            max-width: 1280px;
+        .pf-inner {
+            max-width: 1400px;
             margin: 0 auto;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 40px;
             position: relative;
             z-index: 2;
         }
 
-        .cta-text h2 {
+        /* 5-Column Grid */
+        .pf-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr 1fr 1fr 1.5fr;
+            gap: 32px;
+            margin-bottom: 10px;
+        }
+        .pf-col h4 {
             font-family: 'Outfit', sans-serif;
-            font-size: clamp(1.5rem, 3vw, 2.2rem);
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 12px;
+            letter-spacing: 0.02em;
+        }
+        .pf-col-1 h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
             font-weight: 800;
             color: #fff;
-            letter-spacing: -.025em;
-            margin: 0 0 10px;
+            margin: 0 0 8px;
+            letter-spacing: -0.01em;
         }
-
-        .cta-text h2 .red {
-            color: #C8102E;
+        .pf-logo-img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 16px;
+            display: block;
         }
-
-        .cta-text p {
+        .pf-col-1 .pf-tagline {
             font-family: 'Inter', sans-serif;
-            font-size: .93rem;
-            color: rgba(255, 255, 255, .5);
+            font-size: 0.8rem;
+            color: #C8102E;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .pf-col-1 p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            max-width: 340px;
+        }
+        
+        .pf-socials {
+            display: flex;
+            gap: 12px;
+        }
+        .pf-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .pf-socials a:hover {
+            background: #C8102E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+        .pf-socials a svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .pf-links {
+            list-style: none;
+            padding: 0;
             margin: 0;
         }
+        .pf-links li {
+            margin-bottom: 8px;
+        }
+        .pf-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        .pf-links a::before {
+            content: '→';
+            color: #C8102E;
+            margin-right: 6px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        .pf-links a:hover {
+            color: #fff;
+            transform: translateX(4px);
+        }
+        .pf-links a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
 
-        .cta-btns {
+        .pf-contact-item {
             display: flex;
-            gap: 14px;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .pf-contact-icon {
+            color: #C8102E;
             flex-shrink: 0;
+            margin-top: 2px;
         }
-
-        .btn-red {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 26px;
-            background: #C8102E;
-            color: #fff;
-            font-family: 'Outfit', sans-serif;
-            font-size: .82rem;
-            font-weight: 700;
-            letter-spacing: .05em;
-            text-transform: uppercase;
+        .pf-contact-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+        .pf-contact-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .pf-contact-text a {
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            border-radius: 2px;
-            transition: background .25s, transform .2s;
+            transition: color 0.3s ease;
         }
-
-        .btn-red:hover {
-            background: #a00d24;
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 26px;
-            border: 1px solid rgba(255, 255, 255, .25);
+        .pf-contact-text a:hover {
             color: #fff;
-            font-family: 'Outfit', sans-serif;
-            font-size: .82rem;
-            font-weight: 600;
-            letter-spacing: .05em;
-            text-transform: uppercase;
-            text-decoration: none;
-            border-radius: 2px;
-            transition: border-color .25s, background .25s;
         }
 
-        .btn-outline:hover {
-            border-color: rgba(255, 255, 255, .55);
-            background: rgba(255, 255, 255, .05);
-        }
-
-        /* FOOTER */
-        .abt-footer {
-            background: #0d0d0d;
-            border-top: 2px solid #C8102E;
-            padding: 36px 60px;
-        }
-
-        .footer-inner {
-            max-width: 1280px;
-            margin: 0 auto;
+        /* Copyright Bar */
+        .pf-copyright {
             display: flex;
-            align-items: center;
             justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+        }
+        .pf-copy-links {
+            display: flex;
             gap: 20px;
         }
-
-        .abt-footer p {
-            font-family: 'Inter', sans-serif;
-            font-size: .74rem;
-            color: rgba(255, 255, 255, .3);
-            margin: 0;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 24px;
-        }
-
-        .footer-links a {
-            color: rgba(255, 255, 255, .4);
+        .pf-copy-links a {
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
-            font-family: 'Inter', sans-serif;
-            font-size: .74rem;
-            transition: color .2s;
+            transition: color 0.3s ease;
+        }
+        .pf-copy-links a:hover {
+            color: #fff;
         }
 
-        .footer-links a:hover {
-            color: #C8102E;
+        @media (max-width: 1200px) {
+            .pf-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        }
+        @media (max-width: 768px) {
+            .pf-grid { grid-template-columns: 1fr; gap: 32px; }
+            .pf-copyright { flex-direction: column; gap: 12px; text-align: center; }
         }
 
         /* RESPONSIVE */
@@ -985,7 +1332,7 @@
     </nav>
     <!-- HERO BANNER -->
     <section class="abt-hero" id="abt-hero">
-        <img src="about-banner.jpg" alt="Aargee engineering facility" class="abt-hero-img">
+        <img src="about-banner.jpg?v=2" alt="Aargee engineering facility" class="abt-hero-img">
         <div class="abt-hero-overlay"></div>
         <div class="abt-hero-content">
             <nav class="abt-breadcrumb"><a href="index.html">Home</a><span>&nbsp;&#8250;&nbsp;</span><span>About
@@ -1043,13 +1390,13 @@
                     global standards. We serve OEMs, State Transport Undertakings, bus body builders, and system
                     integrators across India and international markets.</p>
                 <p class="abt-p">Our portfolio spans <strong>automotive lighting systems</strong>,
-                    <strong>ITMS</strong>, <strong>Passenger Information Systems</strong>, <strong>TFT display
+                    <strong>ITMS</strong>, <strong>Public transit display system</strong>, <strong>TFT display
                         solutions</strong>, and <strong>advanced safety technologies</strong> &mdash; each engineered to
                     the highest standards of reliability and performance.</p>
             </div>
             <div style="position:relative;">
                 <div class="img-wrap">
-                    <img src="hero-bg.jpg" alt="Aargee Equipment">
+                    <img src="hero-bg.jpg?v=2" alt="Aargee Equipment">
                     <div class="img-badge"><span class="b-n">45+</span><span class="b-t">Years of<br>Trust</span></div>
                 </div>
             </div>
@@ -1188,128 +1535,259 @@
             </div>
         </div>
     </section>
-    <!-- CERTS -->
-    <section class="abt-certs" id="certifications">
-        <div class="certs-inner">
-            <div class="certs-header">
-                <div class="s-eyebrow center">Quality &amp; Standards</div>
-                <h2 class="s-h2">Certified to Global Standards</h2>
+    <!-- SECTION 3: PREMIUM QUALITY & TRUST -->
+    <section class="premium-quality" id="quality-trust">
+        <div class="pq-inner">
+            <div class="pq-header reveal-up">
+                <div class="s-eyebrow center">QUALITY &amp; TRUST</div>
+                <h2 class="s-h2">Certified to Global Standards.<br>Trusted by <span class="red">Industry Leaders.</span></h2>
+                <p class="abt-p" style="text-align: center; max-width: 800px; margin: 20px auto 0;">Quality is embedded into every stage of engineering, manufacturing, testing, and customer support. Through internationally recognized quality systems and rigorous validation processes, Aargee delivers reliable products trusted by OEMs, transportation authorities, and mobility providers.</p>
             </div>
-            <div class="certs-grid">
-                <div class="cert-card">
-                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path
-                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                        </svg></div>
-                    <div class="cert-name">ISO 9001:2015</div>
-                    <div class="cert-desc">Quality Management System ensuring consistent product quality and customer
-                        satisfaction at every stage of design and manufacturing.</div>
+            
+            <div class="pq-grid">
+                <div class="pq-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="pq-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                    </div>
+                    <div class="pq-name">ISO 9001:2015</div>
+                    <div class="pq-desc">A globally recognized framework ensuring process consistency, customer satisfaction, continuous improvement, and product reliability throughout the entire lifecycle.</div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <rect x="1" y="3" width="15" height="13" rx="1" />
-                            <path d="M16 8h4l3 5v3h-7V8z" />
-                            <circle cx="5.5" cy="18.5" r="2.5" />
-                            <circle cx="18.5" cy="18.5" r="2.5" />
-                        </svg></div>
-                    <div class="cert-name">IATF 16949:2016</div>
-                    <div class="cert-desc">International Automotive Quality Management Standard &mdash; the highest
-                        benchmark for automotive manufacturing adopted by leading OEMs.</div>
+                <div class="pq-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="pq-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1" /><path d="M16 8h4l3 5v3h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>
+                    </div>
+                    <div class="pq-name">IATF 16949:2016</div>
+                    <div class="pq-desc">The highest international benchmark for automotive manufacturing, demonstrating our commitment to world-class quality and operational excellence.</div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            <path d="M2 17l10 5 10-5" />
-                            <path d="M2 12l10 5 10-5" />
-                        </svg></div>
-                    <div class="cert-name">In-house R&amp;D</div>
-                    <div class="cert-desc">End-to-end design and manufacturing capabilities &mdash; delivering
-                        engineering excellence from concept to deployment under one roof.</div>
+                <div class="pq-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="pq-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" /><path d="M3 15h18v7H3z" /><circle cx="16" cy="18.5" r="1.5" /></svg>
+                    </div>
+                    <div class="pq-name">Quality Assurance</div>
+                    <div class="pq-desc">Comprehensive inspection, testing, product verification, and quality control procedures ensure every product meets performance expectations before deployment.</div>
                 </div>
-                <div class="cert-card">
-                    <div class="cert-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg></div>
-                    <div class="cert-name">Safety &amp; Compliance</div>
-                    <div class="cert-desc">All products rigorously tested to meet applicable safety, environmental, and
-                        regulatory standards for the transportation sector.</div>
+                <div class="pq-card reveal-up" style="transition-delay: 0.4s;">
+                    <div class="pq-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                    </div>
+                    <div class="pq-name">Safety &amp; Compliance</div>
+                    <div class="pq-desc">Products are rigorously tested to meet transportation industry safety requirements, environmental regulations, and operational standards.</div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- CAPABILITIES -->
-    <section class="abt-capabilities" id="capabilities">
-        <div class="cap-inner">
-            <div class="cap-header">
-                <div class="s-eyebrow center">What We Do</div>
-                <h2 class="s-h2">Core Capabilities &amp; Business Areas</h2>
-            </div>
-            <div class="cap-grid">
-                <div class="cap-cell">
-                    <div class="cap-num">01</div>
-                    <h4>Automotive Lighting Systems</h4>
-                    <p>Premium LED headlamps, tail lamps, lanterns, interior lighting, and solar-powered systems for
-                        buses, trucks, and special vehicles.</p>
+
+            <div class="trust-strip reveal-up" style="transition-delay: 0.5s;">
+                <div class="trust-item">
+                    <div class="t-num"><span class="counter" data-target="45">0</span><span>+</span></div>
+                    <div class="t-lbl">Years of Excellence</div>
                 </div>
-                <div class="cap-cell">
-                    <div class="cap-num">02</div>
-                    <h4>Intelligent Transport Systems</h4>
-                    <p>ITMS platforms including vehicle tracking, route management, fleet analytics, and driver
-                        monitoring for modern public transport.</p>
+                <div class="trust-item">
+                    <div class="t-num"><span>ISO</span>&nbsp;9001</div>
+                    <div class="t-lbl">Certified</div>
                 </div>
-                <div class="cap-cell">
-                    <div class="cap-num">03</div>
-                    <h4>Passenger Information Systems</h4>
-                    <p>Real-time PIS displays, audio announcement systems, LED destination boards, and integrated
-                        solutions for buses and rail.</p>
+                <div class="trust-item">
+                    <div class="t-num"><span>IATF</span>&nbsp;16949</div>
+                    <div class="t-lbl">Certified</div>
                 </div>
-                <div class="cap-cell">
-                    <div class="cap-num">04</div>
-                    <h4>TFT Display Solutions</h4>
-                    <p>High-brightness driver and passenger displays engineered for harsh vehicle environments &mdash;
-                        daylight-readable and vibration-resistant.</p>
-                </div>
-                <div class="cap-cell">
-                    <div class="cap-num">05</div>
-                    <h4>Vehicle Electronics &amp; Controls</h4>
-                    <p>Custom ECUs, body control units, power distribution systems, and vehicle interface electronics
-                        for commercial vehicles.</p>
-                </div>
-                <div class="cap-cell">
-                    <div class="cap-num">06</div>
-                    <h4>Safety &amp; Advanced Technologies</h4>
-                    <p>Driver fatigue monitoring, collision warning, CCTV integration, and advanced safety electronics
-                        ensuring safer journeys.</p>
+                <div class="trust-item">
+                    <div class="t-num"><span class="counter" data-target="100">0</span><span>%</span></div>
+                    <div class="t-lbl">Quality Focus</div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- CTA -->
-    <section class="abt-cta" id="get-in-touch">
-        <div class="cta-inner">
-            <div class="cta-text">
-                <h2>Partner with <span class="red">Aargee</span> &mdash; India's Engineering Experts</h2>
-                <p>Trusted by OEMs, State Transport Undertakings, and mobility integrators for over 45 years. Let's
-                    build smarter transport together.</p>
+
+    <!-- SECTION 4: PREMIUM ENGINEERING -->
+    <section class="premium-engineering" id="engineering-excellence">
+        <div class="pe-inner">
+            <div class="pe-header reveal-up">
+                <div class="s-eyebrow center">ENGINEERING EXCELLENCE</div>
+                <h2 class="s-h2">Engineering the Future of<br><span class="red">Intelligent Mobility</span></h2>
+                <p class="abt-p" style="text-align: center; max-width: 800px; margin: 20px auto 0;">Combining over four decades of engineering expertise with advanced development capabilities, Aargee continuously designs, develops, tests, and manufactures intelligent transportation technologies that improve safety, connectivity, operational efficiency, and passenger experience.</p>
             </div>
-            <div class="cta-btns">
-                <a href="#" class="btn-red" id="abt-quote-btn">Get A Quote <svg width="14" height="14"
-                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg></a>
-                <a href="index.html" class="btn-outline" id="abt-home-btn">Back to Home</a>
+
+            <div class="pe-grid">
+                <div class="pe-card reveal-up" style="transition-delay: 0.1s;">
+                    <div class="pe-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                    </div>
+                    <h3 class="pe-title">In-house R&amp;D</h3>
+                    <p class="pe-desc">Dedicated engineering teams focused on research, innovation, product design, prototyping, and continuous technology advancement.</p>
+                </div>
+                <div class="pe-card reveal-up" style="transition-delay: 0.2s;">
+                    <div class="pe-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
+                    </div>
+                    <h3 class="pe-title">Product Engineering</h3>
+                    <p class="pe-desc">End-to-end product development from concept creation and design through validation, manufacturing, and deployment.</p>
+                </div>
+                <div class="pe-card reveal-up" style="transition-delay: 0.3s;">
+                    <div class="pe-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                    </div>
+                    <h3 class="pe-title">Transportation Electronics</h3>
+                    <p class="pe-desc">Advanced electronic solutions specifically developed for buses, mobility systems, and transportation applications.</p>
+                </div>
+                <div class="pe-card reveal-up" style="transition-delay: 0.4s;">
+                    <div class="pe-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                    </div>
+                    <h3 class="pe-title">Testing &amp; Validation</h3>
+                    <p class="pe-desc">Comprehensive reliability, environmental, functional, and performance testing ensuring dependable operation in real-world conditions.</p>
+                </div>
+                <div class="pe-card reveal-up" style="transition-delay: 0.5s;">
+                    <div class="pe-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                    </div>
+                    <h3 class="pe-title">Embedded Systems &amp; Displays</h3>
+                    <p class="pe-desc">Development of intelligent control systems, passenger information displays, TFT displays, driver information systems, and smart mobility technologies.</p>
+                </div>
+                <div class="pe-card reveal-up" style="transition-delay: 0.6s;">
+                    <div class="pe-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                    </div>
+                    <h3 class="pe-title">Manufacturing Excellence</h3>
+                    <p class="pe-desc">Precision manufacturing supported by advanced production processes, quality-driven operations, and continuous improvement initiatives.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="pe-focus-band">
+            <div class="pe-marquee">
+                <span>Passenger Information Systems</span>
+                <span>Driver Information Systems</span>
+                <span>TFT Display Technologies</span>
+                <span>Intelligent Transport Management Systems</span>
+                <span>Power Electronics</span>
+                <span>USB Charging Solutions</span>
+                <span>Embedded Electronics</span>
+                <span>Mobility Technologies</span>
+            </div>
+            <div class="pe-marquee" aria-hidden="true">
+                <span>Passenger Information Systems</span>
+                <span>Driver Information Systems</span>
+                <span>TFT Display Technologies</span>
+                <span>Intelligent Transport Management Systems</span>
+                <span>Power Electronics</span>
+                <span>USB Charging Solutions</span>
+                <span>Embedded Electronics</span>
+                <span>Mobility Technologies</span>
+            </div>
+        </div>
+
+        <div class="pe-smart-block">
+            <div class="pe-smart-content zoom-in">
+                <h3>From Concept to Deployment</h3>
+                <p>Aargee combines engineering innovation, advanced manufacturing, rigorous testing, and quality excellence to deliver intelligent transportation technologies trusted by OEMs, transport operators, and mobility providers.</p>
             </div>
         </div>
     </section>
-    <!-- FOOTER -->
-    <footer class="abt-footer">
-        <div class="footer-inner">
-            <p>&copy; 2024 Aargee Equipment Pvt. Ltd. All rights reserved.</p>
-            <div class="footer-links"><a href="index.html">Home</a><a href="#">Solutions</a><a href="#">Contact</a>
+<!-- PREMIUM FOOTER -->
+    <footer class="premium-footer">
+        <div class="pf-inner">
+            <div class="pf-grid">
+                <!-- Column 1 -->
+                <div class="pf-col pf-col-1">
+                    <img src="aargee-logo.png" alt="Aargee Equipment Pvt. Ltd." class="pf-logo-img">
+                    <h3>AARGEE EQUIPMENT PVT. LTD.</h3>
+                    <span class="pf-tagline">Engineering Excellence Since 1979</span>
+                    <p>For over four decades, Aargee has been delivering advanced vehicle technologies to customers across domestic and international markets.</p>
+                    <div class="pf-socials">
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
+                        <a href="#" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.236l-8 4.882-8-4.882V6l8 4.882L20 6v2.236z"/></svg></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="pf-col">
+                    <h4>COMPANY</h4>
+                    <ul class="pf-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Engineering &amp; Innovation</a></li>
+                        <li><a href="#">Manufacturing Excellence</a></li>
+                        <li><a href="#">Quality &amp; Certifications</a></li>
+                        <li><a href="#">Industries</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="pf-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="pf-links">
+                        <li><a href="#">Passenger Information Systems</a></li>
+                        <li><a href="#">Driver Information Systems</a></li>
+                        <li><a href="#">TFT Display Solutions</a></li>
+                        <li><a href="#">Vehicle Electronics</a></li>
+                        <li><a href="#">Power &amp; Entertainment Systems</a></li>
+                        <li><a href="#">Intelligent Transport Management</a></li>
+                        <li><a href="#">USB Charging Solutions</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="pf-col">
+                    <h4>INDUSTRIES</h4>
+                    <ul class="pf-links">
+                        <li><a href="#">Public Transportation</a></li>
+                        <li><a href="#">Bus Manufacturers</a></li>
+                        <li><a href="#">State Transport Undertakings</a></li>
+                        <li><a href="#">Automotive</a></li>
+                        <li><a href="#">Smart Mobility</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 5 -->
+                <div class="pf-col">
+                    <h4>CONTACT</h4>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                        </div>
+                        <div class="pf-contact-text">
+                            Bangalore, India
+                        </div>
+                    </div>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                        </div>
+                        <div class="pf-contact-text">
+                            <a href="tel:+91XXXXXXXXXX">+91 XX XXXX XXXX</a>
+                        </div>
+                    </div>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                        </div>
+                        <div class="pf-contact-text">
+                            <a href="mailto:sales@aargee.net">sales@aargee.net</a>
+                        </div>
+                    </div>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                        </div>
+                        <div class="pf-contact-text">
+                            <a href="http://www.aargee.net">www.aargee.net</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pf-copyright">
+                <div class="pf-copy-text">
+                    &copy; 2026 Aargee Equipment Pvt. Ltd. All Rights Reserved.
+                </div>
+                <div class="pf-copy-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Quality Policy</a>
+                    <a href="#">Sitemap</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -1320,6 +1798,38 @@
             if (tls.length) { var o = new IntersectionObserver(function (e) { e.forEach(function (x) { if (x.isIntersecting) { var i = Array.from(tls).indexOf(x.target); setTimeout(function () { x.target.classList.add('tl-visible'); }, i * 100); o.unobserve(x.target); } }); }, { threshold: .1 }); tls.forEach(function (el) { o.observe(el); }); }
             var co = new IntersectionObserver(function (e) { e.forEach(function (x) { if (x.isIntersecting) { var el = x.target, t = parseInt(el.dataset.count, 10), dur = 1800, s = performance.now(); (function tick(n) { var p = Math.min((n - s) / dur, 1); el.textContent = Math.round(t * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(s); co.unobserve(x.target); } }); }, { threshold: .5 });
             document.querySelectorAll('.abt-stat-num[data-count]').forEach(function (el) { co.observe(el); });
+
+            // Premium Sections Animation Logic
+            var reveals = document.querySelectorAll('.reveal-up, .zoom-in');
+            if (reveals.length) {
+                var ro = new IntersectionObserver(function(e) {
+                    e.forEach(function(x) {
+                        if (x.isIntersecting) {
+                            x.target.classList.add('active');
+                            ro.unobserve(x.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+                reveals.forEach(function(el) { ro.observe(el); });
+            }
+
+            var premiumCounters = document.querySelectorAll('.counter[data-target]');
+            if (premiumCounters.length) {
+                var cObs = new IntersectionObserver(function(e) {
+                    e.forEach(function(x) {
+                        if (x.isIntersecting) {
+                            var el = x.target, t = parseInt(el.dataset.target, 10), dur = 2200, s = performance.now();
+                            (function tick(n) {
+                                var p = Math.min((n - s) / dur, 1);
+                                el.textContent = Math.round(t * (1 - Math.pow(1 - p, 3)));
+                                if (p < 1) requestAnimationFrame(tick);
+                            })(s);
+                            cObs.unobserve(el);
+                        }
+                    });
+                }, { threshold: 0.5 });
+                premiumCounters.forEach(function(el) { cObs.observe(el); });
+            }
         });
     </script>
 </body>

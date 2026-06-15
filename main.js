@@ -179,3 +179,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     haCounters.forEach(el => haCounterObserver.observe(el));
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+// Premium Sections Animation Logic
+            var reveals = document.querySelectorAll('.reveal-up, .zoom-in');
+            if (reveals.length) {
+                var ro = new IntersectionObserver(function(e) {
+                    e.forEach(function(x) {
+                        if (x.isIntersecting) {
+                            x.target.classList.add('active');
+                            ro.unobserve(x.target);
+                        }
+                    });
+                }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+                reveals.forEach(function(el) { ro.observe(el); });
+            }
+});
+

@@ -1396,3 +1396,206 @@ button:focus-visible {
     .ha-sep { display: none; }
 }
 
+
+
+/* -------------------------------------
+           PREMIUM CORPORATE FOOTER (Integrated CTA)
+           ------------------------------------- */
+        .premium-footer {
+            background: #0A0A0A;
+            border-top: 2px solid #C8102E;
+            padding: 30px 60px 16px;
+            position: relative;
+            color: rgba(255, 255, 255, 0.6);
+            overflow: hidden;
+        }
+        .premium-footer::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+        .premium-footer::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200,16,46,0.3), transparent);
+        }
+        .pf-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* 5-Column Grid */
+        .pf-grid {
+            display: grid;
+            grid-template-columns: 2.2fr 1fr 1fr 1fr 1.5fr;
+            gap: 32px;
+            margin-bottom: 10px;
+        }
+        .pf-col h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 0 12px;
+            letter-spacing: 0.02em;
+        }
+        .pf-col-1 h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 800;
+            color: #fff;
+            margin: 0 0 8px;
+            letter-spacing: -0.01em;
+        }
+        .pf-logo-img {
+            max-width: 200px;
+            height: auto;
+            margin-bottom: 16px;
+            display: block;
+        }
+        .pf-col-1 .pf-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: #C8102E;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .pf-col-1 p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            max-width: 340px;
+        }
+        
+        .pf-socials {
+            display: flex;
+            gap: 12px;
+        }
+        .pf-socials a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.06);
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        .pf-socials a:hover {
+            background: #C8102E;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
+        }
+        .pf-socials a svg {
+            width: 16px;
+            height: 16px;
+            fill: currentColor;
+        }
+
+        .pf-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .pf-links li {
+            margin-bottom: 8px;
+        }
+        .pf-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+        }
+        .pf-links a::before {
+            content: '→';
+            color: #C8102E;
+            margin-right: 6px;
+            opacity: 0;
+            transform: translateX(-10px);
+            transition: all 0.3s ease;
+            font-size: 1rem;
+        }
+        .pf-links a:hover {
+            color: #fff;
+            transform: translateX(4px);
+        }
+        .pf-links a:hover::before {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .pf-contact-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+        .pf-contact-icon {
+            color: #C8102E;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .pf-contact-icon svg {
+            width: 18px;
+            height: 18px;
+        }
+        .pf-contact-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .pf-contact-text a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .pf-contact-text a:hover {
+            color: #fff;
+        }
+
+        /* Copyright Bar */
+        .pf-copyright {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+        }
+        .pf-copy-links {
+            display: flex;
+            gap: 20px;
+        }
+        .pf-copy-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .pf-copy-links a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 1200px) {
+            .pf-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        }
+        @media (max-width: 768px) {
+            .pf-grid { grid-template-columns: 1fr; gap: 32px; }
+            .pf-copyright { flex-direction: column; gap: 12px; text-align: center; }
+        }
