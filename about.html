@@ -1395,112 +1395,594 @@
                 display: none;
             }
         }
-    
-/* ====================================================================
+
+        /* ====================================================================
    ENTERPRISE ABOUT PAGE UPGRADE CSS
    ==================================================================== */
-.fade-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
-.fade-up.visible { opacity: 1; transform: translateY(0); }
-.stagger-1 { transition-delay: 0.1s; }
-.stagger-2 { transition-delay: 0.2s; }
-.stagger-3 { transition-delay: 0.3s; }
-.stagger-4 { transition-delay: 0.4s; }
-.stagger-5 { transition-delay: 0.5s; }
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
 
-.section-padding { padding: 100px 20px; }
-.container { max-width: 1400px; margin: 0 auto; width: 100%; }
-.section-label { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; color: #C8102E; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; display: inline-block; position: relative; }
-.section-label::after { content: ''; position: absolute; top: 50%; left: 100%; margin-left: 16px; width: 40px; height: 1px; background: #C8102E; }
-.section-title { font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 32px; color: #111827; }
-.section-subtitle { font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.7; color: #4B5563; max-width: 800px; margin-bottom: 64px; }
-.dark-section .section-title { color: #fff; }
-.dark-section .section-subtitle { color: rgba(255, 255, 255, 0.7); }
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* SECTION 1: ABOUT AARGEE */
-.abt-heritage-new { position: relative; background: #fff; }
-.heritage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-.heritage-content p { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #4B5563; line-height: 1.7; margin-bottom: 20px; }
-.heritage-img-wrapper { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
-.heritage-img-wrapper img { width: 100%; height: auto; display: block; transition: transform 0.8s ease; }
-.heritage-img-wrapper:hover img { transform: scale(1.05); }
-.red-accent-divider { width: 80px; height: 4px; background: #C8102E; margin: 40px 0; border-radius: 2px; }
+        .stagger-1 {
+            transition-delay: 0.1s;
+        }
 
-/* SECTION 2: STATS */
-.stats-container { max-width: 1400px; margin: 0 auto; position: relative; top: -60px; z-index: 10; padding: 0 20px; }
-.stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px); padding: 40px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 1px solid rgba(255,255,255,0.5); }
-.stat-card { text-align: center; transition: all 0.4s ease; padding: 20px; border-radius: 12px; }
-.stat-card:hover { transform: translateY(-8px); background: #fff; box-shadow: 0 10px 30px rgba(200,16,46,0.08); }
-.stat-value { font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: #C8102E; margin-bottom: 8px; line-height: 1; display: flex; justify-content: center; align-items: center; }
-.stat-label { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 4px; }
-.stat-sub { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #6B7280; }
+        .stagger-2 {
+            transition-delay: 0.2s;
+        }
 
-/* SECTION 3: QUALITY */
-.quality-section { background: #fff; padding-top: 40px; padding-bottom: 100px; }
-.quality-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
-.quality-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 48px; transition: all 0.4s ease; position: relative; overflow: hidden; }
-.quality-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #C8102E; transform: scaleY(0); transform-origin: bottom; transition: transform 0.4s ease; }
-.quality-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(200, 16, 46, 0.08); border-color: transparent; }
-.quality-card:hover::before { transform: scaleY(1); }
-.qc-icon { width: 64px; height: 64px; background: rgba(200, 16, 46, 0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #C8102E; margin-bottom: 32px; transition: all 0.4s ease; }
-.quality-card:hover .qc-icon { background: #C8102E; color: #fff; transform: scale(1.1); }
-.qc-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 16px; }
-.qc-desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #4B5563; line-height: 1.6; }
+        .stagger-3 {
+            transition-delay: 0.3s;
+        }
 
-/* SECTION 4: TRUSTED LEADERS */
-.trusted-section { background: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; padding: 80px 0; overflow: hidden; }
-.trusted-header { text-align: center; margin-bottom: 48px; }
-.trusted-header h2 { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 700; color: #111827; }
-.logo-track-wrapper { position: relative; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden; }
-.logo-track { display: flex; align-items: center; gap: 80px; width: max-content; animation: scrollLogos 30s linear infinite; padding: 0 40px; }
-.logo-track:hover { animation-play-state: paused; }
-.partner-logo { font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; color: #9CA3AF; letter-spacing: 1px; transition: all 0.4s ease; white-space: nowrap; cursor: default; filter: grayscale(100%); opacity: 0.6; }
-.partner-logo:hover { color: #C8102E; transform: scale(1.05); filter: grayscale(0%); opacity: 1; }
-@keyframes scrollLogos { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 40px)); } }
+        .stagger-4 {
+            transition-delay: 0.4s;
+        }
 
-/* SECTION 5: ENGINEERING */
-.engineering-section { background: #08080a; position: relative; padding: 120px 0 0 0; color: #fff; overflow: hidden; }
-.eng-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; z-index: 0; }
-.eng-content { position: relative; z-index: 2; }
-.eng-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
-.eng-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 40px; backdrop-filter: blur(10px); transition: all 0.4s ease; }
-.eng-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(200, 16, 46, 0.4); transform: translateY(-8px); box-shadow: 0 10px 30px rgba(200, 16, 46, 0.15); }
-.eng-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
-.eng-card p { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+        .stagger-5 {
+            transition-delay: 0.5s;
+        }
 
-.tech-band-container { background: #C8102E; padding: 24px 0; overflow: hidden; position: relative; z-index: 2; width: 100vw; margin-left: calc(-50vw + 50%); }
-.tech-band { display: flex; gap: 40px; width: max-content; animation: scrollTech 25s linear infinite; }
-.tech-band:hover { animation-play-state: paused; }
-.tech-item { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; white-space: nowrap; display: flex; align-items: center; gap: 20px; letter-spacing: 1px; }
-.tech-item::after { content: '•'; opacity: 0.5; }
-@keyframes scrollTech { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 20px)); } }
+        .section-padding {
+            padding: 100px 20px;
+        }
 
-.feature-block { margin: 80px 0; position: relative; border-radius: 24px; overflow: hidden; padding: 80px; background: linear-gradient(135deg, rgba(200,16,46,0.1) 0%, rgba(0,0,0,0) 100%); border: 1px solid rgba(200,16,46,0.2); backdrop-filter: blur(10px); }
-.feature-block h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3vw, 3rem); font-weight: 800; margin-bottom: 24px; color: #fff; }
-.feature-block p { font-family: 'Inter', sans-serif; font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 800px; line-height: 1.6; }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            width: 100%;
+        }
 
-/* SECTION 6: WHY AARGEE */
-.why-section { background: #fff; padding: 100px 0; }
-.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 80px; }
-.why-card { padding: 40px; background: #f9fafb; border-radius: 16px; border: 1px solid transparent; transition: all 0.3s ease; }
-.why-card:hover { background: #fff; border-color: #C8102E; box-shadow: 0 10px 30px rgba(200, 16, 46, 0.05); transform: translateY(-5px); }
-.why-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px; }
-.why-card p { font-family: 'Inter', sans-serif; font-size: 1rem; color: #4B5563; line-height: 1.6; }
+        .section-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #C8102E;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 24px;
+            display: inline-block;
+            position: relative;
+        }
 
-.why-banner { background: linear-gradient(135deg, #C8102E 0%, #8a0b1f 100%); border-radius: 20px; padding: 60px; text-align: center; color: #fff; box-shadow: 0 20px 40px rgba(200, 16, 46, 0.2); }
-.why-banner h2 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 800; margin-bottom: 24px; }
-.why-banner p { font-family: 'Inter', sans-serif; font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+        .section-label::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 100%;
+            margin-left: 16px;
+            width: 40px;
+            height: 1px;
+            background: #C8102E;
+        }
 
-@media (max-width: 1024px) {
-    .heritage-grid, .quality-grid { grid-template-columns: 1fr; }
-    .stats-grid { grid-template-columns: repeat(2, 1fr); }
-    .eng-cards, .why-grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 768px) {
-    .stats-grid { grid-template-columns: 1fr; }
-    .eng-cards, .why-grid { grid-template-columns: 1fr; }
-    .feature-block, .why-banner { padding: 40px 20px; }
-}
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 32px;
+            color: #111827;
+        }
 
+        .section-subtitle {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.125rem;
+            line-height: 1.7;
+            color: #4B5563;
+            max-width: 800px;
+            margin-bottom: 64px;
+        }
+
+        .dark-section .section-title {
+            color: #fff;
+        }
+
+        .dark-section .section-subtitle {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* SECTION 1: ABOUT AARGEE */
+        .abt-heritage-new {
+            position: relative;
+            background: #fff;
+        }
+
+        .heritage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .heritage-content p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.1rem;
+            color: #4B5563;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .heritage-img-wrapper {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .heritage-img-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.8s ease;
+        }
+
+        .heritage-img-wrapper:hover img {
+            transform: scale(1.05);
+        }
+
+        .red-accent-divider {
+            width: 80px;
+            height: 4px;
+            background: #C8102E;
+            margin: 40px 0;
+            border-radius: 2px;
+        }
+
+        /* SECTION 2: STATS */
+        .stats-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            position: relative;
+            top: -60px;
+            z-index: 10;
+            padding: 0 20px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 24px;
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(16px);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .stat-card {
+            text-align: center;
+            transition: all 0.4s ease;
+            padding: 20px;
+            border-radius: 12px;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-8px);
+            background: #fff;
+            box-shadow: 0 10px 30px rgba(200, 16, 46, 0.08);
+        }
+
+        .stat-value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: #C8102E;
+            margin-bottom: 8px;
+            line-height: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .stat-label {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 4px;
+        }
+
+        .stat-sub {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            color: #6B7280;
+        }
+
+        /* SECTION 3: QUALITY */
+        .quality-section {
+            background: #fff;
+            padding-top: 40px;
+            padding-bottom: 100px;
+        }
+
+        .quality-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 32px;
+        }
+
+        .quality-card {
+            background: #fff;
+            border: 1px solid #e5e7eb;
+            border-radius: 16px;
+            padding: 48px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .quality-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #C8102E;
+            transform: scaleY(0);
+            transform-origin: bottom;
+            transition: transform 0.4s ease;
+        }
+
+        .quality-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(200, 16, 46, 0.08);
+            border-color: transparent;
+        }
+
+        .quality-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .qc-icon {
+            width: 64px;
+            height: 64px;
+            background: rgba(200, 16, 46, 0.05);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C8102E;
+            margin-bottom: 32px;
+            transition: all 0.4s ease;
+        }
+
+        .quality-card:hover .qc-icon {
+            background: #C8102E;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .qc-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 16px;
+        }
+
+        .qc-desc {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.05rem;
+            color: #4B5563;
+            line-height: 1.6;
+        }
+
+        /* SECTION 4: TRUSTED LEADERS */
+        .trusted-section {
+            background: #f9fafb;
+            border-top: 1px solid #e5e7eb;
+            border-bottom: 1px solid #e5e7eb;
+            padding: 80px 0;
+            overflow: hidden;
+        }
+
+        .trusted-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .trusted-header h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .logo-track-wrapper {
+            position: relative;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            overflow: hidden;
+        }
+
+        .logo-track {
+            display: flex;
+            align-items: center;
+            gap: 80px;
+            width: max-content;
+            animation: scrollLogos 30s linear infinite;
+            padding: 0 40px;
+        }
+
+        .logo-track:hover {
+            animation-play-state: paused;
+        }
+
+        .partner-logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.75rem;
+            font-weight: 800;
+            color: #9CA3AF;
+            letter-spacing: 1px;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            cursor: default;
+            filter: grayscale(100%);
+            opacity: 0.6;
+        }
+
+        .partner-logo:hover {
+            color: #C8102E;
+            transform: scale(1.05);
+            filter: grayscale(0%);
+            opacity: 1;
+        }
+
+        @keyframes scrollLogos {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 40px));
+            }
+        }
+
+        /* SECTION 5: ENGINEERING */
+        .engineering-section {
+            background: #08080a;
+            position: relative;
+            padding: 120px 0 0 0;
+            color: #fff;
+            overflow: hidden;
+        }
+
+        .eng-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 0;
+        }
+
+        .eng-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .eng-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-bottom: 80px;
+        }
+
+        .eng-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 40px;
+            backdrop-filter: blur(10px);
+            transition: all 0.4s ease;
+        }
+
+        .eng-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(200, 16, 46, 0.4);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(200, 16, 46, 0.15);
+        }
+
+        .eng-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: #fff;
+        }
+
+        .eng-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        .tech-band-container {
+            background: #C8102E;
+            padding: 24px 0;
+            overflow: hidden;
+            position: relative;
+            z-index: 2;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+        }
+
+        .tech-band {
+            display: flex;
+            gap: 40px;
+            width: max-content;
+            animation: scrollTech 25s linear infinite;
+        }
+
+        .tech-band:hover {
+            animation-play-state: paused;
+        }
+
+        .tech-item {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #fff;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            letter-spacing: 1px;
+        }
+
+        .tech-item::after {
+            content: '•';
+            opacity: 0.5;
+        }
+
+        @keyframes scrollTech {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(calc(-50% - 20px));
+            }
+        }
+
+        .feature-block {
+            margin: 80px 0;
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+            padding: 80px;
+            background: linear-gradient(135deg, rgba(200, 16, 46, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+            border: 1px solid rgba(200, 16, 46, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        .feature-block h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2rem, 3vw, 3rem);
+            font-weight: 800;
+            margin-bottom: 24px;
+            color: #fff;
+        }
+
+        .feature-block p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.7);
+            max-width: 800px;
+            line-height: 1.6;
+        }
+
+        /* SECTION 6: WHY AARGEE */
+        .why-section {
+            background: #fff;
+            padding: 100px 0;
+        }
+
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+            margin-bottom: 80px;
+        }
+
+        .why-card {
+            padding: 40px;
+            background: #f9fafb;
+            border-radius: 16px;
+            border: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .why-card:hover {
+            background: #fff;
+            border-color: #C8102E;
+            box-shadow: 0 10px 30px rgba(200, 16, 46, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .why-card h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 12px;
+        }
+
+        .why-card p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            color: #4B5563;
+            line-height: 1.6;
+        }
+
+        .why-banner {
+            background: linear-gradient(135deg, #C8102E 0%, #8a0b1f 100%);
+            border-radius: 20px;
+            padding: 60px;
+            text-align: center;
+            color: #fff;
+            box-shadow: 0 20px 40px rgba(200, 16, 46, 0.2);
+        }
+
+        .why-banner h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 24px;
+        }
+
+        .why-banner p {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 1024px) {
+
+            .heritage-grid,
+            .quality-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .eng-cards,
+            .why-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .eng-cards,
+            .why-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .feature-block,
+            .why-banner {
+                padding: 40px 20px;
+            }
+        }
     </style>
 </head>
 
@@ -1571,7 +2053,8 @@
             <nav class="abt-breadcrumb"><a href="index.html">Home</a><span> › </span><span>About Us</span></nav>
             <div class="abt-eyebrow-hero">Our Story</div>
             <h1 class="abt-hero-title">About <span class="red">Aargee</span><br>Equipment Pvt. Ltd.</h1>
-            <p class="abt-hero-sub">Trusted Engineering & Manufacturing Partner to the Transportation Industry Since 1979.</p>
+            <p class="abt-hero-sub">Trusted Engineering & Manufacturing Partner to the Transportation Industry Since
+                1979.</p>
         </div>
     </section>
 
@@ -1583,18 +2066,22 @@
                     <div class="abt-lbl">Who We Are</div>
                     <h2 class="abt-h2">Engineering Excellence<br>Since 1979</h2>
                     <div class="red-accent-divider"></div>
-                    <p class="abt-para abt-lead">Founded in 1979, Aargee Equipment Pvt. Ltd. has evolved into one of India's trusted engineering and manufacturing organizations serving the transportation and mobility sector.</p>
-                    <p class="abt-para">Driven by innovation, engineering expertise, and manufacturing excellence, Aargee has built a reputation for delivering reliable technologies and creating long-term partnerships with OEMs, transportation corporations, infrastructure organizations, and mobility providers.</p>
-                    <p class="abt-para">For more than four decades, the company has contributed to safer, smarter, and more connected transportation ecosystems through continuous innovation and customer-focused engineering — across Roadways, Railways, Waterways, and Airways.</p>
+                    <p class="abt-para abt-lead">Founded in 1979, Aargee Equipment Pvt. Ltd. has evolved into one of
+                        India's trusted engineering and manufacturing organizations serving the transportation and
+                        mobility sector.</p>
+                    <p class="abt-para">Driven by innovation, engineering expertise, and manufacturing excellence,
+                        Aargee has built a reputation for delivering reliable technologies and creating long-term
+                        partnerships with OEMs, transportation corporations, infrastructure organizations, and mobility
+                        providers.</p>
+                    <p class="abt-para">For more than four decades, the company has contributed to safer, smarter, and
+                        more connected transportation ecosystems through continuous innovation and customer-focused
+                        engineering — across Roadways, Railways, Waterways, and Airways.</p>
                 </div>
                 <div class="abt-story-visual fade-up d2">
                     <div class="abt-img-frame">
-                        <img src="about-heritage.png" alt="Aargee Manufacturing Facility" style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
+                        <img src="about-heritage.png" alt="Aargee Manufacturing Facility"
+                            style="width:100%;height:100%;object-fit:cover;" onerror="this.style.display='none'">
                         <div class="abt-img-overlay">
-                            <div class="abt-img-badge">
-                                <span class="abt-img-year">1979</span>
-                                <span class="abt-img-caption">Founded</span>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -1608,12 +2095,18 @@
             <div class="fade-up" style="text-align:center;margin-bottom:64px;">
                 <div class="abt-lbl" style="justify-content:center;">Trust & Credentials</div>
                 <h2 class="abt-h2">A Legacy of Trust &amp; Excellence</h2>
-                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;margin:0 auto;line-height:1.7;">A track record built through engineering integrity, quality commitment, and long-term partnerships with India's leading transportation organizations.</p>
+                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;margin:0 auto;line-height:1.7;">A track record
+                    built through engineering integrity, quality commitment, and long-term partnerships with India's
+                    leading transportation organizations.</p>
             </div>
             <div class="abt-trust-grid">
                 <div class="abt-trust-card fade-up d1">
                     <div class="abt-trust-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M12 14v8M8 18h8"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="12" cy="8" r="6" />
+                            <path d="M12 14v8M8 18h8" />
+                        </svg>
                     </div>
                     <div class="abt-trust-value"><span class="trust-counter" data-target="1979">0</span></div>
                     <div class="abt-trust-label">Established</div>
@@ -1621,15 +2114,23 @@
                 </div>
                 <div class="abt-trust-card fade-up d2">
                     <div class="abt-trust-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
                     </div>
-                    <div class="abt-trust-value"><span class="trust-counter" data-target="45">0</span><span style="font-size:2rem;color:#C8102E;font-weight:900;line-height:1;">+</span></div>
+                    <div class="abt-trust-value"><span class="trust-counter" data-target="45">0</span><span
+                            style="font-size:2rem;color:#C8102E;font-weight:900;line-height:1;">+</span></div>
                     <div class="abt-trust-label">Years of Excellence</div>
                     <div class="abt-trust-sub">Industry Experience</div>
                 </div>
                 <div class="abt-trust-card fade-up d3">
                     <div class="abt-trust-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <polyline points="9 12 11 14 15 10" />
+                        </svg>
                     </div>
                     <div class="abt-trust-value" style="font-size:1.6rem;letter-spacing:-0.02em;">ISO 9001:2015</div>
                     <div class="abt-trust-label">Quality Management</div>
@@ -1637,7 +2138,11 @@
                 </div>
                 <div class="abt-trust-card fade-up d4">
                     <div class="abt-trust-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
                     </div>
                     <div class="abt-trust-value" style="font-size:1.5rem;letter-spacing:-0.02em;">IATF 16949</div>
                     <div class="abt-trust-label">Automotive Standard</div>
@@ -1645,7 +2150,13 @@
                 </div>
                 <div class="abt-trust-card fade-up d5">
                     <div class="abt-trust-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                        </svg>
                     </div>
                     <div class="abt-trust-value" style="font-size:1.8rem;letter-spacing:-0.02em;">ARAI</div>
                     <div class="abt-trust-label">Approved</div>
@@ -1653,7 +2164,11 @@
                 </div>
                 <div class="abt-trust-card fade-up d6">
                     <div class="abt-trust-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                            <polyline points="9 22 9 12 15 12 15 22" />
+                        </svg>
                     </div>
                     <div class="abt-trust-value" style="font-size:1.5rem;letter-spacing:-0.02em;">Made in India</div>
                     <div class="abt-trust-label">Proudly Indian</div>
@@ -1673,19 +2188,35 @@
             <div class="abt-vm-grid">
                 <div class="abt-vm-card fade-up d1">
                     <div class="abt-vm-icon">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><line x1="12" y1="2" x2="12" y2="5"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="2" y1="12" x2="5" y2="12"/><line x1="19" y1="12" x2="22" y2="12"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="12" cy="12" r="10" />
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="12" y1="2" x2="12" y2="5" />
+                            <line x1="12" y1="19" x2="12" y2="22" />
+                            <line x1="2" y1="12" x2="5" y2="12" />
+                            <line x1="19" y1="12" x2="22" y2="12" />
+                        </svg>
                     </div>
                     <div class="abt-vm-tag">Our Vision</div>
                     <h3 class="abt-vm-title">Globally Respected Engineering</h3>
-                    <p class="abt-vm-body">To be a globally respected engineering and technology company delivering innovative mobility, transportation, and infrastructure solutions that create safer, smarter, and more connected environments.</p>
+                    <p class="abt-vm-body">To be a globally respected engineering and technology company delivering
+                        innovative mobility, transportation, and infrastructure solutions that create safer, smarter,
+                        and more connected environments.</p>
                 </div>
                 <div class="abt-vm-card fade-up d2" style="background:#08080a;">
                     <div class="abt-vm-icon" style="background:rgba(200,16,46,0.2);">
-                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.8"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.8">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
                     </div>
                     <div class="abt-vm-tag" style="color:#C8102E;border-color:rgba(200,16,46,0.3);">Our Mission</div>
                     <h3 class="abt-vm-title" style="color:#fff;">Engineering for Impact</h3>
-                    <p class="abt-vm-body" style="color:rgba(255,255,255,0.65);">To engineer, manufacture, and deliver reliable, high-quality technologies through innovation, operational excellence, customer focus, and continuous improvement — creating sustainable value for customers, partners, employees, and society.</p>
+                    <p class="abt-vm-body" style="color:rgba(255,255,255,0.65);">To engineer, manufacture, and deliver
+                        reliable, high-quality technologies through innovation, operational excellence, customer focus,
+                        and continuous improvement — creating sustainable value for customers, partners, employees, and
+                        society.</p>
                 </div>
             </div>
         </div>
@@ -1697,38 +2228,80 @@
             <div class="fade-up" style="margin-bottom:64px;">
                 <div class="abt-lbl">Engineering Strengths</div>
                 <h2 class="abt-h2">Engineering &amp;<br>Innovation Culture</h2>
-                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;line-height:1.7;margin-top:16px;">Aargee's engineering capability is built on decades of domain expertise, a culture of continuous innovation, and a commitment to customer-focused development across all transportation sectors.</p>
+                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;line-height:1.7;margin-top:16px;">Aargee's
+                    engineering capability is built on decades of domain expertise, a culture of continuous innovation,
+                    and a commitment to customer-focused development across all transportation sectors.</p>
             </div>
             <div class="abt-cap-grid">
                 <div class="abt-cap-card fade-up d1">
-                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path
+                                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+                        </svg></div>
                     <h3>In-house Research &amp; Development</h3>
-                    <p>Dedicated R&D teams driving product innovation, customization, and technology advancement from concept through delivery.</p>
+                    <p>Dedicated R&D teams driving product innovation, customization, and technology advancement from
+                        concept through delivery.</p>
                 </div>
                 <div class="abt-cap-card fade-up d2">
-                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg></div>
                     <h3>Engineering Excellence</h3>
-                    <p>Transportation-domain engineering expertise accumulated over four decades, embedded across design, validation, and manufacturing.</p>
+                    <p>Transportation-domain engineering expertise accumulated over four decades, embedded across
+                        design, validation, and manufacturing.</p>
                 </div>
                 <div class="abt-cap-card fade-up d3">
-                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg></div>
+                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
+                            <polyline points="17 6 23 6 23 12" />
+                        </svg></div>
                     <h3>Continuous Innovation</h3>
-                    <p>A systematic innovation culture ensuring products evolve to meet the emerging demands of intelligent and connected transportation.</p>
+                    <p>A systematic innovation culture ensuring products evolve to meet the emerging demands of
+                        intelligent and connected transportation.</p>
                 </div>
                 <div class="abt-cap-card fade-up d4">
-                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <rect x="4" y="4" width="16" height="16" rx="2" />
+                            <rect x="9" y="9" width="6" height="6" />
+                            <line x1="9" y1="1" x2="9" y2="4" />
+                            <line x1="15" y1="1" x2="15" y2="4" />
+                            <line x1="9" y1="20" x2="9" y2="23" />
+                            <line x1="15" y1="20" x2="15" y2="23" />
+                            <line x1="20" y1="9" x2="23" y2="9" />
+                            <line x1="20" y1="14" x2="23" y2="14" />
+                            <line x1="1" y1="9" x2="4" y2="9" />
+                            <line x1="1" y1="14" x2="4" y2="14" />
+                        </svg></div>
                     <h3>Advanced Manufacturing Technologies</h3>
-                    <p>State-of-the-art manufacturing processes, automated production lines, and precision fabrication supporting scalable, consistent delivery.</p>
+                    <p>State-of-the-art manufacturing processes, automated production lines, and precision fabrication
+                        supporting scalable, consistent delivery.</p>
                 </div>
                 <div class="abt-cap-card fade-up d5">
-                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <polyline points="9 12 11 14 15 10" />
+                        </svg></div>
                     <h3>Quality-Driven Engineering</h3>
-                    <p>Every engineering decision is guided by quality standards — from component selection through assembly, testing, and final validation.</p>
+                    <p>Every engineering decision is guided by quality standards — from component selection through
+                        assembly, testing, and final validation.</p>
                 </div>
                 <div class="abt-cap-card fade-up d6">
-                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+                    <div class="abt-cap-icon"><svg width="30" height="30" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
+                        </svg></div>
                     <h3>Future Mobility Readiness</h3>
-                    <p>Engineering capabilities continuously aligned with next-generation mobility trends — electrification, connectivity, and smart transportation infrastructure.</p>
+                    <p>Engineering capabilities continuously aligned with next-generation mobility trends —
+                        electrification, connectivity, and smart transportation infrastructure.</p>
                 </div>
             </div>
         </div>
@@ -1736,12 +2309,20 @@
 
     <!-- ==================== SECTION 5 – MANUFACTURING ==================== -->
     <section id="manufacturing" style="background:#08080a;padding:100px 0;position:relative;overflow:hidden;">
-        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;z-index:0;"></div>
+        <div
+            style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;z-index:0;">
+        </div>
         <div class="container" style="position:relative;z-index:1;">
             <div class="fade-up" style="text-align:center;margin-bottom:64px;">
                 <div class="abt-lbl" style="color:#C8102E;justify-content:center;">Infrastructure</div>
                 <h2 class="abt-h2" style="color:#fff;">Manufacturing Excellence<br>at Scale</h2>
-                <p style="font-size:1.1rem;color:rgba(255,255,255,0.6);max-width:780px;margin:16px auto 0;line-height:1.75;">Aargee's manufacturing ecosystem spans more than 200,000 sq.ft and is supported by advanced production facilities, automated manufacturing processes, dedicated assembly operations, precision machining capabilities, powder coating infrastructure, and a dedicated in-house research and development center — enabling quality, consistency, reliability, and scalability across every stage.</p>
+                <p
+                    style="font-size:1.1rem;color:rgba(255,255,255,0.6);max-width:780px;margin:16px auto 0;line-height:1.75;">
+                    Aargee's manufacturing ecosystem spans more than 200,000 sq.ft and is supported by advanced
+                    production facilities, automated manufacturing processes, dedicated assembly operations, precision
+                    machining capabilities, powder coating infrastructure, and a dedicated in-house research and
+                    development center — enabling quality, consistency, reliability, and scalability across every stage.
+                </p>
             </div>
             <div class="abt-mfg-grid">
                 <div class="abt-mfg-stat fade-up d1">
@@ -1778,31 +2359,38 @@
             <div class="fade-up" style="text-align:center;margin-bottom:64px;">
                 <div class="abt-lbl" style="justify-content:center;">Industry Reach</div>
                 <h2 class="abt-h2">Solutions Across Every Mode<br>of Transportation</h2>
-                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;margin:16px auto 0;line-height:1.7;">Aargee's technologies and solutions serve transportation ecosystems across all major mobility modes — connecting people and infrastructure across India and beyond.</p>
+                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;margin:16px auto 0;line-height:1.7;">Aargee's
+                    technologies and solutions serve transportation ecosystems across all major mobility modes —
+                    connecting people and infrastructure across India and beyond.</p>
             </div>
             <div class="abt-mode-grid">
                 <div class="abt-mode-card fade-up d1">
                     <div class="abt-mode-emoji">🚍</div>
                     <h3 class="abt-mode-title">Roadways</h3>
-                    <p class="abt-mode-desc">Supporting public transportation, buses, coaches, and mobility infrastructure through intelligent electronic solutions and passenger communication technologies.</p>
+                    <p class="abt-mode-desc">Supporting public transportation, buses, coaches, and mobility
+                        infrastructure through intelligent electronic solutions and passenger communication
+                        technologies.</p>
                     <div class="abt-mode-tag">Primary Focus</div>
                 </div>
                 <div class="abt-mode-card fade-up d2">
                     <div class="abt-mode-emoji">🚆</div>
                     <h3 class="abt-mode-title">Railways</h3>
-                    <p class="abt-mode-desc">Supporting passenger communication, information systems, safety technologies, and transportation infrastructure for rail networks.</p>
+                    <p class="abt-mode-desc">Supporting passenger communication, information systems, safety
+                        technologies, and transportation infrastructure for rail networks.</p>
                     <div class="abt-mode-tag">Growing Presence</div>
                 </div>
                 <div class="abt-mode-card fade-up d3">
                     <div class="abt-mode-emoji">🚢</div>
                     <h3 class="abt-mode-title">Waterways</h3>
-                    <p class="abt-mode-desc">Supporting operational communication, information technologies, and mobility infrastructure for waterborne transportation systems.</p>
+                    <p class="abt-mode-desc">Supporting operational communication, information technologies, and
+                        mobility infrastructure for waterborne transportation systems.</p>
                     <div class="abt-mode-tag">Expanding</div>
                 </div>
                 <div class="abt-mode-card fade-up d4">
                     <div class="abt-mode-emoji">✈️</div>
                     <h3 class="abt-mode-title">Airways</h3>
-                    <p class="abt-mode-desc">Supporting information systems, safety technologies, and transportation infrastructure across aviation and airport environments.</p>
+                    <p class="abt-mode-desc">Supporting information systems, safety technologies, and transportation
+                        infrastructure across aviation and airport environments.</p>
                     <div class="abt-mode-tag">Future Ready</div>
                 </div>
             </div>
@@ -1811,7 +2399,9 @@
 
     <!-- ==================== SECTION 7 - JOURNEY TIMELINE ==================== -->
     <section id="journey" style="background:#08080a;padding:100px 0;position:relative;overflow:hidden;">
-        <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;z-index:0;"></div>
+        <div
+            style="position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,0.02) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,0.02) 1px,transparent 1px);background-size:40px 40px;z-index:0;">
+        </div>
         <div class="container" style="position:relative;z-index:1;">
             <div class="fade-up" style="text-align:center;margin-bottom:80px;">
                 <div class="abt-lbl" style="justify-content:center;color:#C8102E;">Our Journey</div>
@@ -1830,7 +2420,8 @@
                 <div class="abt-tl-right">
                     <div class="abt-tl-card">
                         <h3>Company Founded</h3>
-                        <p>Aargee Equipment Pvt. Ltd. established in Bangalore with a vision to serve India's growing transportation industry through precision engineering and manufacturing.</p>
+                        <p>Aargee Equipment Pvt. Ltd. established in Bangalore with a vision to serve India's growing
+                            transportation industry through precision engineering and manufacturing.</p>
                     </div>
                 </div>
             </div>
@@ -1839,7 +2430,8 @@
                 <div class="abt-tl-left">
                     <div class="abt-tl-card">
                         <h3>Manufacturing Expansion</h3>
-                        <p>Significant expansion of manufacturing operations, infrastructure investments, and strengthening of engineering capabilities to serve a wider customer base.</p>
+                        <p>Significant expansion of manufacturing operations, infrastructure investments, and
+                            strengthening of engineering capabilities to serve a wider customer base.</p>
                     </div>
                 </div>
                 <div class="abt-tl-mid">
@@ -1858,7 +2450,8 @@
                 <div class="abt-tl-right">
                     <div class="abt-tl-card">
                         <h3>Industry Growth</h3>
-                        <p>Growth in transportation industry presence, development of new product lines, and establishment of long-term partnerships with leading OEMs and transport corporations.</p>
+                        <p>Growth in transportation industry presence, development of new product lines, and
+                            establishment of long-term partnerships with leading OEMs and transport corporations.</p>
                     </div>
                 </div>
             </div>
@@ -1867,7 +2460,8 @@
                 <div class="abt-tl-left">
                     <div class="abt-tl-card">
                         <h3>Quality &amp; Engineering Systems</h3>
-                        <p>Strengthened quality management systems, achieved international certifications, and expanded engineering capabilities to support intelligent transportation technologies.</p>
+                        <p>Strengthened quality management systems, achieved international certifications, and expanded
+                            engineering capabilities to support intelligent transportation technologies.</p>
                     </div>
                 </div>
                 <div class="abt-tl-mid">
@@ -1886,7 +2480,9 @@
                 <div class="abt-tl-right">
                     <div class="abt-tl-card" style="border-top:3px solid #C8102E;">
                         <h3>Trusted Engineering Partner</h3>
-                        <p>A trusted engineering partner across transportation sectors delivering integrated technologies, intelligent mobility solutions, and long-term value to customers across India.</p>
+                        <p>A trusted engineering partner across transportation sectors delivering integrated
+                            technologies, intelligent mobility solutions, and long-term value to customers across India.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -1895,12 +2491,15 @@
                 <div class="abt-tl-left">
                     <div class="abt-tl-card" style="border-style:dashed;background:transparent;">
                         <h3>Next-Generation Mobility</h3>
-                        <p>Driving innovation for next-generation intelligent mobility - connected vehicles, smart infrastructure, electrification, and advanced transportation ecosystems.</p>
+                        <p>Driving innovation for next-generation intelligent mobility - connected vehicles, smart
+                            infrastructure, electrification, and advanced transportation ecosystems.</p>
                     </div>
                 </div>
                 <div class="abt-tl-mid">
-                    <div class="abt-tl-year-badge" style="color:#9CA3AF;border-color:rgba(255,255,255,0.2);">Future</div>
-                    <div class="abt-tl-dot" style="background:transparent;border:2px dashed #C8102E;box-shadow:none;"></div>
+                    <div class="abt-tl-year-badge" style="color:#9CA3AF;border-color:rgba(255,255,255,0.2);">Future
+                    </div>
+                    <div class="abt-tl-dot" style="background:transparent;border:2px dashed #C8102E;box-shadow:none;">
+                    </div>
                 </div>
                 <div class="abt-tl-right"></div>
             </div>
@@ -1917,27 +2516,52 @@
             <div class="abt-strength-grid">
                 <div class="abt-strength-card fade-up d1">
                     <div class="abt-strength-num">01</div>
-                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg></div>
                     <h3>Engineering Excellence</h3>
-                    <p>Decades of transportation-focused engineering expertise — from design and development through testing, validation, and deployment.</p>
+                    <p>Decades of transportation-focused engineering expertise — from design and development through
+                        testing, validation, and deployment.</p>
                 </div>
                 <div class="abt-strength-card fade-up d2">
                     <div class="abt-strength-num">02</div>
-                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg></div>
                     <h3>Manufacturing Capability</h3>
-                    <p>Large-scale, modern manufacturing infrastructure supporting reliable, high-quality production across all product lines and customer requirements.</p>
+                    <p>Large-scale, modern manufacturing infrastructure supporting reliable, high-quality production
+                        across all product lines and customer requirements.</p>
                 </div>
                 <div class="abt-strength-card fade-up d3">
                     <div class="abt-strength-num">03</div>
-                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path
+                                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+                        </svg></div>
                     <h3>Research &amp; Development</h3>
-                    <p>Dedicated in-house R&D teams driving continuous product innovation, technology advancement, and customer-centric customization.</p>
+                    <p>Dedicated in-house R&D teams driving continuous product innovation, technology advancement, and
+                        customer-centric customization.</p>
                 </div>
                 <div class="abt-strength-card fade-up d4">
                     <div class="abt-strength-num">04</div>
-                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <div class="abt-strength-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg></div>
                     <h3>Trusted Partnerships</h3>
-                    <p>Long-standing relationships with India's leading OEMs, transport corporations, and mobility providers — built through performance and reliability over decades.</p>
+                    <p>Long-standing relationships with India's leading OEMs, transport corporations, and mobility
+                        providers — built through performance and reliability over decades.</p>
                 </div>
             </div>
         </div>
@@ -1949,7 +2573,9 @@
             <div class="fade-up" style="text-align:center;margin-bottom:64px;">
                 <div class="abt-lbl" style="justify-content:center;">Industry Trust</div>
                 <h2 class="abt-h2">Trusted by Industry Leaders</h2>
-                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;margin:16px auto 0;line-height:1.7;">Aargee is the preferred engineering partner of leading OEMs, coach builders, state transport undertakings, and national organizations across India's transportation ecosystem.</p>
+                <p style="font-size:1.1rem;color:#4B5563;max-width:700px;margin:16px auto 0;line-height:1.7;">Aargee is
+                    the preferred engineering partner of leading OEMs, coach builders, state transport undertakings, and
+                    national organizations across India's transportation ecosystem.</p>
             </div>
 
             <!-- OEM Group -->
@@ -1958,23 +2584,23 @@
                 <div class="abt-logo-marquee-wrap">
                     <div class="abt-logo-marquee">
                         <div class="abt-logo-track" id="track-oem">
-                            <div class="abt-logo-pill">Ashok Leyland</div>
-                            <div class="abt-logo-pill">Tata Motors</div>
-                            <div class="abt-logo-pill">Volvo</div>
-                            <div class="abt-logo-pill">Scania</div>
-                            <div class="abt-logo-pill">Daimler</div>
-                            <div class="abt-logo-pill">Eicher</div>
-                            <div class="abt-logo-pill">SML Isuzu</div>
-                            <div class="abt-logo-pill">Marcopolo</div>
+                            <div class="abt-logo-pill"><img src="assets/logos/ashok-leyland.png" alt="Ashok Leyland" onerror="this.style.display='none'"><span>Ashok Leyland</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/tata-motors.png" alt="Tata Motors" onerror="this.style.display='none'"><span>Tata Motors</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/volvo.png" alt="Volvo" onerror="this.style.display='none'"><span>Volvo</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/scania.png" alt="Scania" onerror="this.style.display='none'"><span>Scania</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/daimler.png" alt="Daimler" onerror="this.style.display='none'"><span>Daimler</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/eicher.png" alt="Eicher" onerror="this.style.display='none'"><span>Eicher</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/sml-isuzu.png" alt="SML Isuzu" onerror="this.style.display='none'"><span>SML Isuzu</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/marcopolo.png" alt="Marcopolo" onerror="this.style.display='none'"><span>Marcopolo</span></div>
                             <!-- Duplicate -->
-                            <div class="abt-logo-pill">Ashok Leyland</div>
-                            <div class="abt-logo-pill">Tata Motors</div>
-                            <div class="abt-logo-pill">Volvo</div>
-                            <div class="abt-logo-pill">Scania</div>
-                            <div class="abt-logo-pill">Daimler</div>
-                            <div class="abt-logo-pill">Eicher</div>
-                            <div class="abt-logo-pill">SML Isuzu</div>
-                            <div class="abt-logo-pill">Marcopolo</div>
+                            <div class="abt-logo-pill"><img src="assets/logos/ashok-leyland.png" alt="Ashok Leyland" onerror="this.style.display='none'"><span>Ashok Leyland</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/tata-motors.png" alt="Tata Motors" onerror="this.style.display='none'"><span>Tata Motors</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/volvo.png" alt="Volvo" onerror="this.style.display='none'"><span>Volvo</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/scania.png" alt="Scania" onerror="this.style.display='none'"><span>Scania</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/daimler.png" alt="Daimler" onerror="this.style.display='none'"><span>Daimler</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/eicher.png" alt="Eicher" onerror="this.style.display='none'"><span>Eicher</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/sml-isuzu.png" alt="SML Isuzu" onerror="this.style.display='none'"><span>SML Isuzu</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/marcopolo.png" alt="Marcopolo" onerror="this.style.display='none'"><span>Marcopolo</span></div>
                         </div>
                     </div>
                 </div>
@@ -1986,23 +2612,23 @@
                 <div class="abt-logo-marquee-wrap">
                     <div class="abt-logo-marquee abt-logo-marquee-rev">
                         <div class="abt-logo-track" id="track-coach">
-                            <div class="abt-logo-pill">JCBL</div>
-                            <div class="abt-logo-pill">GS Body Builders</div>
-                            <div class="abt-logo-pill">KMS Coach Builders</div>
-                            <div class="abt-logo-pill">Azad</div>
-                            <div class="abt-logo-pill">PMI Coaches</div>
-                            <div class="abt-logo-pill">Mungi Engineers</div>
-                            <div class="abt-logo-pill">SM Kannappa Automobiles</div>
-                            <div class="abt-logo-pill">Veera Vahana Udyog</div>
+                            <div class="abt-logo-pill"><img src="assets/logos/jcbl.png" alt="JCBL" onerror="this.style.display='none'"><span>JCBL</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/gs-body-builders.png" alt="GS Body Builders" onerror="this.style.display='none'"><span>GS Body Builders</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/kms-coach-builders.png" alt="KMS Coach Builders" onerror="this.style.display='none'"><span>KMS Coach Builders</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/azad.png" alt="Azad" onerror="this.style.display='none'"><span>Azad</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/pmi-coaches.png" alt="PMI Coaches" onerror="this.style.display='none'"><span>PMI Coaches</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/mungi-engineers.png" alt="Mungi Engineers" onerror="this.style.display='none'"><span>Mungi Engineers</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/sm-kannappa-automobiles.png" alt="SM Kannappa Automobiles" onerror="this.style.display='none'"><span>SM Kannappa Automobiles</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/veera-vahana-udyog.png" alt="Veera Vahana Udyog" onerror="this.style.display='none'"><span>Veera Vahana Udyog</span></div>
                             <!-- Duplicate -->
-                            <div class="abt-logo-pill">JCBL</div>
-                            <div class="abt-logo-pill">GS Body Builders</div>
-                            <div class="abt-logo-pill">KMS Coach Builders</div>
-                            <div class="abt-logo-pill">Azad</div>
-                            <div class="abt-logo-pill">PMI Coaches</div>
-                            <div class="abt-logo-pill">Mungi Engineers</div>
-                            <div class="abt-logo-pill">SM Kannappa Automobiles</div>
-                            <div class="abt-logo-pill">Veera Vahana Udyog</div>
+                            <div class="abt-logo-pill"><img src="assets/logos/jcbl.png" alt="JCBL" onerror="this.style.display='none'"><span>JCBL</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/gs-body-builders.png" alt="GS Body Builders" onerror="this.style.display='none'"><span>GS Body Builders</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/kms-coach-builders.png" alt="KMS Coach Builders" onerror="this.style.display='none'"><span>KMS Coach Builders</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/azad.png" alt="Azad" onerror="this.style.display='none'"><span>Azad</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/pmi-coaches.png" alt="PMI Coaches" onerror="this.style.display='none'"><span>PMI Coaches</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/mungi-engineers.png" alt="Mungi Engineers" onerror="this.style.display='none'"><span>Mungi Engineers</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/sm-kannappa-automobiles.png" alt="SM Kannappa Automobiles" onerror="this.style.display='none'"><span>SM Kannappa Automobiles</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/veera-vahana-udyog.png" alt="Veera Vahana Udyog" onerror="this.style.display='none'"><span>Veera Vahana Udyog</span></div>
                         </div>
                     </div>
                 </div>
@@ -2014,37 +2640,37 @@
                 <div class="abt-logo-marquee-wrap">
                     <div class="abt-logo-marquee">
                         <div class="abt-logo-track" id="track-stc">
-                            <div class="abt-logo-pill">TNSTC</div>
-                            <div class="abt-logo-pill">SETC</div>
-                            <div class="abt-logo-pill">APSRTC</div>
-                            <div class="abt-logo-pill">TSRTC</div>
-                            <div class="abt-logo-pill">KSRTC</div>
-                            <div class="abt-logo-pill">BMTC</div>
-                            <div class="abt-logo-pill">PSRTC</div>
-                            <div class="abt-logo-pill">HRTC</div>
-                            <div class="abt-logo-pill">UPSRTC</div>
-                            <div class="abt-logo-pill">GSRTC</div>
-                            <div class="abt-logo-pill">RSRTC</div>
-                            <div class="abt-logo-pill">DTC</div>
-                            <div class="abt-logo-pill">MSRTC</div>
-                            <div class="abt-logo-pill">OSRTC</div>
-                            <div class="abt-logo-pill">Indian Railways</div>
+                            <div class="abt-logo-pill"><img src="assets/logos/tnstc.png" alt="TNSTC" onerror="this.style.display='none'"><span>TNSTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/setc.png" alt="SETC" onerror="this.style.display='none'"><span>SETC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/apsrtc.png" alt="APSRTC" onerror="this.style.display='none'"><span>APSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/tsrtc.png" alt="TSRTC" onerror="this.style.display='none'"><span>TSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/ksrtc.png" alt="KSRTC" onerror="this.style.display='none'"><span>KSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/bmtc.png" alt="BMTC" onerror="this.style.display='none'"><span>BMTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/psrtc.png" alt="PSRTC" onerror="this.style.display='none'"><span>PSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/hrtc.png" alt="HRTC" onerror="this.style.display='none'"><span>HRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/upsrtc.png" alt="UPSRTC" onerror="this.style.display='none'"><span>UPSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/gsrtc.png" alt="GSRTC" onerror="this.style.display='none'"><span>GSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/rsrtc.png" alt="RSRTC" onerror="this.style.display='none'"><span>RSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/dtc.png" alt="DTC" onerror="this.style.display='none'"><span>DTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/msrtc.png" alt="MSRTC" onerror="this.style.display='none'"><span>MSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/osrtc.png" alt="OSRTC" onerror="this.style.display='none'"><span>OSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/indian-railways.png" alt="Indian Railways" onerror="this.style.display='none'"><span>Indian Railways</span></div>
                             <!-- Duplicate -->
-                            <div class="abt-logo-pill">TNSTC</div>
-                            <div class="abt-logo-pill">SETC</div>
-                            <div class="abt-logo-pill">APSRTC</div>
-                            <div class="abt-logo-pill">TSRTC</div>
-                            <div class="abt-logo-pill">KSRTC</div>
-                            <div class="abt-logo-pill">BMTC</div>
-                            <div class="abt-logo-pill">PSRTC</div>
-                            <div class="abt-logo-pill">HRTC</div>
-                            <div class="abt-logo-pill">UPSRTC</div>
-                            <div class="abt-logo-pill">GSRTC</div>
-                            <div class="abt-logo-pill">RSRTC</div>
-                            <div class="abt-logo-pill">DTC</div>
-                            <div class="abt-logo-pill">MSRTC</div>
-                            <div class="abt-logo-pill">OSRTC</div>
-                            <div class="abt-logo-pill">Indian Railways</div>
+                            <div class="abt-logo-pill"><img src="assets/logos/tnstc.png" alt="TNSTC" onerror="this.style.display='none'"><span>TNSTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/setc.png" alt="SETC" onerror="this.style.display='none'"><span>SETC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/apsrtc.png" alt="APSRTC" onerror="this.style.display='none'"><span>APSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/tsrtc.png" alt="TSRTC" onerror="this.style.display='none'"><span>TSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/ksrtc.png" alt="KSRTC" onerror="this.style.display='none'"><span>KSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/bmtc.png" alt="BMTC" onerror="this.style.display='none'"><span>BMTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/psrtc.png" alt="PSRTC" onerror="this.style.display='none'"><span>PSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/hrtc.png" alt="HRTC" onerror="this.style.display='none'"><span>HRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/upsrtc.png" alt="UPSRTC" onerror="this.style.display='none'"><span>UPSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/gsrtc.png" alt="GSRTC" onerror="this.style.display='none'"><span>GSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/rsrtc.png" alt="RSRTC" onerror="this.style.display='none'"><span>RSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/dtc.png" alt="DTC" onerror="this.style.display='none'"><span>DTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/msrtc.png" alt="MSRTC" onerror="this.style.display='none'"><span>MSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/osrtc.png" alt="OSRTC" onerror="this.style.display='none'"><span>OSRTC</span></div>
+                            <div class="abt-logo-pill"><img src="assets/logos/indian-railways.png" alt="Indian Railways" onerror="this.style.display='none'"><span>Indian Railways</span></div>
                         </div>
                     </div>
                 </div>
@@ -2061,59 +2687,85 @@
             </div>
             <div class="abt-why-grid">
                 <div class="abt-why-card fade-up d1">
-                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="3" />
+                            <path
+                                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                        </svg></div>
                     <h3>Engineering Excellence</h3>
-                    <p>Delivering quality-driven engineering solutions for decades — trusted by leading transportation organizations across India.</p>
+                    <p>Delivering quality-driven engineering solutions for decades — trusted by leading transportation
+                        organizations across India.</p>
                 </div>
                 <div class="abt-why-card fade-up d2">
-                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M9 18h6" />
+                            <path d="M10 22h4" />
+                            <path
+                                d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14" />
+                        </svg></div>
                     <h3>Innovation Culture</h3>
-                    <p>Continuous investment in research, development, and product improvement — ensuring technologies remain relevant and forward-looking.</p>
+                    <p>Continuous investment in research, development, and product improvement — ensuring technologies
+                        remain relevant and forward-looking.</p>
                 </div>
                 <div class="abt-why-card fade-up d3">
-                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path
+                                d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
+                        </svg></div>
                     <h3>Manufacturing Strength</h3>
-                    <p>Advanced manufacturing capabilities, international quality certifications, and scalable production supporting reliable, consistent delivery.</p>
+                    <p>Advanced manufacturing capabilities, international quality certifications, and scalable
+                        production supporting reliable, consistent delivery.</p>
                 </div>
                 <div class="abt-why-card fade-up d4">
-                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <div class="abt-why-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg></div>
                     <h3>Long-Term Partnerships</h3>
-                    <p>Trusted relationships built through performance, reliability, and commitment — spanning decades with India's leading transportation organizations.</p>
+                    <p>Trusted relationships built through performance, reliability, and commitment — spanning decades
+                        with India's leading transportation organizations.</p>
                 </div>
             </div>
 
             <!-- Final Banner -->
             <div class="abt-final-banner fade-up">
                 <h2>Made in India. Trusted Across Mobility Networks.</h2>
-                <p>Aargee Engineering — Delivering Innovation, Reliability, and Excellence across Roadways, Railways, Waterways, and Airways.</p>
+                <p>Aargee Engineering — Delivering Innovation, Reliability, and Excellence across Roadways, Railways,
+                    Waterways, and Airways.</p>
             </div>
         </div>
     </section>
 
     <!-- ANIMATION SCRIPT -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var obs = new IntersectionObserver(function(entries) {
-            entries.forEach(function(e) {
-                if (e.isIntersecting) {
-                    e.target.classList.add('visible');
-                    // Counters
-                    e.target.querySelectorAll('.trust-counter').forEach(function(c) {
-                        var t = parseInt(c.getAttribute('data-target'));
-                        if (!t) return;
-                        var cur = 0, step = t / 60;
-                        var timer = setInterval(function() {
-                            cur += step;
-                            if (cur >= t) { c.textContent = t; clearInterval(timer); }
-                            else c.textContent = Math.floor(cur);
-                        }, 24);
-                    });
-                    obs.unobserve(e.target);
-                }
-            });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-        document.querySelectorAll('.fade-up').forEach(function(el) { obs.observe(el); });
-    });
+        document.addEventListener('DOMContentLoaded', function () {
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        // Counters
+                        e.target.querySelectorAll('.trust-counter').forEach(function (c) {
+                            var t = parseInt(c.getAttribute('data-target'));
+                            if (!t) return;
+                            var cur = 0, step = t / 60;
+                            var timer = setInterval(function () {
+                                cur += step;
+                                if (cur >= t) { c.textContent = t; clearInterval(timer); }
+                                else c.textContent = Math.floor(cur);
+                            }, 24);
+                        });
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+            document.querySelectorAll('.fade-up').forEach(function (el) { obs.observe(el); });
+        });
     </script>
 
     <!-- PREMIUM FOOTER -->
@@ -2305,58 +2957,59 @@
             }
         });
     </script>
-<script>
-(function(){
-    var navbar = document.getElementById('navbar');
-    if (!navbar) return;
-    window.addEventListener('scroll', function(){
-        navbar.classList.toggle('scrolled', window.scrollY > 45);
-    }, { passive: true });
-})();
-</script>
+    <script>
+        (function () {
+            var navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            window.addEventListener('scroll', function () {
+                navbar.classList.toggle('scrolled', window.scrollY > 45);
+            }, { passive: true });
+        })();
+    </script>
 
     <!-- ANIMATION SCRIPT -->
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: "0px 0px -50px 0px"
-        };
+        document.addEventListener('DOMContentLoaded', function () {
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: "0px 0px -50px 0px"
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                    
-                    // Counter animation
-                    if(entry.target.classList.contains('stats-container')) {
-                        const counters = entry.target.querySelectorAll('.counter');
-                        counters.forEach(counter => {
-                            const target = +counter.getAttribute('data-target');
-                            const duration = 2000; // ms
-                            const step = target / (duration / 16);
-                            let current = 0;
-                            
-                            const updateCounter = () => {
-                                current += step;
-                                if (current < target) {
-                                    counter.innerText = Math.ceil(current);
-                                    requestAnimationFrame(updateCounter);
-                                } else {
-                                    counter.innerText = target;
-                                }
-                            };
-                            updateCounter();
-                        });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+
+                        // Counter animation
+                        if (entry.target.classList.contains('stats-container')) {
+                            const counters = entry.target.querySelectorAll('.counter');
+                            counters.forEach(counter => {
+                                const target = +counter.getAttribute('data-target');
+                                const duration = 2000; // ms
+                                const step = target / (duration / 16);
+                                let current = 0;
+
+                                const updateCounter = () => {
+                                    current += step;
+                                    if (current < target) {
+                                        counter.innerText = Math.ceil(current);
+                                        requestAnimationFrame(updateCounter);
+                                    } else {
+                                        counter.innerText = target;
+                                    }
+                                };
+                                updateCounter();
+                            });
+                        }
+                        observer.unobserve(entry.target);
                     }
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
+                });
+            }, observerOptions);
 
-        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-    });
+            document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+        });
     </script>
-    
+
 </body>
+
 </html>

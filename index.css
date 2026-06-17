@@ -2500,9 +2500,9 @@ body.about-page, .abt-heritage, .abt-mvv, .abt-certs, .abt-capabilities {
 .abt-logo-marquee { display: flex; width: max-content; }
 .abt-logo-track {
     display: flex;
-    gap: 12px;
-    animation: marquee 28s linear infinite;
-    padding: 4px 0;
+    gap: 32px;
+    animation: marquee 40s linear infinite;
+    padding: 10px 0;
 }
 .abt-logo-marquee-rev .abt-logo-track { animation-direction: reverse; }
 .abt-logo-marquee:hover .abt-logo-track { animation-play-state: paused; }
@@ -2511,25 +2511,39 @@ body.about-page, .abt-heritage, .abt-mvv, .abt-certs, .abt-capabilities {
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 16px;
     background: #fff;
     border: 1px solid #e5e7eb;
-    border-radius: 8px;
-    padding: 12px 24px;
+    border-radius: 12px;
+    padding: 18px 36px;
     font-family: 'Outfit', sans-serif;
-    font-size: 0.88rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #6B7280;
+    color: #4B5563;
     white-space: nowrap;
-    transition: all 0.3s;
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     cursor: default;
     letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+.abt-logo-pill img {
+    height: 36px;
+    width: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.4s ease;
 }
 .abt-logo-pill:hover {
     border-color: #C8102E;
-    color: #C8102E;
+    color: #111827;
     background: #fff;
-    box-shadow: 0 4px 16px rgba(200,16,46,0.1);
-    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(200,16,46,0.12);
+    transform: translateY(-4px) scale(1.02);
+}
+.abt-logo-pill:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
 }
 
 /* ── S10: Why Trust Aargee ── */
