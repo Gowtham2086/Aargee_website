@@ -1,16 +1,17 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>About Us | Aargee Equipment Pvt. Ltd.</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Outfit:wght@300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
     <style>
         /* OVERRIDE index.css which sets body{background:#08080a;color:#fff} — causes blank page */
         body {
@@ -29,22 +30,14 @@
         /* HERO */
         .abt-hero {
             position: relative;
-            height: 520px;
+            height: calc(100vh - 135px);
+            min-height: 500px;
             overflow: hidden;
             display: flex;
-            align-items: flex-end;
+            align-items: center;
         }
 
-        .abt-hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: #C8102E;
-            z-index: 10;
-        }
+
 
         .abt-hero-img {
             position: absolute;
@@ -67,7 +60,8 @@
             max-width: 1400px;
             width: 100%;
             margin: 0 auto;
-            padding: 0 clamp(20px, 4vw, 48px) 120px;
+            margin-top: -80px;
+            padding: 0 clamp(20px, 4vw, 48px);
         }
 
         .abt-breadcrumb {
@@ -552,40 +546,49 @@
             position: relative;
             overflow: hidden;
         }
+
         .premium-quality::before {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(200, 16, 46, 0.03) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(200, 16, 46, 0.03) 1px, transparent 1px);
             background-size: 40px 40px;
             opacity: 0.8;
             pointer-events: none;
         }
+
         .premium-quality::after {
             content: '';
             position: absolute;
-            top: 0; right: 0; bottom: 0; left: 50%;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 50%;
             background: radial-gradient(circle at top right, rgba(200, 16, 46, 0.05), transparent 70%);
             pointer-events: none;
         }
+
         .pq-inner {
             max-width: 1400px;
             margin: 0 auto;
             position: relative;
             z-index: 2;
         }
+
         .pq-header {
             text-align: center;
             margin-bottom: 70px;
         }
+
         .pq-grid {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
             margin-bottom: 60px;
         }
+
         .pq-card {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
@@ -596,27 +599,33 @@
             transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             position: relative;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
         }
+
         .pq-card::before {
             content: '';
             position: absolute;
-            bottom: 0; left: 0; right: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
             height: 3px;
             background: #C8102E;
             transform: scaleX(0);
             transform-origin: center;
             transition: transform 0.4s ease;
         }
+
         .pq-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 16px 40px rgba(200, 16, 46, 0.08);
             border-color: rgba(200, 16, 46, 0.2);
             background: #fff;
         }
+
         .pq-card:hover::before {
             transform: scaleX(1);
         }
+
         .pq-icon {
             width: 64px;
             height: 64px;
@@ -624,17 +633,19 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: linear-gradient(135deg, rgba(200,16,46,0.1), rgba(200,16,46,0.02));
+            background: linear-gradient(135deg, rgba(200, 16, 46, 0.1), rgba(200, 16, 46, 0.02));
             border-radius: 50%;
             color: #C8102E;
             transition: transform 0.4s ease, background 0.4s ease;
         }
+
         .pq-card:hover .pq-icon {
             transform: scale(1.1);
             background: #C8102E;
             color: #fff;
-            box-shadow: 0 8px 24px rgba(200,16,46,0.3);
+            box-shadow: 0 8px 24px rgba(200, 16, 46, 0.3);
         }
+
         .pq-name {
             font-family: 'Outfit', sans-serif;
             font-size: 1.1rem;
@@ -642,13 +653,14 @@
             color: #0d0d0d;
             margin-bottom: 12px;
         }
+
         .pq-desc {
             font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
             color: #6B7280;
             line-height: 1.7;
         }
-        
+
         /* TRUST STRIP */
         .trust-strip {
             background: #0d0d0d;
@@ -657,25 +669,34 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
         }
+
         .trust-strip::after {
             content: '';
             position: absolute;
-            top: 0; bottom: 0; left: 0; width: 4px;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 4px;
             background: #C8102E;
         }
+
         .trust-item {
             display: flex;
             flex-direction: column;
             gap: 8px;
             flex: 1;
             padding: 0 24px;
-            border-right: 1px solid rgba(255,255,255,0.1);
+            border-right: 1px solid rgba(255, 255, 255, 0.1);
         }
-        .trust-item:last-child { border: none; }
+
+        .trust-item:last-child {
+            border: none;
+        }
+
         .t-num {
             font-family: 'Outfit', sans-serif;
             font-size: 2.2rem;
@@ -685,13 +706,18 @@
             display: flex;
             align-items: center;
         }
-        .t-num span { color: #C8102E; margin-left: 2px;}
+
+        .t-num span {
+            color: #C8102E;
+            margin-left: 2px;
+        }
+
         .t-lbl {
             font-family: 'Inter', sans-serif;
             font-size: 0.75rem;
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            color: rgba(255,255,255,0.6);
+            color: rgba(255, 255, 255, 0.6);
             font-weight: 600;
         }
 
@@ -703,37 +729,44 @@
             padding: 120px 60px 0;
             position: relative;
         }
+
         .pe-inner {
             max-width: 1400px;
             margin: 0 auto;
         }
+
         .pe-header {
             text-align: center;
             margin-bottom: 70px;
         }
+
         .pe-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 32px;
             margin-bottom: 100px;
         }
+
         .pe-card {
             background: #fff;
             padding: 48px 40px;
             border-radius: 4px;
             border-top: 4px solid transparent;
-            box-shadow: 0 4px 24px rgba(0,0,0,0.03);
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.03);
             transition: all 0.4s ease;
         }
+
         .pe-card:hover {
             transform: translateY(-8px);
             border-top-color: #C8102E;
-            box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+            box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
         }
+
         .pe-icon {
             color: #C8102E;
             margin-bottom: 24px;
         }
+
         .pe-title {
             font-family: 'Outfit', sans-serif;
             font-size: 1.3rem;
@@ -741,6 +774,7 @@
             color: #0d0d0d;
             margin: 0 0 16px;
         }
+
         .pe-desc {
             font-family: 'Inter', sans-serif;
             font-size: 0.9rem;
@@ -758,10 +792,12 @@
             display: flex;
             align-items: center;
         }
+
         .pe-marquee {
             display: inline-block;
             animation: marquee 40s linear infinite;
         }
+
         .pe-marquee span {
             font-family: 'Outfit', sans-serif;
             font-size: 1.2rem;
@@ -773,18 +809,25 @@
             display: inline-flex;
             align-items: center;
         }
+
         .pe-marquee span::after {
             content: '';
             display: inline-block;
             width: 8px;
             height: 8px;
-            background: rgba(255,255,255,0.4);
+            background: rgba(255, 255, 255, 0.4);
             border-radius: 50%;
             margin-left: 80px;
         }
+
         @keyframes marquee {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
         }
 
         /* SMART FEATURE BLOCK */
@@ -794,10 +837,12 @@
             text-align: center;
             border-bottom: 4px solid #C8102E;
         }
+
         .pe-smart-content {
             max-width: 900px;
             margin: 0 auto;
         }
+
         .pe-smart-content h3 {
             font-family: 'Outfit', sans-serif;
             font-size: 2.8rem;
@@ -806,6 +851,7 @@
             margin: 0 0 24px;
             letter-spacing: -0.02em;
         }
+
         .pe-smart-content p {
             font-family: 'Inter', sans-serif;
             font-size: 1.1rem;
@@ -819,31 +865,60 @@
             transform: translateY(30px);
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .reveal-up.active {
             opacity: 1;
             transform: translateY(0);
         }
+
         .zoom-in {
             opacity: 0;
             transform: scale(0.9);
             transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
         }
+
         .zoom-in.active {
             opacity: 1;
             transform: scale(1);
         }
-        
+
         @media (max-width: 1024px) {
-            .pq-grid, .pe-grid { grid-template-columns: repeat(2, 1fr); }
-            .trust-strip { flex-wrap: wrap; gap: 32px; }
-            .trust-item { border: none; width: 50%; flex: none; }
+
+            .pq-grid,
+            .pe-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .trust-strip {
+                flex-wrap: wrap;
+                gap: 32px;
+            }
+
+            .trust-item {
+                border: none;
+                width: 50%;
+                flex: none;
+            }
         }
+
         @media (max-width: 768px) {
-            .pq-grid, .pe-grid { grid-template-columns: 1fr; }
-            .trust-item { width: 100%; text-align: center; }
-            .pe-smart-content h3 { font-size: 2rem; }
+
+            .pq-grid,
+            .pe-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust-item {
+                width: 100%;
+                text-align: center;
+            }
+
+            .pe-smart-content h3 {
+                font-size: 2rem;
+            }
         }
-.cert-grid {
+
+        .cert-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 40px;
@@ -853,7 +928,7 @@
             background: #f7f8fa;
             border-radius: 12px;
             padding: 48px 40px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
             border-top: 4px solid #C8102E;
             transition: transform 0.4s ease, box-shadow 0.4s ease;
             position: relative;
@@ -875,14 +950,14 @@
 
         .cert-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 50px rgba(200,16,46,0.1);
+            box-shadow: 0 20px 50px rgba(200, 16, 46, 0.1);
         }
 
         .cert-card:hover::before {
             transform: scale(3);
         }
 
-        .cert-card > * {
+        .cert-card>* {
             position: relative;
             z-index: 1;
         }
@@ -953,20 +1028,26 @@
         }
 
         @media (max-width: 768px) {
-            
-        .cert-grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        @media (max-width: 1024px) {
-            .cert-grid-4 { grid-template-columns: repeat(2, 1fr); }
-        }
-        @media (max-width: 768px) {
-            .cert-grid-4 { grid-template-columns: 1fr; }
-        }
 
-        .cert-grid {
+            .cert-grid-4 {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 24px;
+            }
+
+            @media (max-width: 1024px) {
+                .cert-grid-4 {
+                    grid-template-columns: repeat(2, 1fr);
+                }
+            }
+
+            @media (max-width: 768px) {
+                .cert-grid-4 {
+                    grid-template-columns: 1fr;
+                }
+            }
+
+            .cert-grid {
                 grid-template-columns: 1fr;
             }
         }
@@ -979,25 +1060,32 @@
             border-top: 2px solid #C8102E;
             padding: 30px 60px 16px;
             position: relative;
+            z-index: 1;
             color: rgba(255, 255, 255, 0.6);
             overflow: hidden;
         }
+
         .premium-footer::before {
             content: '';
             position: absolute;
             inset: 0;
-            background-image: 
+            background-image:
                 linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
             background-size: 30px 30px;
             pointer-events: none;
         }
+
         .premium-footer::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; right: 0; height: 1px;
-            background: linear-gradient(90deg, transparent, rgba(200,16,46,0.3), transparent);
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(200, 16, 46, 0.3), transparent);
         }
+
         .pf-inner {
             max-width: 1400px;
             margin: 0 auto;
@@ -1012,6 +1100,7 @@
             gap: 32px;
             margin-bottom: 10px;
         }
+
         .pf-col h4 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.05rem;
@@ -1020,6 +1109,7 @@
             margin: 0 0 12px;
             letter-spacing: 0.02em;
         }
+
         .pf-col-1 h3 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.05rem;
@@ -1028,12 +1118,14 @@
             margin: 0 0 8px;
             letter-spacing: -0.01em;
         }
+
         .pf-logo-img {
             max-width: 200px;
             height: auto;
             margin-bottom: 16px;
             display: block;
         }
+
         .pf-col-1 .pf-tagline {
             font-family: 'Inter', sans-serif;
             font-size: 0.8rem;
@@ -1044,6 +1136,7 @@
             margin-bottom: 12px;
             display: block;
         }
+
         .pf-col-1 p {
             font-family: 'Inter', sans-serif;
             font-size: 0.9rem;
@@ -1051,11 +1144,12 @@
             margin-bottom: 16px;
             max-width: 340px;
         }
-        
+
         .pf-socials {
             display: flex;
             gap: 12px;
         }
+
         .pf-socials a {
             display: flex;
             align-items: center;
@@ -1067,11 +1161,13 @@
             color: #fff;
             transition: all 0.3s ease;
         }
+
         .pf-socials a:hover {
             background: #C8102E;
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(200, 16, 46, 0.3);
         }
+
         .pf-socials a svg {
             width: 16px;
             height: 16px;
@@ -1083,9 +1179,11 @@
             padding: 0;
             margin: 0;
         }
+
         .pf-links li {
             margin-bottom: 8px;
         }
+
         .pf-links a {
             color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
@@ -1095,6 +1193,7 @@
             display: inline-flex;
             align-items: center;
         }
+
         .pf-links a::before {
             content: '→';
             color: #C8102E;
@@ -1104,10 +1203,12 @@
             transition: all 0.3s ease;
             font-size: 1rem;
         }
+
         .pf-links a:hover {
             color: #fff;
             transform: translateX(4px);
         }
+
         .pf-links a:hover::before {
             opacity: 1;
             transform: translateX(0);
@@ -1119,25 +1220,30 @@
             gap: 12px;
             margin-bottom: 10px;
         }
+
         .pf-contact-icon {
             color: #C8102E;
             flex-shrink: 0;
             margin-top: 2px;
         }
+
         .pf-contact-icon svg {
             width: 18px;
             height: 18px;
         }
+
         .pf-contact-text {
             font-family: 'Inter', sans-serif;
             font-size: 0.9rem;
             line-height: 1.5;
         }
+
         .pf-contact-text a {
             color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         .pf-contact-text a:hover {
             color: #fff;
         }
@@ -1152,25 +1258,40 @@
             font-family: 'Inter', sans-serif;
             font-size: 0.8rem;
         }
+
         .pf-copy-links {
             display: flex;
             gap: 20px;
         }
+
         .pf-copy-links a {
             color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
             transition: color 0.3s ease;
         }
+
         .pf-copy-links a:hover {
             color: #fff;
         }
 
         @media (max-width: 1200px) {
-            .pf-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+            .pf-grid {
+                grid-template-columns: repeat(3, 1fr);
+                gap: 24px;
+            }
         }
+
         @media (max-width: 768px) {
-            .pf-grid { grid-template-columns: 1fr; gap: 32px; }
-            .pf-copyright { flex-direction: column; gap: 12px; text-align: center; }
+            .pf-grid {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .pf-copyright {
+                flex-direction: column;
+                gap: 12px;
+                text-align: center;
+            }
         }
 
         /* RESPONSIVE */
@@ -1274,6 +1395,112 @@
                 display: none;
             }
         }
+    
+/* ====================================================================
+   ENTERPRISE ABOUT PAGE UPGRADE CSS
+   ==================================================================== */
+.fade-up { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+.fade-up.visible { opacity: 1; transform: translateY(0); }
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+.section-padding { padding: 100px 20px; }
+.container { max-width: 1400px; margin: 0 auto; width: 100%; }
+.section-label { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 700; color: #C8102E; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 24px; display: inline-block; position: relative; }
+.section-label::after { content: ''; position: absolute; top: 50%; left: 100%; margin-left: 16px; width: 40px; height: 1px; background: #C8102E; }
+.section-title { font-family: 'Outfit', sans-serif; font-size: clamp(2.5rem, 4vw, 3.5rem); font-weight: 800; line-height: 1.1; margin-bottom: 32px; color: #111827; }
+.section-subtitle { font-family: 'Inter', sans-serif; font-size: 1.125rem; line-height: 1.7; color: #4B5563; max-width: 800px; margin-bottom: 64px; }
+.dark-section .section-title { color: #fff; }
+.dark-section .section-subtitle { color: rgba(255, 255, 255, 0.7); }
+
+/* SECTION 1: ABOUT AARGEE */
+.abt-heritage-new { position: relative; background: #fff; }
+.heritage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+.heritage-content p { font-family: 'Inter', sans-serif; font-size: 1.1rem; color: #4B5563; line-height: 1.7; margin-bottom: 20px; }
+.heritage-img-wrapper { position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+.heritage-img-wrapper img { width: 100%; height: auto; display: block; transition: transform 0.8s ease; }
+.heritage-img-wrapper:hover img { transform: scale(1.05); }
+.red-accent-divider { width: 80px; height: 4px; background: #C8102E; margin: 40px 0; border-radius: 2px; }
+
+/* SECTION 2: STATS */
+.stats-container { max-width: 1400px; margin: 0 auto; position: relative; top: -60px; z-index: 10; padding: 0 20px; }
+.stats-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(16px); padding: 40px; border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.08); border: 1px solid rgba(255,255,255,0.5); }
+.stat-card { text-align: center; transition: all 0.4s ease; padding: 20px; border-radius: 12px; }
+.stat-card:hover { transform: translateY(-8px); background: #fff; box-shadow: 0 10px 30px rgba(200,16,46,0.08); }
+.stat-value { font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: #C8102E; margin-bottom: 8px; line-height: 1; display: flex; justify-content: center; align-items: center; }
+.stat-label { font-family: 'Outfit', sans-serif; font-size: 1.1rem; font-weight: 700; color: #111827; margin-bottom: 4px; }
+.stat-sub { font-family: 'Inter', sans-serif; font-size: 0.85rem; color: #6B7280; }
+
+/* SECTION 3: QUALITY */
+.quality-section { background: #fff; padding-top: 40px; padding-bottom: 100px; }
+.quality-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; }
+.quality-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 16px; padding: 48px; transition: all 0.4s ease; position: relative; overflow: hidden; }
+.quality-card::before { content: ''; position: absolute; top: 0; left: 0; width: 4px; height: 100%; background: #C8102E; transform: scaleY(0); transform-origin: bottom; transition: transform 0.4s ease; }
+.quality-card:hover { transform: translateY(-10px); box-shadow: 0 20px 40px rgba(200, 16, 46, 0.08); border-color: transparent; }
+.quality-card:hover::before { transform: scaleY(1); }
+.qc-icon { width: 64px; height: 64px; background: rgba(200, 16, 46, 0.05); border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #C8102E; margin-bottom: 32px; transition: all 0.4s ease; }
+.quality-card:hover .qc-icon { background: #C8102E; color: #fff; transform: scale(1.1); }
+.qc-title { font-family: 'Outfit', sans-serif; font-size: 1.5rem; font-weight: 700; color: #111827; margin-bottom: 16px; }
+.qc-desc { font-family: 'Inter', sans-serif; font-size: 1.05rem; color: #4B5563; line-height: 1.6; }
+
+/* SECTION 4: TRUSTED LEADERS */
+.trusted-section { background: #f9fafb; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; padding: 80px 0; overflow: hidden; }
+.trusted-header { text-align: center; margin-bottom: 48px; }
+.trusted-header h2 { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 700; color: #111827; }
+.logo-track-wrapper { position: relative; width: 100vw; margin-left: calc(-50vw + 50%); overflow: hidden; }
+.logo-track { display: flex; align-items: center; gap: 80px; width: max-content; animation: scrollLogos 30s linear infinite; padding: 0 40px; }
+.logo-track:hover { animation-play-state: paused; }
+.partner-logo { font-family: 'Outfit', sans-serif; font-size: 1.75rem; font-weight: 800; color: #9CA3AF; letter-spacing: 1px; transition: all 0.4s ease; white-space: nowrap; cursor: default; filter: grayscale(100%); opacity: 0.6; }
+.partner-logo:hover { color: #C8102E; transform: scale(1.05); filter: grayscale(0%); opacity: 1; }
+@keyframes scrollLogos { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 40px)); } }
+
+/* SECTION 5: ENGINEERING */
+.engineering-section { background: #08080a; position: relative; padding: 120px 0 0 0; color: #fff; overflow: hidden; }
+.eng-grid-bg { position: absolute; inset: 0; background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px); background-size: 40px 40px; z-index: 0; }
+.eng-content { position: relative; z-index: 2; }
+.eng-cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 80px; }
+.eng-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); border-radius: 16px; padding: 40px; backdrop-filter: blur(10px); transition: all 0.4s ease; }
+.eng-card:hover { background: rgba(255,255,255,0.05); border-color: rgba(200, 16, 46, 0.4); transform: translateY(-8px); box-shadow: 0 10px 30px rgba(200, 16, 46, 0.15); }
+.eng-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; margin-bottom: 16px; color: #fff; }
+.eng-card p { font-family: 'Inter', sans-serif; font-size: 0.95rem; color: rgba(255,255,255,0.6); line-height: 1.6; }
+
+.tech-band-container { background: #C8102E; padding: 24px 0; overflow: hidden; position: relative; z-index: 2; width: 100vw; margin-left: calc(-50vw + 50%); }
+.tech-band { display: flex; gap: 40px; width: max-content; animation: scrollTech 25s linear infinite; }
+.tech-band:hover { animation-play-state: paused; }
+.tech-item { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: #fff; white-space: nowrap; display: flex; align-items: center; gap: 20px; letter-spacing: 1px; }
+.tech-item::after { content: '•'; opacity: 0.5; }
+@keyframes scrollTech { 0% { transform: translateX(0); } 100% { transform: translateX(calc(-50% - 20px)); } }
+
+.feature-block { margin: 80px 0; position: relative; border-radius: 24px; overflow: hidden; padding: 80px; background: linear-gradient(135deg, rgba(200,16,46,0.1) 0%, rgba(0,0,0,0) 100%); border: 1px solid rgba(200,16,46,0.2); backdrop-filter: blur(10px); }
+.feature-block h2 { font-family: 'Outfit', sans-serif; font-size: clamp(2rem, 3vw, 3rem); font-weight: 800; margin-bottom: 24px; color: #fff; }
+.feature-block p { font-family: 'Inter', sans-serif; font-size: 1.25rem; color: rgba(255,255,255,0.7); max-width: 800px; line-height: 1.6; }
+
+/* SECTION 6: WHY AARGEE */
+.why-section { background: #fff; padding: 100px 0; }
+.why-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; margin-bottom: 80px; }
+.why-card { padding: 40px; background: #f9fafb; border-radius: 16px; border: 1px solid transparent; transition: all 0.3s ease; }
+.why-card:hover { background: #fff; border-color: #C8102E; box-shadow: 0 10px 30px rgba(200, 16, 46, 0.05); transform: translateY(-5px); }
+.why-card h3 { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; color: #111827; margin-bottom: 12px; }
+.why-card p { font-family: 'Inter', sans-serif; font-size: 1rem; color: #4B5563; line-height: 1.6; }
+
+.why-banner { background: linear-gradient(135deg, #C8102E 0%, #8a0b1f 100%); border-radius: 20px; padding: 60px; text-align: center; color: #fff; box-shadow: 0 20px 40px rgba(200, 16, 46, 0.2); }
+.why-banner h2 { font-family: 'Outfit', sans-serif; font-size: 2.5rem; font-weight: 800; margin-bottom: 24px; }
+.why-banner p { font-family: 'Inter', sans-serif; font-size: 1.2rem; opacity: 0.9; max-width: 800px; margin: 0 auto; line-height: 1.6; }
+
+@media (max-width: 1024px) {
+    .heritage-grid, .quality-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .eng-cards, .why-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 768px) {
+    .stats-grid { grid-template-columns: 1fr; }
+    .eng-cards, .why-grid { grid-template-columns: 1fr; }
+    .feature-block, .why-banner { padding: 40px 20px; }
+}
+
     </style>
 </head>
 
@@ -1282,28 +1509,34 @@
     <div class="top-bar" id="top-bar">
         <div class="top-bar-inner">
             <div class="top-bar-items">
-                <div class="top-bar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <div class="top-bar-item"><svg fill="none" height="16" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24" width="16">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
                     </svg><span>45+ Years of Excellence</span></div>
-                <div class="top-bar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
-                        <path
-                            d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                <div class="top-bar-item"><svg fill="none" height="16" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24" width="16">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
                     </svg><span>ISO 9001:2015 Certified</span></div>
-                <div class="top-bar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="1.5">
+                <div class="top-bar-item"><svg fill="none" height="16" stroke="currentColor" stroke-width="1.8"
+                        viewBox="0 0 24 24" width="16">
+                        <circle cx="12" cy="12" r="3"></circle>
                         <path
-                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                            d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                        </path>
                     </svg><span>IATF 16949:2016</span></div>
             </div>
             <div class="top-bar-social">
-                <a href="#" aria-label="Facebook"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+                <a aria-label="Facebook" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        viewbox="0 0 24 24" width="18">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
                     </svg></a>
-                <a href="#" aria-label="LinkedIn"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path
-                            d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2zM4 6a2 2 0 100-4 2 2 0 000 4z" />
+                <a aria-label="LinkedIn" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                        stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect height="12" width="4" x="2" y="9"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
                     </svg></a>
             </div>
         </div>
@@ -1311,394 +1544,348 @@
     <!-- NAVBAR -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
-            <a href="index.html" class="nav-logo" id="nav-logo"><img src="aargee-logo.png"
-                    alt="Aargee Equipment Pvt. Ltd." class="logo-img"></a>
+            <a class="nav-logo" href="index.html" id="nav-logo"><img alt="Aargee Equipment Pvt. Ltd." class="logo-img"
+                    src="aargee-logo.png?v=3" /></a>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="nav-link" id="nav-home">HOME</a></li>
-                    <li><a href="about.html" class="nav-link active" id="nav-about">ABOUT US</a></li>
-                    <li><a href="#" class="nav-link" id="nav-solutions">SOLUTIONS</a></li>
-                    <li><a href="#" class="nav-link" id="nav-industries">INDUSTRIES</a></li>
-                    <li><a href="#" class="nav-link" id="nav-manufacturing">MANUFACTURING</a></li>
-                    <li><a href="#" class="nav-link" id="nav-quality">QUALITY</a></li>
-                    <li><a href="#" class="nav-link" id="nav-careers">CAREERS</a></li>
-                    <li><a href="#" class="nav-link" id="nav-contact">CONTACT</a></li>
+                    <li><a class="nav-link" href="index.html" id="nav-home">HOME</a></li>
+                    <li><a class="nav-link active" href="about.html" id="nav-about">ABOUT US</a></li>
+                    <li><a class="nav-link" href="solutions.html" id="nav-solutions">SOLUTIONS</a></li>
+                    <li><a class="nav-link" href="#" id="nav-industries">INDUSTRIES</a></li>
+                    <li><a class="nav-link" href="#" id="nav-manufacturing">MANUFACTURING</a></li>
+                    <li><a class="nav-link" href="#" id="nav-quality">QUALITY</a></li>
+                    <li><a class="nav-link" href="#" id="nav-careers">CAREERS</a></li>
+                    <li><a class="nav-link" href="#" id="nav-contact">CONTACT</a></li>
                 </ul>
             </div>
-            <a href="#" class="nav-cta" id="nav-contact-btn">Get A Quote</a>
-            <button class="nav-toggle" id="nav-toggle"
-                aria-label="Menu"><span></span><span></span><span></span></button>
+            <a class="nav-cta" href="#" id="nav-contact-btn">Get A Quote</a>
+            <button aria-label="Menu" class="nav-toggle"
+                id="nav-toggle"><span></span><span></span><span></span></button>
         </div>
     </nav>
     <!-- HERO BANNER -->
     <section class="abt-hero" id="abt-hero">
-        <img src="about-banner.jpg?v=2" alt="Aargee engineering facility" class="abt-hero-img">
+        <img alt="Aargee engineering facility" class="abt-hero-img" src="about-banner.jpg?v=2" />
         <div class="abt-hero-overlay"></div>
         <div class="abt-hero-content">
-            <nav class="abt-breadcrumb"><a href="index.html">Home</a><span>&nbsp;&#8250;&nbsp;</span><span>About
+            <nav class="abt-breadcrumb"><a href="index.html">Home</a><span> › </span><span>About
                     Us</span></nav>
             <div class="abt-eyebrow-hero">Who We Are</div>
-            <h1 class="abt-hero-title">About <span class="red">Aargee</span><br>Equipment Pvt. Ltd.</h1>
-            <p class="abt-hero-sub">Engineering Excellence Since 1979 &mdash; Trusted by OEMs, Transport Operators &amp;
+            <h1 class="abt-hero-title">About <span class="red">Aargee</span><br />Equipment Pvt. Ltd.</h1>
+            <p class="abt-hero-sub">Engineering Excellence Since 1979 — Trusted by OEMs, Transport Operators &amp;
                 System Integrators across India.</p>
             <div class="badge-row">
-                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5">
-                        <polyline points="20 6 9 17 4 12" />
+                <div class="badge-pill"><svg fill="none" height="11" stroke="currentColor" stroke-width="2.5"
+                        viewbox="0 0 24 24" width="11">
+                        <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>ISO 9001:2015</div>
-                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5">
-                        <polyline points="20 6 9 17 4 12" />
+                <div class="badge-pill"><svg fill="none" height="11" stroke="currentColor" stroke-width="2.5"
+                        viewbox="0 0 24 24" width="11">
+                        <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>IATF 16949:2016</div>
-                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5">
-                        <polyline points="20 6 9 17 4 12" />
+                <div class="badge-pill"><svg fill="none" height="11" stroke="currentColor" stroke-width="2.5"
+                        viewbox="0 0 24 24" width="11">
+                        <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>45+ Years</div>
-                <div class="badge-pill"><svg width="11" height="11" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2.5">
-                        <polyline points="20 6 9 17 4 12" />
+                <div class="badge-pill"><svg fill="none" height="11" stroke="currentColor" stroke-width="2.5"
+                        viewbox="0 0 24 24" width="11">
+                        <polyline points="20 6 9 17 4 12"></polyline>
                     </svg>Est. 1979</div>
             </div>
         </div>
     </section>
-    <!-- STATS -->
-    <div class="abt-stats">
-        <div class="abt-stats-inner">
-            <div class="abt-stat"><span class="abt-stat-num" data-count="45">0</span><span
-                    class="abt-stat-suf">+</span><span class="abt-stat-lbl">Years of Excellence</span></div>
-            <div class="abt-stat"><span class="abt-stat-num">1979</span><span class="abt-stat-lbl">Year
-                    Established</span></div>
-            <div class="abt-stat"><span class="abt-stat-num" data-count="500">0</span><span
-                    class="abt-stat-suf">+</span><span class="abt-stat-lbl">Products Delivered</span></div>
-            <div class="abt-stat"><span class="abt-stat-num" data-count="100">0</span><span
-                    class="abt-stat-suf">+</span><span class="abt-stat-lbl">Clients Nationwide</span></div>
+    
+    <!-- SECTION 1 & 2: ABOUT AARGEE & STATS -->
+    <section class="abt-heritage-new section-padding" id="our-heritage">
+        <div class="container fade-up">
+            <div class="heritage-grid">
+                <div class="heritage-content">
+                    <span class="section-label">Who We Are</span>
+                    <h2 class="section-title">About Aargee Equipment Pvt. Ltd.</h2>
+                    <h3 class="section-subtitle" style="color: #C8102E; font-size: 1.5rem; font-weight: 700; margin-bottom: 24px;">Engineering Excellence Since 1979</h3>
+                    
+                    <p>Aargee Equipment Pvt. Ltd. has been at the forefront of transportation technology for over four decades. As an ISO 9001:2015 and IATF 16949:2016 certified company, we specialize in the design, development, and manufacturing of advanced electronic solutions for the mobility sector.</p>
+                    
+                    <div class="red-accent-divider"></div>
+                    
+                    <p>Our comprehensive portfolio includes state-of-the-art Passenger Information Systems (PIS), Driver Information Systems, TFT displays, and custom embedded electronics. Trusted by leading OEMs and State Transport Undertakings across India, we are committed to delivering reliable, innovative, and high-quality products that enhance public transportation infrastructure.</p>
+                </div>
+                <div class="heritage-img-wrapper fade-up stagger-2">
+                    <img src="about-heritage.png" alt="Aargee Manufacturing Facility">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: STATS BAR -->
+    <div class="stats-container fade-up stagger-3">
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-value"><span class="counter" data-target="45">0</span>+</div>
+                <div class="stat-label">Years of Excellence</div>
+                <div class="stat-sub">Industry Experience</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value"><span class="counter" data-target="1979">0</span></div>
+                <div class="stat-label">Established</div>
+                <div class="stat-sub">Foundation Year</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">ISO</div>
+                <div class="stat-label">9001:2015</div>
+                <div class="stat-sub">Certified Quality</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">IATF</div>
+                <div class="stat-label">16949:2016</div>
+                <div class="stat-sub">Automotive Standard</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">OEM</div>
+                <div class="stat-label">Trusted Partner</div>
+                <div class="stat-sub">Transportation Focus</div>
+            </div>
         </div>
     </div>
-    <!-- HERITAGE -->
-    <section class="abt-heritage" id="our-heritage">
-        <div class="abt-heritage-inner">
-            <div>
-                <div class="s-eyebrow">Our Heritage</div>
-                <h2 class="s-h2" style="margin-bottom:20px;">Four Decades of<br><span class="red">Engineering</span>
-                    Leadership</h2>
-                <p class="abt-p">Founded in <strong>1979</strong>, Aargee Equipment Pvt. Ltd. is a pioneering force in
-                    India's transportation electronics industry. For over four decades, we have been at the forefront of
-                    designing and manufacturing advanced vehicle technologies, intelligent mobility solutions, and
-                    safety-critical systems that power the nation's transport infrastructure.</p>
-                <p class="abt-p">Holding both <strong>ISO 9001:2015</strong> and <strong>IATF 16949:2016</strong>
-                    certifications, our engineering and manufacturing capabilities are benchmarked against the highest
-                    global standards. We serve OEMs, State Transport Undertakings, bus body builders, and system
-                    integrators across India and international markets.</p>
-                <p class="abt-p">Our portfolio spans <strong>automotive lighting systems</strong>,
-                    <strong>ITMS</strong>, <strong>Public transit display system</strong>, <strong>TFT display
-                        solutions</strong>, and <strong>advanced safety technologies</strong> &mdash; each engineered to
-                    the highest standards of reliability and performance.</p>
-            </div>
-            <div style="position:relative;">
-                <div class="img-wrap">
-                    <img src="hero-bg.jpg?v=2" alt="Aargee Equipment">
-                    <div class="img-badge"><span class="b-n">45+</span><span class="b-t">Years of<br>Trust</span></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- MVV -->
-    <section class="abt-mvv" id="mission-vision">
-        <div class="abt-mvv-inner">
-            <div class="mvv-header">
-                <div class="s-eyebrow center">Our Foundation</div>
-                <h2 class="s-h2">Mission, Vision &amp; Values</h2>
-            </div>
-            <div class="mvv-grid">
-                <div class="mvv-card mission">
-                    <div class="mvv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                            <path d="M2 17l10 5 10-5" />
-                            <path d="M2 12l10 5 10-5" />
-                        </svg></div>
-                    <h3>Our Mission</h3>
-                    <p>To engineer and deliver world-class transportation electronics and intelligent mobility solutions
-                        that enhance safety, efficiency, and passenger experience across India and beyond.</p>
-                </div>
-                <div class="mvv-card vision">
-                    <div class="mvv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <circle cx="12" cy="12" r="10" />
-                            <circle cx="12" cy="12" r="3" />
-                            <path d="M12 2v4M12 18v4M2 12h4M18 12h4" />
-                        </svg></div>
-                    <h3>Our Vision</h3>
-                    <p>To be India's most trusted and innovative engineering company in transportation electronics
-                        &mdash; setting new standards in quality, technology, and sustainable intelligent mobility.</p>
-                </div>
-                <div class="mvv-card values">
-                    <div class="mvv-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="1.8">
-                            <path
-                                d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-                        </svg></div>
-                    <h3>Our Values</h3>
-                    <p>Quality without compromise. Innovation with purpose. Integrity in every partnership &mdash;
-                        guided by a commitment to engineering excellence, customer-first thinking, and ethical business
-                        practices.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- TIMELINE -->
-    <section class="abt-timeline" id="our-journey">
-        <div class="tl-inner">
-            <div class="tl-header">
-                <div class="s-eyebrow center">Our Journey</div>
-                <h2 class="s-h2">Milestones That Shaped <span class="red">Aargee</span></h2>
-            </div>
-            <div class="tl-track">
-                <div class="tl-item">
-                    <div class="tl-left">
-                        <div class="tl-card">
-                            <h4>Foundation &amp; Beginnings</h4>
-                            <p>Established with a vision to engineer reliable automotive electrical and lighting systems
-                                for the Indian transportation sector.</p>
-                        </div>
-                    </div>
-                    <div class="tl-center">
-                        <div class="tl-dot"></div><span class="tl-year">1979</span>
-                    </div>
-                    <div class="tl-right"></div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-left"></div>
-                    <div class="tl-center">
-                        <div class="tl-dot"></div><span class="tl-year">1990s</span>
-                    </div>
-                    <div class="tl-right">
-                        <div class="tl-card">
-                            <h4>Expansion into Vehicle Electronics</h4>
-                            <p>Growth into a full-spectrum vehicle electronics manufacturer, expanding into driver
-                                information systems and advanced control modules.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-left">
-                        <div class="tl-card">
-                            <h4>ISO 9001 Quality Certification</h4>
-                            <p>Achieved ISO 9001 certification, formalising Aargee's commitment to world-class quality
-                                management and process excellence.</p>
-                        </div>
-                    </div>
-                    <div class="tl-center">
-                        <div class="tl-dot"></div><span class="tl-year">2000s</span>
-                    </div>
-                    <div class="tl-right"></div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-left"></div>
-                    <div class="tl-center">
-                        <div class="tl-dot"></div><span class="tl-year">2010s</span>
-                    </div>
-                    <div class="tl-right">
-                        <div class="tl-card">
-                            <h4>Intelligent Mobility &amp; ITMS</h4>
-                            <p>Launched ITMS and Passenger Information Systems, positioning Aargee as a smart mobility
-                                technology leader in India.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-left">
-                        <div class="tl-card">
-                            <h4>IATF 16949 Automotive Standard</h4>
-                            <p>Secured IATF 16949:2016 &mdash; reinforcing capability to supply leading OEMs worldwide
-                                to the highest automotive quality standard.</p>
-                        </div>
-                    </div>
-                    <div class="tl-center">
-                        <div class="tl-dot"></div><span class="tl-year">2016</span>
-                    </div>
-                    <div class="tl-right"></div>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-left"></div>
-                    <div class="tl-center">
-                        <div class="tl-dot"></div><span class="tl-year">Today</span>
-                    </div>
-                    <div class="tl-right">
-                        <div class="tl-card">
-                            <h4>45+ Years &mdash; Engineering the Future</h4>
-                            <p>Trusted by 100+ clients across India, continuing to innovate with TFT displays, LED
-                                lighting, and advanced safety solutions.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- SECTION 3: PREMIUM QUALITY & TRUST -->
-    <section class="premium-quality" id="quality-trust">
-        <div class="pq-inner">
-            <div class="pq-header reveal-up">
-                <div class="s-eyebrow center">QUALITY &amp; TRUST</div>
-                <h2 class="s-h2">Certified to Global Standards.<br>Trusted by <span class="red">Industry Leaders.</span></h2>
-                <p class="abt-p" style="text-align: center; max-width: 800px; margin: 20px auto 0;">Quality is embedded into every stage of engineering, manufacturing, testing, and customer support. Through internationally recognized quality systems and rigorous validation processes, Aargee delivers reliable products trusted by OEMs, transportation authorities, and mobility providers.</p>
-            </div>
+
+    <!-- SECTION 3: QUALITY & TRUST -->
+    <section class="quality-section section-padding">
+        <div class="container fade-up">
+            <span class="section-label">Quality & Trust</span>
+            <h2 class="section-title">Certified to Global Standards.<br>Trusted by Industry Leaders.</h2>
+            <p class="section-subtitle">Quality is embedded into every stage of engineering, manufacturing, testing, and customer support. Through internationally recognized quality systems and rigorous validation processes, Aargee delivers reliable products trusted by OEMs, transportation authorities, and mobility providers.</p>
             
-            <div class="pq-grid">
-                <div class="pq-card reveal-up" style="transition-delay: 0.1s;">
-                    <div class="pq-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+            <div class="quality-grid">
+                <!-- Card 1 -->
+                <div class="quality-card fade-up stagger-1">
+                    <div class="qc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
                     </div>
-                    <div class="pq-name">ISO 9001:2015</div>
-                    <div class="pq-desc">A globally recognized framework ensuring process consistency, customer satisfaction, continuous improvement, and product reliability throughout the entire lifecycle.</div>
+                    <h3 class="qc-title">ISO 9001:2015</h3>
+                    <p class="qc-desc">A globally recognized framework ensuring process consistency, customer satisfaction, continuous improvement, and product reliability.</p>
                 </div>
-                <div class="pq-card reveal-up" style="transition-delay: 0.2s;">
-                    <div class="pq-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13" rx="1" /><path d="M16 8h4l3 5v3h-7V8z" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>
+                <!-- Card 2 -->
+                <div class="quality-card fade-up stagger-2">
+                    <div class="qc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                        </svg>
                     </div>
-                    <div class="pq-name">IATF 16949:2016</div>
-                    <div class="pq-desc">The highest international benchmark for automotive manufacturing, demonstrating our commitment to world-class quality and operational excellence.</div>
+                    <h3 class="qc-title">IATF 16949:2016</h3>
+                    <p class="qc-desc">International benchmark demonstrating our unwavering commitment to world-class manufacturing practices and operational excellence in the automotive sector.</p>
                 </div>
-                <div class="pq-card reveal-up" style="transition-delay: 0.3s;">
-                    <div class="pq-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" /><path d="M3 15h18v7H3z" /><circle cx="16" cy="18.5" r="1.5" /></svg>
+                <!-- Card 3 -->
+                <div class="quality-card fade-up stagger-3">
+                    <div class="qc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+                        </svg>
                     </div>
-                    <div class="pq-name">Quality Assurance</div>
-                    <div class="pq-desc">Comprehensive inspection, testing, product verification, and quality control procedures ensure every product meets performance expectations before deployment.</div>
+                    <h3 class="qc-title">Quality Assurance</h3>
+                    <p class="qc-desc">Comprehensive inspection, testing, and verification procedures applied rigorously to ensure dependable performance and reliability across all environments.</p>
                 </div>
-                <div class="pq-card reveal-up" style="transition-delay: 0.4s;">
-                    <div class="pq-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                <!-- Card 4 -->
+                <div class="quality-card fade-up stagger-4">
+                    <div class="qc-icon">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
                     </div>
-                    <div class="pq-name">Safety &amp; Compliance</div>
-                    <div class="pq-desc">Products are rigorously tested to meet transportation industry safety requirements, environmental regulations, and operational standards.</div>
-                </div>
-            </div>
-
-            <div class="trust-strip reveal-up" style="transition-delay: 0.5s;">
-                <div class="trust-item">
-                    <div class="t-num"><span class="counter" data-target="45">0</span><span>+</span></div>
-                    <div class="t-lbl">Years of Excellence</div>
-                </div>
-                <div class="trust-item">
-                    <div class="t-num"><span>ISO</span>&nbsp;9001</div>
-                    <div class="t-lbl">Certified</div>
-                </div>
-                <div class="trust-item">
-                    <div class="t-num"><span>IATF</span>&nbsp;16949</div>
-                    <div class="t-lbl">Certified</div>
-                </div>
-                <div class="trust-item">
-                    <div class="t-num"><span class="counter" data-target="100">0</span><span>%</span></div>
-                    <div class="t-lbl">Quality Focus</div>
+                    <h3 class="qc-title">Safety & Compliance</h3>
+                    <p class="qc-desc">Every product is meticulously engineered and exhaustively tested to meet or exceed strict transportation industry safety standards and regulatory requirements.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SECTION 4: PREMIUM ENGINEERING -->
-    <section class="premium-engineering" id="engineering-excellence">
-        <div class="pe-inner">
-            <div class="pe-header reveal-up">
-                <div class="s-eyebrow center">ENGINEERING EXCELLENCE</div>
-                <h2 class="s-h2">Engineering the Future of<br><span class="red">Intelligent Mobility</span></h2>
-                <p class="abt-p" style="text-align: center; max-width: 800px; margin: 20px auto 0;">Combining over four decades of engineering expertise with advanced development capabilities, Aargee continuously designs, develops, tests, and manufactures intelligent transportation technologies that improve safety, connectivity, operational efficiency, and passenger experience.</p>
+    <!-- SECTION 4: TRUSTED LEADERS -->
+    <section class="trusted-section">
+        <div class="container fade-up">
+            <div class="trusted-header">
+                <h2>Trusted by Industry Leaders</h2>
             </div>
-
-            <div class="pe-grid">
-                <div class="pe-card reveal-up" style="transition-delay: 0.1s;">
-                    <div class="pe-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
-                    </div>
-                    <h3 class="pe-title">In-house R&amp;D</h3>
-                    <p class="pe-desc">Dedicated engineering teams focused on research, innovation, product design, prototyping, and continuous technology advancement.</p>
+            <div class="logo-track-wrapper">
+                <div class="logo-track">
+                    <div class="partner-logo">TATA MOTORS</div>
+                    <div class="partner-logo">ASHOK LEYLAND</div>
+                    <div class="partner-logo">EICHER</div>
+                    <div class="partner-logo">VOLVO</div>
+                    <div class="partner-logo">MERCEDES-BENZ</div>
+                    <div class="partner-logo">STATE TRANSPORT UNDERTAKINGS</div>
+                    <div class="partner-logo">MOBILITY INTEGRATORS</div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="partner-logo">TATA MOTORS</div>
+                    <div class="partner-logo">ASHOK LEYLAND</div>
+                    <div class="partner-logo">EICHER</div>
+                    <div class="partner-logo">VOLVO</div>
+                    <div class="partner-logo">MERCEDES-BENZ</div>
+                    <div class="partner-logo">STATE TRANSPORT UNDERTAKINGS</div>
+                    <div class="partner-logo">MOBILITY INTEGRATORS</div>
                 </div>
-                <div class="pe-card reveal-up" style="transition-delay: 0.2s;">
-                    <div class="pe-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
-                    </div>
-                    <h3 class="pe-title">Product Engineering</h3>
-                    <p class="pe-desc">End-to-end product development from concept creation and design through validation, manufacturing, and deployment.</p>
-                </div>
-                <div class="pe-card reveal-up" style="transition-delay: 0.3s;">
-                    <div class="pe-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
-                    </div>
-                    <h3 class="pe-title">Transportation Electronics</h3>
-                    <p class="pe-desc">Advanced electronic solutions specifically developed for buses, mobility systems, and transportation applications.</p>
-                </div>
-                <div class="pe-card reveal-up" style="transition-delay: 0.4s;">
-                    <div class="pe-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
-                    </div>
-                    <h3 class="pe-title">Testing &amp; Validation</h3>
-                    <p class="pe-desc">Comprehensive reliability, environmental, functional, and performance testing ensuring dependable operation in real-world conditions.</p>
-                </div>
-                <div class="pe-card reveal-up" style="transition-delay: 0.5s;">
-                    <div class="pe-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
-                    </div>
-                    <h3 class="pe-title">Embedded Systems &amp; Displays</h3>
-                    <p class="pe-desc">Development of intelligent control systems, passenger information displays, TFT displays, driver information systems, and smart mobility technologies.</p>
-                </div>
-                <div class="pe-card reveal-up" style="transition-delay: 0.6s;">
-                    <div class="pe-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
-                    </div>
-                    <h3 class="pe-title">Manufacturing Excellence</h3>
-                    <p class="pe-desc">Precision manufacturing supported by advanced production processes, quality-driven operations, and continuous improvement initiatives.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="pe-focus-band">
-            <div class="pe-marquee">
-                <span>Passenger Information Systems</span>
-                <span>Driver Information Systems</span>
-                <span>TFT Display Technologies</span>
-                <span>Intelligent Transport Management Systems</span>
-                <span>Power Electronics</span>
-                <span>USB Charging Solutions</span>
-                <span>Embedded Electronics</span>
-                <span>Mobility Technologies</span>
-            </div>
-            <div class="pe-marquee" aria-hidden="true">
-                <span>Passenger Information Systems</span>
-                <span>Driver Information Systems</span>
-                <span>TFT Display Technologies</span>
-                <span>Intelligent Transport Management Systems</span>
-                <span>Power Electronics</span>
-                <span>USB Charging Solutions</span>
-                <span>Embedded Electronics</span>
-                <span>Mobility Technologies</span>
-            </div>
-        </div>
-
-        <div class="pe-smart-block">
-            <div class="pe-smart-content zoom-in">
-                <h3>From Concept to Deployment</h3>
-                <p>Aargee combines engineering innovation, advanced manufacturing, rigorous testing, and quality excellence to deliver intelligent transportation technologies trusted by OEMs, transport operators, and mobility providers.</p>
             </div>
         </div>
     </section>
-<!-- PREMIUM FOOTER -->
+
+    <!-- SECTION 5: ENGINEERING (DARK FLAGSHIP) -->
+    <section class="engineering-section dark-section">
+        <div class="eng-grid-bg"></div>
+        <div class="container eng-content">
+            <span class="section-label" style="color:#C8102E;">Engineering & Innovation</span>
+            <h2 class="section-title">Engineering the Future<br>of Intelligent Mobility</h2>
+            <p class="section-subtitle">Combining over four decades of engineering expertise with advanced development capabilities, Aargee continuously designs, develops, tests, and manufactures intelligent transportation technologies that improve safety, connectivity, operational efficiency, and passenger experience.</p>
+            
+            <div class="eng-cards">
+                <div class="eng-card fade-up stagger-1">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+                    <h3>In-house R&D</h3>
+                    <p>Dedicated engineering teams focused on research, innovation, product design, prototyping, and continuous technology advancement.</p>
+                </div>
+                <div class="eng-card fade-up stagger-2">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+                    <h3>Product Engineering</h3>
+                    <p>End-to-end product development from concept creation and design through validation, manufacturing, and deployment.</p>
+                </div>
+                <div class="eng-card fade-up stagger-3">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+                    <h3>Transportation Electronics</h3>
+                    <p>Advanced electronic solutions developed specifically for buses, mobility systems, and rigorous transportation applications.</p>
+                </div>
+                <div class="eng-card fade-up stagger-4">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+                    <h3>Testing & Validation</h3>
+                    <p>Comprehensive reliability, environmental, functional, and performance testing ensuring dependable operation globally.</p>
+                </div>
+                <div class="eng-card fade-up stagger-5">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+                    <h3>Embedded Systems & Displays</h3>
+                    <p>Development of intelligent control systems, passenger information displays, TFT displays, and driver information systems.</p>
+                </div>
+                <div class="eng-card fade-up stagger-6">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 20a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8l-7 5V8l-7 5V4a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2Z"/></svg></div>
+                    <h3>Manufacturing Excellence</h3>
+                    <p>Precision manufacturing supported by advanced production processes, quality-driven operations, and continuous improvement initiatives.</p>
+                </div>
+            </div>
+
+            <!-- TECH BAND -->
+            <div class="tech-band-container">
+                <div class="tech-band">
+                    <div class="tech-item">Passenger Information Systems</div>
+                    <div class="tech-item">Driver Information Systems</div>
+                    <div class="tech-item">TFT Display Technologies</div>
+                    <div class="tech-item">Intelligent Transport Management</div>
+                    <div class="tech-item">Power Electronics</div>
+                    <div class="tech-item">USB Charging Solutions</div>
+                    <div class="tech-item">Embedded Electronics</div>
+                    <div class="tech-item">Mobility Technologies</div>
+                    <!-- Duplicate for infinite scroll -->
+                    <div class="tech-item">Passenger Information Systems</div>
+                    <div class="tech-item">Driver Information Systems</div>
+                    <div class="tech-item">TFT Display Technologies</div>
+                    <div class="tech-item">Intelligent Transport Management</div>
+                    <div class="tech-item">Power Electronics</div>
+                    <div class="tech-item">USB Charging Solutions</div>
+                    <div class="tech-item">Embedded Electronics</div>
+                    <div class="tech-item">Mobility Technologies</div>
+                </div>
+            </div>
+
+            <!-- FEATURE HIGHLIGHT BLOCK -->
+            <div class="feature-block fade-up">
+                <h2>From Concept to Deployment</h2>
+                <p>Aargee combines engineering innovation, advanced manufacturing, rigorous testing, and quality excellence to deliver intelligent transportation technologies trusted by OEMs, transport operators, and mobility providers worldwide.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: WHY AARGEE -->
+    <section class="why-section section-padding">
+        <div class="container">
+            <span class="section-label fade-up">Why Aargee</span>
+            <h2 class="section-title fade-up">Trusted Engineering. Proven Excellence.</h2>
+            <p class="section-subtitle fade-up">For over four decades, Aargee has combined engineering expertise, innovation, quality systems, and manufacturing excellence to deliver intelligent transportation technologies trusted by OEMs, transportation authorities, and mobility providers.</p>
+            
+            <div class="why-grid">
+                <div class="why-card fade-up stagger-1">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></div>
+                    <h3>45+ Years of Excellence</h3>
+                    <p>More than four decades of engineering expertise serving the transportation and mobility industry.</p>
+                </div>
+                <div class="why-card fade-up stagger-2">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18h6"/><path d="M10 22h4"/><path d="M15.09 14c.18-.98.65-1.74 1.41-2.5A4.65 4.65 0 0 0 18 8 6 6 0 0 0 6 8c0 1 .23 2.23 1.5 3.5A4.61 4.61 0 0 1 8.91 14"/></svg></div>
+                    <h3>In-house R&D</h3>
+                    <p>Dedicated research and development capabilities driving continuous innovation and product advancement.</p>
+                </div>
+                <div class="why-card fade-up stagger-3">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+                    <h3>Global Quality Standards</h3>
+                    <p>ISO 9001:2015 and IATF 16949:2016 certified processes ensuring world-class quality and reliability.</p>
+                </div>
+                <div class="why-card fade-up stagger-4">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="14" rx="2" ry="2"/><path d="M3 13h18"/><path d="M8 17v4"/><path d="M16 17v4"/><circle cx="8" cy="13" r="1"/><circle cx="16" cy="13" r="1"/></svg></div>
+                    <h3>Transportation Electronics</h3>
+                    <p>Specialized solutions designed specifically for buses, passenger information systems, displays, and intelligent mobility.</p>
+                </div>
+                <div class="why-card fade-up stagger-5">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3>Manufacturing Excellence</h3>
+                    <p>Advanced manufacturing processes supported by rigorous quality assurance and continuous improvement practices.</p>
+                </div>
+                <div class="why-card fade-up stagger-6">
+                    <div style="color: #C8102E; margin-bottom: 20px;"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+                    <h3>Trusted by OEMs</h3>
+                    <p>Long-standing relationships with OEMs, transport operators, and mobility solution providers worldwide.</p>
+                </div>
+            </div>
+
+            <div class="why-banner fade-up">
+                <h2>Made in India. Trusted Across Mobility Networks.</h2>
+                <p>Aargee continues to deliver innovative transportation electronics and intelligent mobility solutions through engineering excellence, quality-driven manufacturing, and customer-focused innovation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREMIUM FOOTER -->
     <footer class="premium-footer">
         <div class="pf-inner">
             <div class="pf-grid">
                 <!-- Column 1 -->
                 <div class="pf-col pf-col-1">
-                    <img src="aargee-logo.png" alt="Aargee Equipment Pvt. Ltd." class="pf-logo-img">
+                    <img alt="Aargee Equipment Pvt. Ltd." class="pf-logo-img" src="aargee-logo.png?v=3" />
                     <h3>AARGEE EQUIPMENT PVT. LTD.</h3>
                     <span class="pf-tagline">Engineering Excellence Since 1979</span>
-                    <p>For over four decades, Aargee has been delivering advanced vehicle technologies to customers across domestic and international markets.</p>
+                    <p>For over four decades, Aargee has been delivering advanced vehicle technologies to customers
+                        across domestic and international markets.</p>
                     <div class="pf-socials">
-                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
-                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
-                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg></a>
-                        <a href="#" aria-label="Email"><svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.236l-8 4.882-8-4.882V6l8 4.882L20 6v2.236z"/></svg></a>
+                        <a aria-label="LinkedIn" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                                stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect height="12" width="4" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg></a>
+                        <a aria-label="YouTube" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                                stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg></a>
+                        <a aria-label="Facebook" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewbox="0 0 24 24" width="18">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a aria-label="Email" href="#"><svg viewbox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.236l-8 4.882-8-4.882V6l8 4.882L20 6v2.236z">
+                                </path>
+                            </svg></a>
                     </div>
                 </div>
-
                 <!-- Column 2 -->
                 <div class="pf-col">
                     <h4>COMPANY</h4>
@@ -1712,7 +1899,6 @@
                         <li><a href="#">Contact Us</a></li>
                     </ul>
                 </div>
-
                 <!-- Column 3 -->
                 <div class="pf-col">
                     <h4>SOLUTIONS</h4>
@@ -1726,7 +1912,6 @@
                         <li><a href="#">USB Charging Solutions</a></li>
                     </ul>
                 </div>
-
                 <!-- Column 4 -->
                 <div class="pf-col">
                     <h4>INDUSTRIES</h4>
@@ -1739,13 +1924,16 @@
                         <li><a href="#">Infrastructure</a></li>
                     </ul>
                 </div>
-
                 <!-- Column 5 -->
                 <div class="pf-col">
                     <h4>CONTACT</h4>
                     <div class="pf-contact-item">
                         <div class="pf-contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                                width="20">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
                         </div>
                         <div class="pf-contact-text">
                             Bangalore, India
@@ -1753,7 +1941,12 @@
                     </div>
                     <div class="pf-contact-item">
                         <div class="pf-contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                                width="20">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
                         </div>
                         <div class="pf-contact-text">
                             <a href="tel:+91XXXXXXXXXX">+91 XX XXXX XXXX</a>
@@ -1761,7 +1954,12 @@
                     </div>
                     <div class="pf-contact-item">
                         <div class="pf-contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                                width="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
                         </div>
                         <div class="pf-contact-text">
                             <a href="mailto:sales@aargee.net">sales@aargee.net</a>
@@ -1769,7 +1967,14 @@
                     </div>
                     <div class="pf-contact-item">
                         <div class="pf-contact-icon">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                            <svg fill="none" height="20" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24"
+                                width="20">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" x2="22" y1="12" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg>
                         </div>
                         <div class="pf-contact-text">
                             <a href="http://www.aargee.net">www.aargee.net</a>
@@ -1777,10 +1982,9 @@
                     </div>
                 </div>
             </div>
-
             <div class="pf-copyright">
                 <div class="pf-copy-text">
-                    &copy; 2026 Aargee Equipment Pvt. Ltd. All Rights Reserved.
+                    © 2026 Aargee Equipment Pvt. Ltd. All Rights Reserved.
                 </div>
                 <div class="pf-copy-links">
                     <a href="#">Privacy Policy</a>
@@ -1802,21 +2006,21 @@
             // Premium Sections Animation Logic
             var reveals = document.querySelectorAll('.reveal-up, .zoom-in');
             if (reveals.length) {
-                var ro = new IntersectionObserver(function(e) {
-                    e.forEach(function(x) {
+                var ro = new IntersectionObserver(function (e) {
+                    e.forEach(function (x) {
                         if (x.isIntersecting) {
                             x.target.classList.add('active');
                             ro.unobserve(x.target);
                         }
                     });
                 }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
-                reveals.forEach(function(el) { ro.observe(el); });
+                reveals.forEach(function (el) { ro.observe(el); });
             }
 
             var premiumCounters = document.querySelectorAll('.counter[data-target]');
             if (premiumCounters.length) {
-                var cObs = new IntersectionObserver(function(e) {
-                    e.forEach(function(x) {
+                var cObs = new IntersectionObserver(function (e) {
+                    e.forEach(function (x) {
                         if (x.isIntersecting) {
                             var el = x.target, t = parseInt(el.dataset.target, 10), dur = 2200, s = performance.now();
                             (function tick(n) {
@@ -1828,10 +2032,62 @@
                         }
                     });
                 }, { threshold: 0.5 });
-                premiumCounters.forEach(function(el) { cObs.observe(el); });
+                premiumCounters.forEach(function (el) { cObs.observe(el); });
             }
         });
     </script>
-</body>
+<script>
+(function(){
+    var navbar = document.getElementById('navbar');
+    if (!navbar) return;
+    window.addEventListener('scroll', function(){
+        navbar.classList.toggle('scrolled', window.scrollY > 45);
+    }, { passive: true });
+})();
+</script>
 
+    <!-- ANIMATION SCRIPT -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    
+                    // Counter animation
+                    if(entry.target.classList.contains('stats-container')) {
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            const target = +counter.getAttribute('data-target');
+                            const duration = 2000; // ms
+                            const step = target / (duration / 16);
+                            let current = 0;
+                            
+                            const updateCounter = () => {
+                                current += step;
+                                if (current < target) {
+                                    counter.innerText = Math.ceil(current);
+                                    requestAnimationFrame(updateCounter);
+                                } else {
+                                    counter.innerText = target;
+                                }
+                            };
+                            updateCounter();
+                        });
+                    }
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    });
+    </script>
+    
+</body>
 </html>
