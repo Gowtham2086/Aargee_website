@@ -1,0 +1,1517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+        content="Aargee Equipment Pvt. Ltd. — Intelligent Transportation Solutions across Roadways, Railways, Waterways & Airways. Passenger Information Systems, Fleet Tracking, Driver Safety, Surveillance and more."
+        name="description" />
+    <title>Solutions | Aargee Equipment Pvt. Ltd. | Intelligent Transportation Technology</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link href="index.css" rel="stylesheet" />
+    <style>
+        /* ── body override (index.css sets dark body) ── */
+        body {
+            background: #fff;
+            color: #111827;
+        }
+
+        /* ── Utility ── */
+        .sol-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        @media(max-width:768px) {
+            .sol-container {
+                padding: 0 20px;
+            }
+        }
+
+        /* ── Section Label ── */
+        .sol-lbl {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #C8102E;
+            margin-bottom: 18px;
+        }
+
+        .sol-lbl::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            background: #C8102E;
+        }
+
+        /* ── Fade-in on scroll (hero items shown immediately, others fade in) ── */
+        .sol-fade {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+
+        .sol-fade.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Hero content always visible — no fade delay */
+        .sol-hero .sol-fade {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        .sol-fade.d1 {
+            transition-delay: 0.05s;
+        }
+
+        .sol-fade.d2 {
+            transition-delay: 0.15s;
+        }
+
+        .sol-fade.d3 {
+            transition-delay: 0.25s;
+        }
+
+        .sol-fade.d4 {
+            transition-delay: 0.35s;
+        }
+
+        .sol-fade.d5 {
+            transition-delay: 0.45s;
+        }
+
+        .sol-fade.d6 {
+            transition-delay: 0.55s;
+        }
+
+        /* ── Section Heading ── */
+        .sol-h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.9rem, 3.2vw, 2.7rem);
+            font-weight: 800;
+            color: #111827;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .sol-h2.white {
+            color: #fff;
+        }
+
+        .sol-section-sub {
+            font-size: 1.05rem;
+            color: #4B5563;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .sol-section-sub.white {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .sol-section-head {
+            text-align: center;
+            margin-bottom: 72px;
+        }
+
+        /* ============================================================
+           HERO — Dark with red accent (same approach as about.html hero)
+           ============================================================ */
+        .sol-hero {
+            position: relative;
+            height: 100vh;
+            height: 100dvh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .sol-hero-bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .sol-hero-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .sol-hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 45%, transparent 100%);
+        }
+
+        /* No floating particles — removed */
+
+        .sol-hero-content {
+            position: relative;
+            z-index: 10;
+            padding: 48px clamp(20px, 4vw, 48px) 0;
+            transform: translateY(-80px);
+            max-width: 860px;
+            width: 100%;
+        }
+
+        .sol-hero-eyebrow {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            color: #C8102E;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: fadeUp 0.7s var(--ease) 0.2s forwards;
+        }
+
+        .sol-hero-eyebrow::before {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 2px;
+            background: #C8102E;
+        }
+
+        .sol-hero-h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.2rem, 4.5vw, 4rem);
+            font-weight: 900;
+            color: #fff;
+            line-height: 1.07;
+            margin-bottom: 18px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeUp 0.8s var(--ease) 0.4s forwards;
+        }
+
+        .sol-hero-h1 .red {
+            color: #C8102E;
+        }
+
+        .sol-hero-desc {
+            font-size: clamp(0.92rem, 1.2vw, 1.05rem);
+            color: rgba(255, 255, 255, 0.68);
+            line-height: 1.75;
+            max-width: 660px;
+            margin-bottom: 32px;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: fadeUp 0.7s var(--ease) 0.6s forwards;
+        }
+
+        .sol-hero-btns {
+            display: flex;
+            gap: 18px;
+            flex-wrap: wrap;
+            opacity: 0;
+            transform: translateY(16px);
+            animation: fadeUp 0.7s var(--ease) 0.8s forwards;
+        }
+
+        .btn-sol-red {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #C8102E;
+            color: #fff;
+            padding: 15px 34px;
+            border-radius: 6px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.93rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid #C8102E;
+        }
+
+        .btn-sol-red:hover {
+            background: #a00d24;
+            box-shadow: 0 0 28px rgba(200, 16, 46, 0.45);
+            transform: translateY(-2px);
+        }
+
+        .btn-sol-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid rgba(255, 255, 255, 0.28);
+            color: #fff;
+            padding: 15px 34px;
+            border-radius: 6px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.93rem;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-sol-outline:hover {
+            border-color: #C8102E;
+            color: #C8102E;
+            transform: translateY(-2px);
+        }
+
+        /* Scroll hint — no animation */
+        .sol-scroll-hint {
+            position: absolute;
+            bottom: 28px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            z-index: 10;
+        }
+
+        .sol-scroll-hint span {
+            font-size: 0.68rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* ============================================================
+           INDUSTRIES WE SERVE — white background
+           ============================================================ */
+        .sol-industries {
+            background: #fff;
+            padding: 110px 0;
+        }
+
+        .sol-ind-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        @media(max-width:1024px) {
+            .sol-ind-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(max-width:600px) {
+            .sol-ind-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .sol-ind-card {
+            border: 1px solid #e5e7eb;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: all 0.35s;
+            cursor: default;
+        }
+
+        .sol-ind-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.09), 0 0 0 1px rgba(200, 16, 46, 0.18);
+            border-color: rgba(200, 16, 46, 0.3);
+        }
+
+        .sol-ind-imgbox {
+            height: 180px;
+            background: #f3f4f6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .sol-ind-body {
+            padding: 28px 24px;
+        }
+
+        .sol-ind-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(200, 16, 46, 0.07);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C8102E;
+            margin-bottom: 16px;
+        }
+
+        .sol-ind-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+
+        .sol-ind-desc {
+            font-size: 0.9rem;
+            color: #4B5563;
+            line-height: 1.7;
+        }
+
+        .sol-ind-tag {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 4px 14px;
+            border: 1px solid rgba(200, 16, 46, 0.25);
+            color: #C8102E;
+            border-radius: 20px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* ============================================================
+           SOLUTIONS SECTION HEADER — light grey
+           ============================================================ */
+        .sol-sol-intro {
+            background: #f9fafb;
+            padding: 80px 0 60px;
+        }
+
+        /* ============================================================
+           INDIVIDUAL SOLUTIONS — alternating white / light-grey
+           ============================================================ */
+        .sol-sol-section {
+            padding: 100px 0;
+        }
+
+        .sol-sol-section.bg-white {
+            background: #fff;
+        }
+
+        .sol-sol-section.bg-grey {
+            background: #f9fafb;
+        }
+
+        .sol-sol-section.bg-dark {
+            background: #08080a;
+        }
+
+        .sol-sol-inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .sol-sol-inner.reverse {
+            direction: rtl;
+        }
+
+        .sol-sol-inner.reverse>* {
+            direction: ltr;
+        }
+
+        @media(max-width:900px) {
+            .sol-sol-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sol-sol-inner.reverse {
+                direction: ltr;
+            }
+        }
+
+        /* Text side */
+        .sol-sol-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            font-weight: 900;
+            color: rgba(200, 16, 46, 0.1);
+            line-height: 1;
+            margin-bottom: -8px;
+        }
+
+        .sol-sol-num.dark {
+            color: rgba(200, 16, 46, 0.15);
+        }
+
+        .sol-sol-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(200, 16, 46, 0.08);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #C8102E;
+            margin-bottom: 22px;
+            transition: all 0.3s;
+        }
+
+        .sol-sol-section.bg-dark .sol-sol-icon {
+            background: rgba(200, 16, 46, 0.15);
+        }
+
+        .sol-sol-section:hover .sol-sol-icon {
+            background: #C8102E;
+            color: #fff;
+        }
+
+        .sol-sol-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 14px;
+            line-height: 1.2;
+        }
+
+        .sol-sol-title.white {
+            color: #fff;
+        }
+
+        .sol-sol-desc {
+            font-size: 1rem;
+            color: #4B5563;
+            line-height: 1.85;
+            margin-bottom: 30px;
+        }
+
+        .sol-sol-desc.white {
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .sol-feat-list {
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 9px 20px;
+        }
+
+        .sol-feat-list li {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 0.88rem;
+            color: #374151;
+            font-weight: 500;
+        }
+
+        .sol-feat-list.white li {
+            color: rgba(255, 255, 255, 0.78);
+        }
+
+        .sol-feat-list li::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #C8102E;
+            flex-shrink: 0;
+        }
+
+        @media(max-width:600px) {
+            .sol-feat-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Image side */
+        .sol-sol-img-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.13);
+        }
+
+        .sol-sol-section.bg-dark .sol-sol-img-wrap {
+            box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
+        }
+
+        .sol-sol-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .sol-sol-inner:hover .sol-sol-img-wrap img {
+            transform: scale(1.04);
+        }
+
+        .sol-img-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 14px;
+            background: #f3f4f6;
+        }
+
+        .sol-img-placeholder.dark-bg {
+            background: #12151e;
+        }
+
+        .sol-img-placeholder p {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.78rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #9CA3AF;
+        }
+
+        .sol-img-placeholder.dark-bg p {
+            color: rgba(255, 255, 255, 0.28);
+        }
+
+        .sol-img-badge {
+            position: absolute;
+            bottom: 18px;
+            left: 18px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(200, 16, 46, 0.2);
+            border-radius: 8px;
+            padding: 8px 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sol-sol-section.bg-dark .sol-img-badge {
+            background: rgba(0, 0, 0, 0.75);
+            border-color: rgba(200, 16, 46, 0.3);
+        }
+
+        .sol-img-badge span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .sol-sol-section.bg-dark .sol-img-badge span {
+            color: #fff;
+        }
+
+        /* ============================================================
+           WHY AARGEE — dark background
+           ============================================================ */
+        .sol-why {
+            background: #08080a;
+            padding: 110px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sol-why-net {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background-image:
+                linear-gradient(rgba(200, 16, 46, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(200, 16, 46, 0.04) 1px, transparent 1px);
+            background-size: 72px 72px;
+        }
+
+        .sol-why-inner {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        @media(max-width:900px) {
+            .sol-why-inner {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+        }
+
+        .sol-counters {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2px;
+        }
+
+        .sol-counter-box {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            padding: 48px 32px;
+            text-align: center;
+            transition: all 0.35s;
+        }
+
+        .sol-counter-box:hover {
+            background: rgba(200, 16, 46, 0.06);
+            border-color: rgba(200, 16, 46, 0.25);
+        }
+
+        .sol-counter-num {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            color: #C8102E;
+            line-height: 1;
+            margin-bottom: 8px;
+        }
+
+        .sol-counter-label {
+            font-size: 0.87rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        .sol-why-body {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.9;
+            margin-top: 20px;
+        }
+
+        .sol-chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 30px;
+        }
+
+        .sol-chip {
+            padding: 7px 18px;
+            border: 1px solid rgba(200, 16, 46, 0.3);
+            border-radius: 30px;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* ============================================================
+           FINAL CTA — red-tinted dark
+           ============================================================ */
+        .sol-cta {
+            background: #fff;
+            padding: 110px 0;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        .sol-cta-inner {
+            text-align: center;
+        }
+
+        .sol-cta-h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.9rem, 3.5vw, 3rem);
+            font-weight: 900;
+            color: #111827;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .sol-cta-h2 span {
+            color: #C8102E;
+        }
+
+        .sol-cta-desc {
+            font-size: 1.05rem;
+            color: #4B5563;
+            max-width: 580px;
+            margin: 0 auto 44px;
+            line-height: 1.8;
+        }
+
+        .sol-cta-btns {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn-cta-solid {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #C8102E;
+            color: #fff;
+            padding: 15px 34px;
+            border-radius: 6px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.93rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: 2px solid #C8102E;
+        }
+
+        .btn-cta-solid:hover {
+            background: #a00d24;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(200, 16, 46, 0.35);
+        }
+
+        .btn-cta-outline {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            border: 2px solid #d1d5db;
+            color: #111827;
+            padding: 15px 34px;
+            border-radius: 6px;
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 0.93rem;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .btn-cta-outline:hover {
+            border-color: #C8102E;
+            color: #C8102E;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======== NAVIGATION ======== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-inner">
+            <a class="nav-logo" href="index.html" id="nav-logo">
+                <img alt="Aargee Equipment Pvt. Ltd." class="logo-img" src="aargee-logo.png?v=3" />
+            </a>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a class="nav-link" href="index.html" id="nav-home">HOME</a></li>
+                    <li><a class="nav-link" href="about.html" id="nav-about">ABOUT US</a></li>
+                    <li><a class="nav-link active" href="solutions.html" id="nav-solutions">SOLUTIONS</a></li>
+                    <li><a class="nav-link" href="industries.html" id="nav-industries">INDUSTRIES</a></li>
+                    <li><a class="nav-link" href="#" id="nav-manufacturing">MANUFACTURING</a></li>
+                    <li><a class="nav-link" href="#" id="nav-quality">QUALITY</a></li>
+                    <li><a class="nav-link" href="#" id="nav-careers">CAREERS</a></li>
+                    <li><a class="nav-link" href="#" id="nav-contact">CONTACT</a></li>
+                </ul>
+            </div>
+            <a class="nav-cta" href="#sol-cta" id="nav-contact-btn">Get A Quote</a>
+            <button aria-label="Menu" class="nav-toggle"
+                id="nav-toggle"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO — Dark (matches about.html hero style)
+         ============================================================ -->
+    <section class="sol-hero" id="sol-hero">
+        <div class="sol-hero-bg">
+            <img alt="Transportation Technology Network" class="sol-hero-bg-img" src="sol-hero-bg.png" />
+            <div class="sol-hero-overlay"></div>
+        </div>
+
+        <div class="sol-hero-content">
+            <h1 class="sol-hero-h1">
+                Engineering Smarter Mobility<br>
+                For A <span class="red">Connected World</span>
+            </h1>
+            <p class="sol-hero-desc">
+                AARGEE delivers intelligent transportation technologies that enhance passenger communication, fleet
+                visibility, operational efficiency, and safety across roadways, railways, waterways, and airways —
+                helping transportation operators build smarter, safer journeys.
+            </p>
+            <div class="sol-hero-btns">
+                <a class="btn-sol-red" href="#sol-solutions-section" id="btn-explore-sol">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2">
+                        <path d="M12 5v14M5 12l7 7 7-7" />
+                    </svg>
+                    Explore Solutions
+                </a>
+                <a class="btn-sol-outline" href="#sol-cta" id="btn-talk-experts">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2.2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                    </svg>
+                    Talk To Experts
+                </a>
+            </div>
+        </div>
+        <div class="sol-scroll-hint">
+            <span>Scroll</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2">
+                <path d="M7 13l5 5 5-5" />
+                <path d="M7 6l5 5 5-5" />
+            </svg>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         INDUSTRIES WE SERVE — white
+         ============================================================ -->
+    <section class="sol-industries" id="sol-industries">
+        <div class="sol-container">
+            <div class="sol-section-head sol-fade">
+                <div class="sol-lbl" style="justify-content:center;">Industries We Serve</div>
+                <h2 class="sol-h2">Solutions Across Every Mode<br>Of Transportation</h2>
+                <p class="sol-section-sub">Purpose-built technologies for every major transportation mode across India
+                    and beyond.</p>
+            </div>
+            <div class="sol-ind-grid">
+                <div class="sol-ind-card sol-fade d1">
+                    <img src="placeholder-road.jpg" alt="Roadways Placeholder" class="sol-ind-imgbox"
+                        style="object-fit:cover; width:100%; height:200px; padding:0; border:none; background:#eee;">
+                    <div class="sol-ind-body">
+                        <div class="sol-ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <rect x="1" y="3" width="15" height="13" rx="2" />
+                                <path d="M16 8h4l3 5v3h-7V8z" />
+                                <circle cx="5.5" cy="18.5" r="2.5" />
+                                <circle cx="18.5" cy="18.5" r="2.5" />
+                            </svg></div>
+                        <div class="sol-ind-title">Roadways</div>
+                        <p class="sol-ind-desc">Advanced technologies for public transit, intercity coaches, commercial
+                            fleets, school buses, and smart mobility systems.</p>
+                        <span class="sol-ind-tag">Primary Focus</span>
+                    </div>
+                </div>
+                <div class="sol-ind-card sol-fade d2">
+                    <img src="placeholder-rail.jpg" alt="Railways Placeholder" class="sol-ind-imgbox"
+                        style="object-fit:cover; width:100%; height:200px; padding:0; border:none; background:#eee;">
+                    <div class="sol-ind-body">
+                        <div class="sol-ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <rect x="2" y="2" width="20" height="14" rx="2" />
+                                <path d="M2 8h20" />
+                                <circle cx="7" cy="19" r="2" />
+                                <circle cx="17" cy="19" r="2" />
+                                <path d="M5 16l-2 4M19 16l2 4" />
+                            </svg></div>
+                        <div class="sol-ind-title">Railways</div>
+                        <p class="sol-ind-desc">Passenger communication, safety systems, lighting solutions, and
+                            intelligent rail technologies for modern networks.</p>
+                        <span class="sol-ind-tag">Growing Presence</span>
+                    </div>
+                </div>
+                <div class="sol-ind-card sol-fade d3">
+                    <img src="placeholder-air.jpg" alt="Airways Placeholder" class="sol-ind-imgbox"
+                        style="object-fit:cover; width:100%; height:200px; padding:0; border:none; background:#eee;">
+                    <div class="sol-ind-body">
+                        <div class="sol-ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path
+                                    d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5z" />
+                            </svg></div>
+                        <div class="sol-ind-title">Airways</div>
+                        <p class="sol-ind-desc">Passenger communication systems, digital information displays, and
+                            transportation infrastructure for aviation.</p>
+                        <span class="sol-ind-tag">Future Ready</span>
+                    </div>
+                </div>
+                <div class="sol-ind-card sol-fade d4">
+                    <img src="placeholder-water.jpg" alt="Waterways Placeholder" class="sol-ind-imgbox"
+                        style="object-fit:cover; width:100%; height:200px; padding:0; border:none; background:#eee;">
+                    <div class="sol-ind-body">
+                        <div class="sol-ind-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path
+                                    d="M2 20c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1 .6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1" />
+                                <path d="M19 6H5l-3 8h20z" />
+                                <path d="M12 6V3M9 6l1-3M15 6l-1-3" />
+                            </svg></div>
+                        <div class="sol-ind-title">Waterways</div>
+                        <p class="sol-ind-desc">Navigation displays, passenger information systems, surveillance, and
+                            vessel safety technologies.</p>
+                        <span class="sol-ind-tag">Expanding</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions section intro label — light grey -->
+    <div class="sol-sol-intro">
+        <div class="sol-container">
+            <div class="sol-section-head sol-fade" style="margin-bottom:0;">
+                <div class="sol-lbl" style="justify-content:center;">Our Solutions</div>
+                <h2 class="sol-h2" id="sol-solutions-section">Comprehensive Transportation<br>Technology Portfolio</h2>
+                <p class="sol-section-sub">Eight core technology domains engineered to transform transportation
+                    operations across every mode of mobility.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================
+         SOLUTION 01 — white
+         ============================================================ -->
+    <section class="sol-sol-section bg-white" id="sol01">
+        <div class="sol-container">
+            <div class="sol-sol-inner sol-fade">
+                <div>
+                    <div class="sol-sol-num">01</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="2" y="3" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 17v4" />
+                            <path d="M7 8h4M7 11h3" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 01</div>
+                    <h3 class="sol-sol-title">Passenger Information Systems</h3>
+                    <p class="sol-sol-desc">Delivering real-time passenger communication through intelligent display and
+                        announcement technologies. Keeping passengers informed and confident at every step of their
+                        journey.</p>
+                    <ul class="sol-feat-list">
+                        <li>LED Destination Displays</li>
+                        <li>Route Information Systems</li>
+                        <li>Passenger Information Displays</li>
+                        <li>Public Transit Displays</li>
+                        <li>Multi-Language Voice Announcements</li>
+                        <li>Smart Bus Stop Displays</li>
+                        <li>ITS Integration</li>
+                        <li>Real-Time Data Feeds</li>
+                    </ul>
+                </div>
+                <div class="sol-sol-img-wrap">
+                    <img src="pis-placeholder.png" alt="Passenger Information Systems">
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <circle cx="12" cy="12" r="10" />
+                            <path d="M12 8v4l3 3" />
+                        </svg>
+                        <span>Real-Time Passenger Displays</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Solution 02 — grey ── -->
+    <section class="sol-sol-section bg-grey" id="sol02">
+        <div class="sol-container">
+            <div class="sol-sol-inner reverse sol-fade">
+                <div>
+                    <div class="sol-sol-num">02</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M17.5 6.5l-1.5 1.5M6.5 6.5l1.5 1.5" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 02</div>
+                    <h3 class="sol-sol-title">Driver Safety &amp; Monitoring Systems</h3>
+                    <p class="sol-sol-desc">AI-powered driver monitoring systems designed to detect fatigue,
+                        distraction, and unsafe driving behavior before incidents occur. Protecting drivers and
+                        passengers through intelligent real-time surveillance.</p>
+                    <ul class="sol-feat-list">
+                        <li>Driver Fatigue Monitoring</li>
+                        <li>Distraction Detection</li>
+                        <li>Real-Time Alerts</li>
+                        <li>Event Recording</li>
+                        <li>Driver Safety Analytics</li>
+                        <li>Fleet Safety Dashboard</li>
+                        <li>AI Behavior Analysis</li>
+                        <li>Incident Prevention</li>
+                    </ul>
+                </div>
+                <div class="sol-sol-img-wrap">
+                    <img src="placeholder-cctv.jpg" alt="Video Surveillance Systems">
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M23 7l-7 5 7 5V7z" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                        </svg>
+                        <span>CCTV &amp; Mobile DVR Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Solution 03 — grey ── -->
+    <section class="sol-sol-section bg-grey" id="sol05">
+        <div class="sol-container">
+            <div class="sol-sol-inner sol-fade">
+                <div>
+                    <div class="sol-sol-num">03</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 03</div>
+                    <h3 class="sol-sol-title">Passenger Safety Systems</h3>
+                    <p class="sol-sol-desc">Critical safety technologies designed to protect passengers and provide
+                        rapid emergency response capabilities. Ensuring every passenger has immediate access to help
+                        when it matters most.</p>
+                    <ul class="sol-feat-list">
+                        <li>Panic Button Systems</li>
+                        <li>Emergency Alarms</li>
+                        <li>Safety Hammer Monitoring</li>
+                        <li>Emergency Communication</li>
+                        <li>Passenger Alert Systems</li>
+                        <li>Incident Reporting</li>
+                        <li>SOS Integration</li>
+                        <li>Control Room Alerts</li>
+                    </ul>
+                </div>
+                <div class="sol-sol-img-wrap">
+                    <div class="sol-img-placeholder">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
+                            opacity="0.4">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            <polyline points="9 12 11 14 15 10" />
+                        </svg>
+                        <p>Passenger Safety Systems</p>
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <span>Emergency Panic &amp; Alert Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Solution 04 — dark ── -->
+    <section class="sol-sol-section bg-dark" id="sol06">
+        <div class="sol-container">
+            <div class="sol-sol-inner reverse sol-fade">
+                <div>
+                    <div class="sol-sol-num dark">04</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 04</div>
+                    <h3 class="sol-sol-title white">Alcohol Interlock Systems</h3>
+                    <p class="sol-sol-desc white">Preventing unauthorized and unsafe vehicle operation through
+                        intelligent alcohol detection and ignition control technologies. Zero-tolerance enforcement that
+                        keeps roads and passengers safe.</p>
+                    <ul class="sol-feat-list white">
+                        <li>Breath Alcohol Analysis</li>
+                        <li>Ignition Interlock Control</li>
+                        <li>Driver Authentication</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Event Logging</li>
+                        <li>Fleet-Wide Reports</li>
+                    </ul>
+                </div>
+                <div class="sol-sol-img-wrap">
+                    <div class="sol-img-placeholder dark-bg">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
+                            opacity="0.5">
+                            <path d="M8 3h8a1 1 0 0 1 1 1v4a8 8 0 0 1-10 0V4a1 1 0 0 1 1-1z" />
+                            <path d="M12 12v9M8 21h8" />
+                        </svg>
+                        <p>Alcohol Interlock Systems</p>
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        <span>Breath Test &amp; Ignition Control</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Solution 05 — white ── -->
+    <section class="sol-sol-section bg-white" id="sol07">
+        <div class="sol-container">
+            <div class="sol-sol-inner sol-fade">
+                <div>
+                    <div class="sol-sol-num">05</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 05</div>
+                    <h3 class="sol-sol-title">Passenger Comfort &amp; Entertainment</h3>
+                    <p class="sol-sol-desc">Creating engaging travel experiences through integrated entertainment and
+                        passenger convenience technologies. Transforming journeys into experiences passengers look
+                        forward to.</p>
+                    <ul class="sol-feat-list">
+                        <li>TFT/LCD Display Systems</li>
+                        <li>USB Charging Systems</li>
+                        <li>Mobile Charging Ports</li>
+                        <li>Audio Systems</li>
+                        <li>Multimedia Solutions</li>
+                        <li>Wi-Fi Connectivity</li>
+                        <li>Seat Power Outlets</li>
+                        <li>Passenger Convenience Systems</li>
+                    </ul>
+                </div>
+                <div class="sol-sol-img-wrap">
+                    <div class="sol-img-placeholder">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
+                            opacity="0.4">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                            <polyline points="17 2 12 7 7 2" />
+                        </svg>
+                        <p>Comfort &amp; Entertainment</p>
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                            <polyline points="17 2 12 7 7 2" />
+                        </svg>
+                        <span>TFT Displays &amp; USB Charging</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── Solution 06 — grey ── -->
+    <section class="sol-sol-section bg-grey" id="sol08">
+        <div class="sol-container">
+            <div class="sol-sol-inner reverse sol-fade">
+                <div>
+                    <div class="sol-sol-num">06</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <circle cx="12" cy="12" r="4" />
+                            <line x1="12" y1="2" x2="12" y2="6" />
+                            <line x1="12" y1="18" x2="12" y2="22" />
+                            <line x1="4.93" y1="4.93" x2="7.76" y2="7.76" />
+                            <line x1="16.24" y1="16.24" x2="19.07" y2="19.07" />
+                            <line x1="2" y1="12" x2="6" y2="12" />
+                            <line x1="18" y1="12" x2="22" y2="12" />
+                            <line x1="4.93" y1="19.07" x2="7.76" y2="16.24" />
+                            <line x1="16.24" y1="7.76" x2="19.07" y2="4.93" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 06</div>
+                    <h3 class="sol-sol-title">Intelligent Lighting Solutions</h3>
+                    <p class="sol-sol-desc">Energy-efficient LED lighting engineered specifically for transportation
+                        environments. From interior passenger comfort lighting to exterior safety-critical signal lamps
+                        — built for durability and performance.</p>
+                    <ul class="sol-feat-list">
+                        <li>Interior LED Lighting</li>
+                        <li>Reading Lamps</li>
+                        <li>Dome Lights</li>
+                        <li>Step Lights</li>
+                        <li>Exterior Marker Lights</li>
+                        <li>Tail Lamps</li>
+                        <li>Brake Lamps</li>
+                        <li>Signal Lamps</li>
+                    </ul>
+                </div>
+                <div class="sol-sol-img-wrap">
+                    <div class="sol-img-placeholder">
+                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
+                            opacity="0.4">
+                            <circle cx="12" cy="12" r="4" />
+                            <line x1="12" y1="2" x2="12" y2="6" />
+                            <line x1="12" y1="18" x2="12" y2="22" />
+                            <line x1="2" y1="12" x2="6" y2="12" />
+                            <line x1="18" y1="12" x2="22" y2="12" />
+                        </svg>
+                        <p>Intelligent LED Lighting</p>
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <circle cx="12" cy="12" r="4" />
+                            <line x1="12" y1="2" x2="12" y2="6" />
+                            <line x1="12" y1="18" x2="12" y2="22" />
+                        </svg>
+                        <span>Interior &amp; Exterior LED Systems</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         WHY AARGEE — dark
+         ============================================================ -->
+    <section class="sol-why" id="sol-why">
+        <div class="sol-why-net"></div>
+        <div class="sol-container">
+            <div class="sol-why-inner">
+                <div class="sol-counters sol-fade d1">
+                    <div class="sol-counter-box">
+                        <div class="sol-counter-num"><span class="sol-count" data-target="45">0</span>+</div>
+                        <div class="sol-counter-label">Years Of<br>Engineering Excellence</div>
+                    </div>
+                    <div class="sol-counter-box">
+                        <div class="sol-counter-num"><span class="sol-count" data-target="1000">0</span>+</div>
+                        <div class="sol-counter-label">Successful<br>Deployments</div>
+                    </div>
+                    <div class="sol-counter-box">
+                        <div class="sol-counter-num">4</div>
+                        <div class="sol-counter-label">Transportation<br>Sectors Served</div>
+                    </div>
+                    <div class="sol-counter-box">
+                        <div class="sol-counter-num">24/7</div>
+                        <div class="sol-counter-label">Engineering<br>Support</div>
+                    </div>
+                </div>
+                <div class="sol-fade d2">
+                    <div class="sol-lbl">Why Aargee</div>
+                    <h2 class="sol-h2 white">Four Decades of<br>Trusted Engineering</h2>
+                    <p class="sol-why-body">For more than four decades, AARGEE has been delivering innovative
+                        transportation technologies trusted by public transit operators, fleet owners, infrastructure
+                        developers, and mobility organizations across India.</p>
+                    <p class="sol-why-body" style="margin-top:14px;">Our solutions power safer, smarter, and more
+                        connected transportation ecosystems across Roadways, Railways, Waterways, and Airways — backed
+                        by ISO 9001:2015 and IATF 16949:2016 certified manufacturing.</p>
+                    <div class="sol-chips">
+                        <div class="sol-chip">Roadways</div>
+                        <div class="sol-chip">Railways</div>
+                        <div class="sol-chip">Airways</div>
+                        <div class="sol-chip">Waterways</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FINAL CTA — white
+         ============================================================ -->
+    <section class="sol-cta" id="sol-cta">
+        <div class="sol-container">
+            <div class="sol-cta-inner sol-fade">
+                <div class="sol-lbl" style="justify-content:center;">Partner With Aargee</div>
+                <h2 class="sol-cta-h2">Building The Future Of<br><span>Intelligent Transportation</span></h2>
+                <p class="sol-cta-desc">Partner with AARGEE to deploy advanced transportation technologies that improve
+                    safety, efficiency, passenger experience, and operational performance across your entire fleet and
+                    network.</p>
+                <div class="sol-cta-btns">
+                    <a class="btn-cta-solid" href="mailto:sales@aargee.net" id="btn-request-consultation">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                        Request Consultation
+                    </a>
+                    <a class="btn-cta-outline" href="http://www.aargee.net" id="btn-contact-aargee">
+                        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.2">
+                            <circle cx="12" cy="12" r="10" />
+                            <line x1="2" y1="12" x2="22" y2="12" />
+                            <path
+                                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+                        </svg>
+                        Contact AARGEE
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PREMIUM FOOTER — exact copy from about.html
+         ============================================================ -->
+    <footer class="premium-footer">
+        <div class="pf-inner">
+            <div class="pf-grid">
+                <!-- Column 1 -->
+                <div class="pf-col pf-col-1">
+                    <img alt="Aargee Equipment Pvt. Ltd." class="pf-logo-img" src="aargee-logo.png?v=3" />
+                    <h3>AARGEE EQUIPMENT PVT. LTD.</h3>
+                    <span class="pf-tagline">Engineering Excellence Since 1979</span>
+                    <p>For over four decades, Aargee has been delivering advanced vehicle technologies to customers
+                        across domestic and international markets.</p>
+                    <div class="pf-socials">
+                        <a aria-label="LinkedIn" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                                stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect height="12" width="4" x="2" y="9"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg></a>
+                        <a aria-label="YouTube" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                                stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18">
+                                <path
+                                    d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33 2.78 2.78 0 0 0 1.94 2c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.33 29 29 0 0 0-.46-5.33z">
+                                </path>
+                                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                            </svg></a>
+                        <a aria-label="Facebook" href="#"><svg class="premium-icon-anim" fill="none" height="18"
+                                stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                viewbox="0 0 24 24" width="18">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg></a>
+                        <a aria-label="Email" href="#"><svg viewbox="0 0 24 24">
+                                <path
+                                    d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4.236l-8 4.882-8-4.882V6l8 4.882L20 6v2.236z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+                <!-- Column 2 -->
+                <div class="pf-col">
+                    <h4>COMPANY</h4>
+                    <ul class="pf-links">
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Engineering &amp; Innovation</a></li>
+                        <li><a href="#">Manufacturing Excellence</a></li>
+                        <li><a href="#">Quality &amp; Certifications</a></li>
+                        <li><a href="#">Industries</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <!-- Column 3 -->
+                <div class="pf-col">
+                    <h4>SOLUTIONS</h4>
+                    <ul class="pf-links">
+                        <li><a href="#sol01">Passenger Information Systems</a></li>
+                        <li><a href="#sol02">Driver Safety &amp; Monitoring</a></li>
+                        <li><a href="#sol03">Fleet Intelligence &amp; GPS</a></li>
+                        <li><a href="#sol04">Video Surveillance</a></li>
+                        <li><a href="#sol05">Passenger Safety Systems</a></li>
+                        <li><a href="#sol06">Alcohol Interlock Systems</a></li>
+                        <li><a href="#sol07">Comfort &amp; Entertainment</a></li>
+                        <li><a href="#sol08">Intelligent Lighting</a></li>
+                    </ul>
+                </div>
+                <!-- Column 4 -->
+                <div class="pf-col">
+                    <h4>INDUSTRIES</h4>
+                    <ul class="pf-links">
+                        <li><a href="#">Public Transportation</a></li>
+                        <li><a href="#">Bus Manufacturers</a></li>
+                        <li><a href="#">State Transport Undertakings</a></li>
+                        <li><a href="#">Automotive</a></li>
+                        <li><a href="#">Smart Mobility</a></li>
+                        <li><a href="#">Infrastructure</a></li>
+                    </ul>
+                </div>
+                <!-- Column 5 -->
+                <div class="pf-col">
+                    <h4>CONTACT</h4>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon"><svg fill="none" height="20" stroke="currentColor" stroke-width="2"
+                                viewbox="0 0 24 24" width="20">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg></div>
+                        <div class="pf-contact-text">Bangalore, India</div>
+                    </div>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon"><svg fill="none" height="20" stroke="currentColor" stroke-width="2"
+                                viewbox="0 0 24 24" width="20">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg></div>
+                        <div class="pf-contact-text"><a href="tel:+91XXXXXXXXXX">+91 XX XXXX XXXX</a></div>
+                    </div>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon"><svg fill="none" height="20" stroke="currentColor" stroke-width="2"
+                                viewbox="0 0 24 24" width="20">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg></div>
+                        <div class="pf-contact-text"><a href="mailto:sales@aargee.net">sales@aargee.net</a></div>
+                    </div>
+                    <div class="pf-contact-item">
+                        <div class="pf-contact-icon"><svg fill="none" height="20" stroke="currentColor" stroke-width="2"
+                                viewbox="0 0 24 24" width="20">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" x2="22" y1="12" y2="12"></line>
+                                <path
+                                    d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                                </path>
+                            </svg></div>
+                        <div class="pf-contact-text"><a href="http://www.aargee.net">www.aargee.net</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="pf-copyright">
+                <div class="pf-copy-text">© 2026 Aargee Equipment Pvt. Ltd. All Rights Reserved.</div>
+                <div class="pf-copy-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms &amp; Conditions</a>
+                    <a href="#">Quality Policy</a>
+                    <a href="#">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+    <script>
+        (function () {
+            /* ── Navbar scroll ── */
+            var navbar = document.getElementById('navbar');
+            if (navbar) window.addEventListener('scroll', function () { navbar.classList.toggle('scrolled', window.scrollY > 45); }, { passive: true });
+
+            /* ── Mobile nav toggle ── */
+            var toggle = document.getElementById('nav-toggle'), menu = document.getElementById('nav-menu');
+            if (toggle && menu) toggle.addEventListener('click', function () { menu.classList.toggle('open'); toggle.classList.toggle('open'); });
+
+            /* ── Scroll fade-in ── */
+            var fades = document.querySelectorAll('.sol-fade');
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+            }, { threshold: 0.1 });
+            fades.forEach(function (el) { obs.observe(el); });
+
+            /* ── Counter animation ── */
+            var counts = document.querySelectorAll('.sol-count');
+            var cobs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (!e.isIntersecting) return;
+                    var el = e.target, t = +el.dataset.target, s = performance.now(), d = 1800;
+                    (function tick(n) { var p = Math.min((n - s) / d, 1); el.textContent = Math.round(t * (1 - Math.pow(1 - p, 3))); if (p < 1) requestAnimationFrame(tick); })(s);
+                    cobs.unobserve(el);
+                });
+            }, { threshold: 0.5 });
+            counts.forEach(function (el) { cobs.observe(el); });
+        })();
+    </script>
+</body>
+
+</html>
