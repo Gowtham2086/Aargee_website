@@ -40,7 +40,7 @@
             align-items: center;
             gap: 10px;
             font-family: 'Outfit', sans-serif;
-            font-size: 0.72rem;
+            font-size: 0.87rem;
             font-weight: 700;
             letter-spacing: 2.5px;
             text-transform: uppercase;
@@ -114,7 +114,7 @@
         }
 
         .sol-section-sub {
-            font-size: 1.05rem;
+            font-size: 1.2rem;
             color: #4B5563;
             max-width: 640px;
             margin: 0 auto;
@@ -155,13 +155,16 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+            filter: brightness(1.15);
+            /* Brightens the image itself */
         }
 
         .sol-hero-overlay {
             position: absolute;
             inset: 0;
             z-index: 1;
-            background: linear-gradient(90deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.6) 45%, transparent 100%);
+            /* Significantly reduced the darkness of the gradient overlay */
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 100%);
         }
 
         /* No floating particles — removed */
@@ -177,7 +180,7 @@
 
         .sol-hero-eyebrow {
             font-family: 'Outfit', sans-serif;
-            font-size: 0.72rem;
+            font-size: 0.87rem;
             font-weight: 700;
             letter-spacing: 2.5px;
             text-transform: uppercase;
@@ -245,7 +248,7 @@
             border-radius: 6px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 0.93rem;
+            font-size: 1.08rem;
             letter-spacing: 0.5px;
             text-decoration: none;
             transition: all 0.3s;
@@ -268,7 +271,7 @@
             border-radius: 6px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 0.93rem;
+            font-size: 1.08rem;
             letter-spacing: 0.5px;
             text-decoration: none;
             transition: all 0.3s;
@@ -294,7 +297,7 @@
         }
 
         .sol-scroll-hint span {
-            font-size: 0.68rem;
+            font-size: 0.83rem;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: rgba(255, 255, 255, 0.4);
@@ -367,14 +370,14 @@
 
         .sol-ind-title {
             font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
+            font-size: 1.35rem;
             font-weight: 800;
             color: #111827;
             margin-bottom: 8px;
         }
 
         .sol-ind-desc {
-            font-size: 0.9rem;
+            font-size: 1.05rem;
             color: #4B5563;
             line-height: 1.7;
         }
@@ -386,7 +389,7 @@
             border: 1px solid rgba(200, 16, 46, 0.25);
             color: #C8102E;
             border-radius: 20px;
-            font-size: 0.7rem;
+            font-size: 0.85rem;
             font-weight: 700;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -495,7 +498,7 @@
         }
 
         .sol-sol-desc {
-            font-size: 1rem;
+            font-size: 1.15rem;
             color: #4B5563;
             line-height: 1.85;
             margin-bottom: 30px;
@@ -516,7 +519,7 @@
             display: flex;
             align-items: center;
             gap: 9px;
-            font-size: 0.88rem;
+            font-size: 1.03rem;
             color: #374151;
             font-weight: 500;
         }
@@ -581,7 +584,7 @@
 
         .sol-img-placeholder p {
             font-family: 'Outfit', sans-serif;
-            font-size: 0.78rem;
+            font-size: 0.93rem;
             letter-spacing: 1.5px;
             text-transform: uppercase;
             color: #9CA3AF;
@@ -592,17 +595,17 @@
         }
 
         .sol-img-badge {
-            position: absolute;
-            bottom: 18px;
-            left: 18px;
+            position: relative;
+            margin-top: 16px;
             background: rgba(255, 255, 255, 0.92);
             backdrop-filter: blur(10px);
             border: 1px solid rgba(200, 16, 46, 0.2);
             border-radius: 8px;
-            padding: 8px 16px;
-            display: flex;
+            padding: 10px 20px;
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
         }
 
         .sol-sol-section.bg-dark .sol-img-badge {
@@ -612,7 +615,7 @@
 
         .sol-img-badge span {
             font-family: 'Outfit', sans-serif;
-            font-size: 0.8rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #111827;
         }
@@ -686,13 +689,13 @@
         }
 
         .sol-counter-label {
-            font-size: 0.87rem;
+            font-size: 1.02rem;
             color: rgba(255, 255, 255, 0.5);
             line-height: 1.5;
         }
 
         .sol-why-body {
-            font-size: 1rem;
+            font-size: 1.15rem;
             color: rgba(255, 255, 255, 0.6);
             line-height: 1.9;
             margin-top: 20px;
@@ -709,7 +712,7 @@
             padding: 7px 18px;
             border: 1px solid rgba(200, 16, 46, 0.3);
             border-radius: 30px;
-            font-size: 0.82rem;
+            font-size: 0.97rem;
             font-weight: 600;
             color: rgba(255, 255, 255, 0.75);
         }
@@ -741,7 +744,7 @@
         }
 
         .sol-cta-desc {
-            font-size: 1.05rem;
+            font-size: 1.2rem;
             color: #4B5563;
             max-width: 580px;
             margin: 0 auto 44px;
@@ -765,7 +768,7 @@
             border-radius: 6px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 0.93rem;
+            font-size: 1.08rem;
             text-decoration: none;
             transition: all 0.3s;
             border: 2px solid #C8102E;
@@ -787,7 +790,7 @@
             border-radius: 6px;
             font-family: 'Outfit', sans-serif;
             font-weight: 700;
-            font-size: 0.93rem;
+            font-size: 1.08rem;
             text-decoration: none;
             transition: all 0.3s;
         }
@@ -802,11 +805,14 @@
 
 <body>
 
-    <!-- ======== NAVIGATION ======== -->
+    <!-- ============================================================
+         SOLUTION 01 — Passenger Information Systems
+         ============================================================ -->
     <nav class="navbar" id="navbar">
         <div class="nav-inner">
             <a class="nav-logo" href="index.html" id="nav-logo">
                 <img alt="Aargee Equipment Pvt. Ltd." class="logo-img" src="aargee-logo.png?v=3" />
+                <span class="nav-tagline">Engineering Power. Enabling Progress.</span>
             </a>
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-links">
@@ -814,7 +820,7 @@
                     <li><a class="nav-link" href="about.html" id="nav-about">ABOUT US</a></li>
                     <li><a class="nav-link active" href="solutions.html" id="nav-solutions">SOLUTIONS</a></li>
                     <li><a class="nav-link" href="industries.html" id="nav-industries">INDUSTRIES</a></li>
-                    <li><a class="nav-link" href="#" id="nav-manufacturing">MANUFACTURING</a></li>
+                    <li><a class="nav-link" href="manufacturing.html" id="nav-manufacturing">MANUFACTURING</a></li>
                     <li><a class="nav-link" href="#" id="nav-quality">QUALITY</a></li>
                     <li><a class="nav-link" href="#" id="nav-careers">CAREERS</a></li>
                     <li><a class="nav-link" href="#" id="nav-contact">CONTACT</a></li>
@@ -862,13 +868,7 @@
                 </a>
             </div>
         </div>
-        <div class="sol-scroll-hint">
-            <span>Scroll</span>
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2">
-                <path d="M7 13l5 5 5-5" />
-                <path d="M7 6l5 5 5-5" />
-            </svg>
-        </div>
+
     </section>
 
     <!-- ============================================================
@@ -998,8 +998,10 @@
                         <li>Real-Time Data Feeds</li>
                     </ul>
                 </div>
-                <div class="sol-sol-img-wrap">
-                    <img src="pis-placeholder.png" alt="Passenger Information Systems">
+                <div class="sol-image-container">
+                    <div class="sol-sol-img-wrap">
+                        <img src="pis-placeholder.png" alt="Passenger Information Systems">
+                    </div>
                     <div class="sol-img-badge">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
                             <circle cx="12" cy="12" r="10" />
@@ -1007,211 +1009,19 @@
                         </svg>
                         <span>Real-Time Passenger Displays</span>
                     </div>
+
                 </div>
             </div>
         </div>
     </section>
-
-    <!-- ── Solution 02 — grey ── -->
+    <!-- ============================================================
+         SOLUTION 02 — Intelligent Lighting Solutions
+         ============================================================ -->
     <section class="sol-sol-section bg-grey" id="sol02">
         <div class="sol-container">
             <div class="sol-sol-inner reverse sol-fade">
                 <div>
                     <div class="sol-sol-num">02</div>
-                    <div class="sol-sol-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
-                            <circle cx="12" cy="12" r="3" />
-                            <path d="M17.5 6.5l-1.5 1.5M6.5 6.5l1.5 1.5" />
-                        </svg>
-                    </div>
-                    <div class="sol-lbl">Solution 02</div>
-                    <h3 class="sol-sol-title">Driver Safety &amp; Monitoring Systems</h3>
-                    <p class="sol-sol-desc">AI-powered driver monitoring systems designed to detect fatigue,
-                        distraction, and unsafe driving behavior before incidents occur. Protecting drivers and
-                        passengers through intelligent real-time surveillance.</p>
-                    <ul class="sol-feat-list">
-                        <li>Driver Fatigue Monitoring</li>
-                        <li>Distraction Detection</li>
-                        <li>Real-Time Alerts</li>
-                        <li>Event Recording</li>
-                        <li>Driver Safety Analytics</li>
-                        <li>Fleet Safety Dashboard</li>
-                        <li>AI Behavior Analysis</li>
-                        <li>Incident Prevention</li>
-                    </ul>
-                </div>
-                <div class="sol-sol-img-wrap">
-                    <img src="placeholder-cctv.jpg" alt="Video Surveillance Systems">
-                    <div class="sol-img-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
-                            <path d="M23 7l-7 5 7 5V7z" />
-                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
-                        </svg>
-                        <span>CCTV &amp; Mobile DVR Systems</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Solution 03 — grey ── -->
-    <section class="sol-sol-section bg-grey" id="sol05">
-        <div class="sol-container">
-            <div class="sol-sol-inner sol-fade">
-                <div>
-                    <div class="sol-sol-num">03</div>
-                    <div class="sol-sol-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-                            <polyline points="10 17 15 12 10 7" />
-                            <line x1="15" y1="12" x2="3" y2="12" />
-                        </svg>
-                    </div>
-                    <div class="sol-lbl">Solution 03</div>
-                    <h3 class="sol-sol-title">Passenger Safety Systems</h3>
-                    <p class="sol-sol-desc">Critical safety technologies designed to protect passengers and provide
-                        rapid emergency response capabilities. Ensuring every passenger has immediate access to help
-                        when it matters most.</p>
-                    <ul class="sol-feat-list">
-                        <li>Panic Button Systems</li>
-                        <li>Emergency Alarms</li>
-                        <li>Safety Hammer Monitoring</li>
-                        <li>Emergency Communication</li>
-                        <li>Passenger Alert Systems</li>
-                        <li>Incident Reporting</li>
-                        <li>SOS Integration</li>
-                        <li>Control Room Alerts</li>
-                    </ul>
-                </div>
-                <div class="sol-sol-img-wrap">
-                    <div class="sol-img-placeholder">
-                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
-                            opacity="0.4">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                            <polyline points="9 12 11 14 15 10" />
-                        </svg>
-                        <p>Passenger Safety Systems</p>
-                    </div>
-                    <div class="sol-img-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
-                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                        </svg>
-                        <span>Emergency Panic &amp; Alert Systems</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Solution 04 — dark ── -->
-    <section class="sol-sol-section bg-dark" id="sol06">
-        <div class="sol-container">
-            <div class="sol-sol-inner reverse sol-fade">
-                <div>
-                    <div class="sol-sol-num dark">04</div>
-                    <div class="sol-sol-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                            <line x1="3" y1="9" x2="21" y2="9" />
-                            <line x1="9" y1="21" x2="9" y2="9" />
-                        </svg>
-                    </div>
-                    <div class="sol-lbl">Solution 04</div>
-                    <h3 class="sol-sol-title white">Alcohol Interlock Systems</h3>
-                    <p class="sol-sol-desc white">Preventing unauthorized and unsafe vehicle operation through
-                        intelligent alcohol detection and ignition control technologies. Zero-tolerance enforcement that
-                        keeps roads and passengers safe.</p>
-                    <ul class="sol-feat-list white">
-                        <li>Breath Alcohol Analysis</li>
-                        <li>Ignition Interlock Control</li>
-                        <li>Driver Authentication</li>
-                        <li>Regulatory Compliance</li>
-                        <li>Event Logging</li>
-                        <li>Fleet-Wide Reports</li>
-                    </ul>
-                </div>
-                <div class="sol-sol-img-wrap">
-                    <div class="sol-img-placeholder dark-bg">
-                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
-                            opacity="0.5">
-                            <path d="M8 3h8a1 1 0 0 1 1 1v4a8 8 0 0 1-10 0V4a1 1 0 0 1 1-1z" />
-                            <path d="M12 12v9M8 21h8" />
-                        </svg>
-                        <p>Alcohol Interlock Systems</p>
-                    </div>
-                    <div class="sol-img-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
-                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                            <polyline points="22 4 12 14.01 9 11.01" />
-                        </svg>
-                        <span>Breath Test &amp; Ignition Control</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Solution 05 — white ── -->
-    <section class="sol-sol-section bg-white" id="sol07">
-        <div class="sol-container">
-            <div class="sol-sol-inner sol-fade">
-                <div>
-                    <div class="sol-sol-num">05</div>
-                    <div class="sol-sol-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                            stroke-width="1.8">
-                            <path
-                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
-                            <circle cx="12" cy="13" r="4" />
-                        </svg>
-                    </div>
-                    <div class="sol-lbl">Solution 05</div>
-                    <h3 class="sol-sol-title">Passenger Comfort &amp; Entertainment</h3>
-                    <p class="sol-sol-desc">Creating engaging travel experiences through integrated entertainment and
-                        passenger convenience technologies. Transforming journeys into experiences passengers look
-                        forward to.</p>
-                    <ul class="sol-feat-list">
-                        <li>TFT/LCD Display Systems</li>
-                        <li>USB Charging Systems</li>
-                        <li>Mobile Charging Ports</li>
-                        <li>Audio Systems</li>
-                        <li>Multimedia Solutions</li>
-                        <li>Wi-Fi Connectivity</li>
-                        <li>Seat Power Outlets</li>
-                        <li>Passenger Convenience Systems</li>
-                    </ul>
-                </div>
-                <div class="sol-sol-img-wrap">
-                    <div class="sol-img-placeholder">
-                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
-                            opacity="0.4">
-                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-                            <polyline points="17 2 12 7 7 2" />
-                        </svg>
-                        <p>Comfort &amp; Entertainment</p>
-                    </div>
-                    <div class="sol-img-badge">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
-                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
-                            <polyline points="17 2 12 7 7 2" />
-                        </svg>
-                        <span>TFT Displays &amp; USB Charging</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── Solution 06 — grey ── -->
-    <section class="sol-sol-section bg-grey" id="sol08">
-        <div class="sol-container">
-            <div class="sol-sol-inner reverse sol-fade">
-                <div>
-                    <div class="sol-sol-num">06</div>
                     <div class="sol-sol-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="1.8">
@@ -1242,17 +1052,9 @@
                         <li>Signal Lamps</li>
                     </ul>
                 </div>
-                <div class="sol-sol-img-wrap">
-                    <div class="sol-img-placeholder">
-                        <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="1.2"
-                            opacity="0.4">
-                            <circle cx="12" cy="12" r="4" />
-                            <line x1="12" y1="2" x2="12" y2="6" />
-                            <line x1="12" y1="18" x2="12" y2="22" />
-                            <line x1="2" y1="12" x2="6" y2="12" />
-                            <line x1="18" y1="12" x2="22" y2="12" />
-                        </svg>
-                        <p>Intelligent LED Lighting</p>
+                <div class="sol-image-container">
+                    <div class="sol-sol-img-wrap">
+                        <img src="sol-intelligent-lighting.png" alt="Intelligent Lighting Solutions">
                     </div>
                     <div class="sol-img-badge">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
@@ -1261,6 +1063,403 @@
                             <line x1="12" y1="18" x2="12" y2="22" />
                         </svg>
                         <span>Interior &amp; Exterior LED Systems</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 03 — Driver Safety & Monitoring Systems
+         ============================================================ -->
+    <section class="sol-sol-section bg-dark" id="sol03">
+        <div class="sol-container">
+            <div class="sol-sol-inner reverse sol-fade">
+                <div>
+                    <div class="sol-sol-num dark">03</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                            <path d="M17.5 6.5l-1.5 1.5M6.5 6.5l1.5 1.5" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl" style="color: rgba(255,255,255,0.7);">Solution 02</div>
+                    <p class="sol-sol-desc white">AI-powered driver monitoring systems designed to detect fatigue,
+                        distraction, and unsafe driving behavior before incidents occur. Protecting drivers and
+                        passengers through intelligent real-time surveillance.</p>
+                    <ul class="sol-feat-list white">
+                        <li>Driver Fatigue Monitoring</li>
+                        <li>Distraction Detection</li>
+                        <li>Real-Time Alerts</li>
+                        <li>Event Recording</li>
+                        <li>Driver Safety Analytics</li>
+                        <li>Fleet Safety Dashboard</li>
+                        <li>AI Behavior Analysis</li>
+                        <li>Incident Prevention</li>
+                    </ul>
+                </div>
+                <div class="sol-image-container">
+                    <div class="sol-sol-img-wrap">
+                        <img src="placeholder-cctv.jpg" alt="Video Surveillance Systems">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M23 7l-7 5 7 5V7z" />
+                            <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
+                        </svg>
+                        <span>CCTV &amp; Mobile DVR Systems</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 04 — Passenger Safety Systems
+         ============================================================ -->
+    <section class="sol-sol-section bg-white" id="sol04">
+        <div class="sol-container">
+            <div class="sol-sol-inner sol-fade">
+                <div>
+                    <div class="sol-sol-num">04</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
+                            <polyline points="10 17 15 12 10 7" />
+                            <line x1="15" y1="12" x2="3" y2="12" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 03</div>
+                    <h3 class="sol-sol-title">Passenger Safety Systems</h3>
+                    <p class="sol-sol-desc">Critical safety technologies designed to protect passengers and provide
+                        rapid emergency response capabilities. Ensuring every passenger has immediate access to help
+                        when it matters most.</p>
+                    <ul class="sol-feat-list">
+                        <li>Panic Button Systems</li>
+                        <li>Emergency Alarms</li>
+                        <li>Safety Hammer Monitoring</li>
+                        <li>Emergency Communication</li>
+                        <li>Passenger Alert Systems</li>
+                        <li>Incident Reporting</li>
+                        <li>SOS Integration</li>
+                        <li>Control Room Alerts</li>
+                    </ul>
+                </div>
+                <div class="sol-image-container">
+                    <div class="sol-sol-img-wrap">
+                        <img src="placeholder-safety.jpg" alt="Passenger Safety Systems">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                        </svg>
+                        <span>Emergency Panic &amp; Alert Systems</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 05 — Alcohol Interlock Systems
+         ============================================================ -->
+    <section class="sol-sol-section bg-grey" id="sol05">
+        <div class="sol-container">
+            <div class="sol-sol-inner reverse sol-fade">
+                <div>
+                    <div class="sol-sol-num">05</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                            <line x1="3" y1="9" x2="21" y2="9" />
+                            <line x1="9" y1="21" x2="9" y2="9" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 04</div>
+                    <p class="sol-sol-desc">Preventing unauthorized and unsafe vehicle operation through
+                        intelligent alcohol detection and ignition control technologies. Zero-tolerance enforcement that
+                        keeps roads and passengers safe.</p>
+                    <ul class="sol-feat-list">
+                        <li>Breath Alcohol Analysis</li>
+                        <li>Ignition Interlock Control</li>
+                        <li>Driver Authentication</li>
+                        <li>Regulatory Compliance</li>
+                        <li>Event Logging</li>
+                        <li>Fleet-Wide Reports</li>
+                    </ul>
+                </div>
+                <div class="sol-image-container">
+                    <div class="sol-sol-img-wrap">
+                        <img src="placeholder-interlock.jpg" alt="Alcohol Interlock Systems">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                            <polyline points="22 4 12 14.01 9 11.01" />
+                        </svg>
+                        <span>Breath Test &amp; Ignition Control</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 06 — Passenger Comfort & Entertainment
+         ============================================================ -->
+    <section class="sol-sol-section bg-dark" id="sol06">
+        <div class="sol-container">
+            <div class="sol-sol-inner sol-fade">
+                <div>
+                    <div class="sol-sol-num dark">06</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl" style="color: rgba(255,255,255,0.7);">Solution 05</div>
+                    <p class="sol-sol-desc white">Creating engaging travel experiences through integrated entertainment
+                        and
+                        passenger convenience technologies. Transforming journeys into experiences passengers look
+                        forward to.</p>
+                    <ul class="sol-feat-list white">
+                        <li>TFT/LCD Display Systems</li>
+                        <li>USB Charging Systems</li>
+                        <li>Mobile Charging Ports</li>
+                        <li>Audio Systems</li>
+                        <li>Multimedia Solutions</li>
+                        <li>Wi-Fi Connectivity</li>
+                        <li>Seat Power Outlets</li>
+                        <li>Passenger Convenience Systems</li>
+                    </ul>
+                </div>
+                <div class="sol-image-container">
+                    <div class="sol-sol-img-wrap">
+                        <img src="placeholder-comfort.jpg" alt="Passenger Comfort & Entertainment">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <rect x="2" y="7" width="20" height="15" rx="2" ry="2" />
+                            <polyline points="17 2 12 7 7 2" />
+                        </svg>
+                        <span>TFT Displays &amp; USB Charging</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 07 — AI Passenger Counting System
+         ============================================================ -->
+    <section class="sol-sol-section bg-white" id="sol07">
+        <div class="sol-container">
+            <div class="sol-sol-inner">
+                <!-- Text side -->
+                <div class="sol-sol-content sol-fade d1">
+                    <div class="sol-sol-num">07</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                            <circle cx="9" cy="7" r="4" />
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 07</div>
+                    <h2 class="sol-sol-title">AI Passenger Counting System</h2>
+                    <p class="sol-sol-desc">Accurately monitor passenger boarding and alighting activities using
+                        AI-powered vision analytics. The system provides real-time occupancy insights, passenger flow
+                        analysis, and operational data to improve transportation planning and fleet efficiency.</p>
+
+                    <ul class="sol-feat-list">
+                        <li>Real-time passenger counting</li>
+                        <li>Boarding and alighting detection</li>
+                        <li>AI-powered analytics</li>
+                        <li>Occupancy monitoring</li>
+                        <li>High counting accuracy</li>
+                        <li>Fleet utilization insights</li>
+                    </ul>
+                </div>
+
+                <!-- Image side -->
+                <div class="sol-sol-image sol-fade d2">
+                    <div class="sol-sol-img-wrap">
+                        <img src="camera-ai.jpg" alt="AI Passenger Counting System">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <div>
+                            <span>AI Analytics</span>
+                            <strong>Real-Time Monitoring</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 08 — Interior Monitoring Camera
+         ============================================================ -->
+    <section class="sol-sol-section bg-grey" id="sol08">
+        <div class="sol-container">
+            <div class="sol-sol-inner reverse">
+                <!-- Text side -->
+                <div class="sol-sol-content sol-fade d1">
+                    <div class="sol-sol-num">08</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path
+                                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" />
+                            <circle cx="12" cy="13" r="4" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl">Solution 08</div>
+                    <h2 class="sol-sol-title">Interior Monitoring Camera</h2>
+                    <p class="sol-sol-desc">Designed for continuous in-vehicle monitoring, the interior camera enhances
+                        passenger safety, security, and operational visibility by providing clear visual coverage of
+                        passenger and driver areas.</p>
+
+                    <ul class="sol-feat-list">
+                        <li>Full HD video monitoring</li>
+                        <li>Wide-angle coverage</li>
+                        <li>Driver behaviour monitoring</li>
+                        <li>Passenger area surveillance</li>
+                        <li>Low-light performance</li>
+                        <li>Audio recording support</li>
+                    </ul>
+                </div>
+
+                <!-- Image side -->
+                <div class="sol-sol-image sol-fade d2">
+                    <div class="sol-sol-img-wrap">
+                        <img src="camera-interior.jpg" alt="Interior Monitoring Camera">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <div>
+                            <span>Continuous</span>
+                            <strong>HD Recording</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================================
+         SOLUTION 09 — Exterior Monitoring Camera
+         ============================================================ -->
+    <section class="sol-sol-section bg-dark" id="sol09">
+        <div class="sol-container">
+            <div class="sol-sol-inner">
+                <!-- Text side -->
+                <div class="sol-sol-content sol-fade d1">
+                    <div class="sol-sol-num dark">09</div>
+                    <div class="sol-sol-icon">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.8">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
+                            <circle cx="12" cy="12" r="3" />
+                        </svg>
+                    </div>
+                    <div class="sol-lbl" style="color: rgba(255,255,255,0.7);">Solution 09</div>
+                    <h2 class="sol-sol-title white">Exterior Monitoring Camera</h2>
+                    <p class="sol-sol-desc white">Provides high-quality external vehicle monitoring to improve driver
+                        awareness, operational safety, and incident recording in urban and intercity transportation
+                        environments.</p>
+
+                    <ul class="sol-feat-list white">
+                        <li>Full HD imaging</li>
+                        <li>Day and night operation</li>
+                        <li>Wide viewing angle</li>
+                        <li>Low-light visibility</li>
+                        <li>Weather-resistant design</li>
+                        <li>Transportation-grade reliability</li>
+                    </ul>
+                </div>
+
+                <!-- Image side -->
+                <div class="sol-sol-image sol-fade d2">
+                    <div class="sol-sol-img-wrap">
+                        <img src="camera-exterior.jpg" alt="Exterior Monitoring Camera">
+                    </div>
+                    <div class="sol-img-badge">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10" />
+                            <polyline points="12 6 12 12 16 14" />
+                        </svg>
+                        <div>
+                            <span>All-Weather</span>
+                            <strong>Operation</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ============================================================
+         SOLUTION 07-09 WHY CHOOSE SECTION
+         ============================================================ -->
+    <section class="sol-sol-section bg-white" style="padding-top:0;">
+        <div class="sol-container">
+            <div class="sol-why-choose sol-fade">
+                <h3 class="sac-title" style="text-align:center; margin-bottom:32px;">Why Choose This Solution</h3>
+                <div class="sol-why-grid">
+                    <div class="sw-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        Enhanced Passenger Safety
+                    </div>
+                    <div class="sw-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        Real-Time Visibility
+                    </div>
+                    <div class="sw-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        AI-Based Analytics
+                    </div>
+                    <div class="sw-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        Operational Intelligence
+                    </div>
+                    <div class="sw-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        Improved Fleet Management
+                    </div>
+                    <div class="sw-item">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C8102E" stroke-width="2">
+                            <path d="M20 6L9 17l-5-5" />
+                        </svg>
+                        Transportation-Grade Reliability
                     </div>
                 </div>
             </div>
@@ -1356,8 +1555,7 @@
                 <!-- Column 1 -->
                 <div class="pf-col pf-col-1">
                     <img alt="Aargee Equipment Pvt. Ltd." class="pf-logo-img" src="aargee-logo.png?v=3" />
-                    <h3>AARGEE EQUIPMENT PVT. LTD.</h3>
-                    <span class="pf-tagline">Engineering Excellence Since 1979</span>
+                    
                     <p>For over four decades, Aargee has been delivering advanced vehicle technologies to customers
                         across domestic and international markets.</p>
                     <div class="pf-socials">

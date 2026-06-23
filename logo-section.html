@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aargee Corporate Logo Section</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
+    <style>
+        /* Dark background to preview the transparent section and ensure tagline readability */
+        body {
+            background-color: #08080a; 
+            margin: 0;
+            padding: 0;
+        }
+
+        /* 
+           ================================================================
+           CORPORATE LOGO DISPLAY SECTION
+           ================================================================
+        */
+        .corporate-logo-section {
+            background-color: transparent;
+            width: 100%;
+            padding: 100px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .corporate-logo-img {
+            max-width: 320px; /* Scaled for premium crisp presentation */
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            /* Ensures HD clarity and prevents browser blurring on resize */
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: crisp-edges;
+            transform: translateZ(0); 
+        }
+
+        .corporate-tagline {
+            color: #FFFFFF;
+            font-family: 'Inter', sans-serif;
+            font-weight: 500;
+            font-size: 1.15rem;
+            letter-spacing: 1.5px;
+            text-align: center;
+            margin-top: 18px; /* Perfectly positioned 15-20px below logo */
+            margin-bottom: 0;
+            line-height: 1.4;
+        }
+
+        /* Responsive scaling */
+        @media (max-width: 768px) {
+            .corporate-logo-section {
+                padding: 80px 20px;
+            }
+            .corporate-logo-img {
+                max-width: 260px;
+            }
+            .corporate-tagline {
+                font-size: 1.05rem;
+                letter-spacing: 1px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="corporate-logo-section">
+        <img src="aargee-logo.png?v=3" alt="Aargee Equipment Pvt. Ltd." class="corporate-logo-img">
+        <p class="corporate-tagline">Engineering Power. Enabling Progress.</p>
+    </section>
+
+</body>
+</html>
